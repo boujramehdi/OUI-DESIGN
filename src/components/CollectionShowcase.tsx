@@ -5,11 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { collectionItems } from "@/lib/site";
 
-const collectionImages = [
-  "/images/liftbar.png",
-  "/images/mini-liftbar.png",
-  "/images/bureau.png",
-  "/images/cuisine.png",
+const collectionImages: { src: string; fit: string }[] = [
+  { src: "/images/liftbar.png",      fit: "object-cover" },
+  { src: "/images/mini-liftbar.png", fit: "object-cover" },
+  { src: "/images/bureau.png",       fit: "object-contain" },
+  { src: "/images/cuisine.png",      fit: "object-cover" },
 ];
 
 export function CollectionShowcase() {
@@ -38,7 +38,7 @@ export function CollectionShowcase() {
 
         {/* Center — swappable image */}
         <div className="reveal relative aspect-[4/3] overflow-hidden bg-charcoal sm:aspect-[3/2] lg:aspect-[16/10]">
-          {collectionImages.map((src, i) => (
+          {collectionImages.map((item, i) => (
             <div
               key={i}
               className={`absolute inset-0 transition-opacity duration-700 ${
@@ -46,11 +46,11 @@ export function CollectionShowcase() {
               }`}
             >
               <Image
-                src={src}
+                src={item.src}
                 alt={collectionItems[i].title}
                 fill
                 sizes="(min-width: 1024px) 55vw, 100vw"
-                className="object-cover"
+                className={item.fit}
               />
             </div>
           ))}

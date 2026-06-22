@@ -58,7 +58,7 @@ const expertiseTiles = [
     title: "Rénovation Villas & Riads",
     text: "Redonner vie à l’existant avec exigence et respect de l’âme du lieu.",
     href: "/renovation-villa-marrakech",
-    image: "/images/bar-vintage.png",
+    image: "/images/riad&villa.jpg",
     className: "aspect-[4/5] sm:aspect-[16/11] lg:aspect-auto lg:col-span-6 lg:row-span-2",
   },
   {
