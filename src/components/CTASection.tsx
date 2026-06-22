@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CinematicImage } from "@/components/CinematicImage";
 
 type CTASectionProps = {
   title?: string;
@@ -15,8 +16,22 @@ export function CTASection({
 }: CTASectionProps) {
   return (
     <section id="contact" className="relative overflow-hidden bg-charcoal text-ivory">
+      {/* Background image */}
+      <CinematicImage
+        src="/images/marrakech-final section.jpg"
+        alt=""
+        sizes="100vw"
+        imageClassName="object-cover opacity-60"
+      />
+
+      {/* Gradient: dark left → semi-transparent right */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#0D0E10_0%,rgba(13,14,16,0.88)_30%,rgba(13,14,16,0.55)_65%,rgba(13,14,16,0.25)_100%)]" />
+
+      {/* Top bronze rule */}
       <div className="absolute inset-x-0 top-0 h-px bg-bronze/70" />
-      <div className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_70%_20%,rgba(184,146,95,0.18),transparent_38%)]" />
+      {/* Bottom bronze rule */}
+      <div className="absolute inset-x-0 bottom-0 h-px bg-bronze/30" />
+
       <div className="reveal relative mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 sm:py-16 lg:grid-cols-[1.2fr_0.9fr_0.8fr] lg:items-center lg:gap-12 lg:py-20">
         <div>
           <p className="text-xs text-ivory/55">Prêt à donner vie à votre projet ?</p>
