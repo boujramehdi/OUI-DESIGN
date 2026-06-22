@@ -23,38 +23,47 @@ export default function CollectionPage() {
         dark
       />
 
+      {/* Collection items — ivory bg, dark cards */}
       <section className="bg-ivory">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
           <div className="grid gap-4 md:grid-cols-2">
             {collectionItems.map((item, index) => (
-              <article key={item.title} className="border border-charcoal/10 bg-ivory p-8 sm:p-10">
-                <p className="text-xs uppercase text-bronze">{String(index + 1).padStart(2, "0")}</p>
-                <h2 className="mt-8 font-serif text-4xl text-charcoal">{item.title}</h2>
-                <p className="mt-6 text-base leading-8 text-charcoal/70">{item.description}</p>
+              <article
+                key={item.title}
+                className="border border-bronze/20 bg-charcoal p-8 text-ivory sm:p-10"
+              >
+                <p className="text-[0.6rem] uppercase tracking-[0.3em] text-bronze">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h2 className="mt-7 font-serif text-3xl text-ivory sm:text-4xl">{item.title}</h2>
+                <p className="mt-5 text-sm leading-7 text-ivory/62">{item.description}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="cuisines-premium" className="bg-smoke">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_1fr] lg:py-28">
+      {/* Cuisines premium — dark section */}
+      <section id="cuisines-premium" className="bg-charcoal text-ivory">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_1fr] lg:gap-16 lg:py-28">
           <div>
-            <p className="text-xs uppercase text-bronze">Cuisines premium</p>
-            <h2 className="mt-5 font-serif text-5xl leading-tight text-charcoal sm:text-6xl">
+            <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
+              Cuisines premium
+            </p>
+            <h2 className="mt-3 font-serif text-3xl font-medium leading-tight text-ivory sm:text-4xl lg:text-5xl">
               Une cuisine comme pièce de réception.
             </h2>
           </div>
-          <div className="text-base leading-8 text-charcoal/72">
-            <p>
+          <div>
+            <p className="text-sm leading-8 text-ivory/65 sm:text-base">
               Ouidesign conçoit des cuisines sur mesure pour villas et riads : volumes clairs,
               rangements invisibles, plans de travail élégants, électroménager intégré et détails
-              de menuiserie alignés avec l’architecture intérieure.
+              de menuiserie alignés avec l'architecture intérieure.
             </p>
             <Link
-              href={whatsappHref("Bonjour Ouidesign, je souhaite parler d’une cuisine premium.")}
+              href={whatsappHref("Bonjour Ouidesign, je souhaite parler d'une cuisine premium.")}
               target="_blank"
-              className="mt-8 inline-flex bg-charcoal px-6 py-4 text-sm uppercase text-ivory transition hover:bg-bronze hover:text-charcoal"
+              className="mt-8 inline-flex items-center gap-3 bg-bronze px-6 py-4 text-xs uppercase tracking-[0.18em] text-charcoal transition duration-300 hover:bg-ivory"
             >
               Parler cuisine
             </Link>

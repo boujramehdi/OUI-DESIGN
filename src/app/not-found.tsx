@@ -11,7 +11,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
-          className="mt-8 inline-flex bg-charcoal px-6 py-4 text-sm uppercase text-ivory transition hover:bg-bronze hover:text-charcoal"
+          className="mt-8 inline-flex bg-bronze px-6 py-4 text-xs uppercase tracking-[0.18em] text-charcoal transition duration-300 hover:bg-charcoal hover:text-ivory"
         >
           Retour accueil
         </Link>

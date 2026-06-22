@@ -9,20 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ivory: "#F4EFE7",
-        charcoal: "#1C1C1A",
-        bronze: "#B8925F",
-        sand: "#D8C6AD",
-        stone: "#B8A58C",
-        smoke: "#EEE5D8",
+        // PRD palette
+        ivory:   "#F9F6F0",   // Warm Sand Light — light section backgrounds
+        charcoal:"#0D0E10",   // Deep Obsidian Black — dark backgrounds, footer
+        bronze:  "#C5A880",   // Luxury Muted Gold — accent, buttons, borders
+        sand:    "#E5DFD5",   // Border Light Subtle — dividers on light sections
+        stone:   "#8A8A8A",   // Text Secondary Muted — sub-labels, tags
+        smoke:   "#F9F6F0",   // alias of ivory (kept for compatibility)
+        "dark-border": "#222428", // grid lines on dark sections
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', '"Iowan Old Style"', "Georgia", "serif"],
-        sans: ['"Inter"', '"Avenir Next"', "Avenir", "Helvetica", "Arial", "sans-serif"],
+        serif:     ['"Cormorant Garamond"', '"Iowan Old Style"', "Georgia", "serif"],
+        sans:      ['"Inter"', '"Avenir Next"', "Avenir", "Helvetica", "Arial", "sans-serif"],
+        signature: ['"Monsieur La Doulaise"', "cursive"],
       },
       boxShadow: {
-        line: "inset 0 0 0 1px rgba(28, 28, 26, 0.10)",
-        bronze: "0 24px 80px rgba(184, 146, 95, 0.22)",
+        line:   "inset 0 0 0 1px rgba(197,168,128,0.12)",
+        bronze: "0 24px 80px rgba(197,168,128,0.20)",
       },
     },
   },

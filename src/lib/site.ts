@@ -21,7 +21,9 @@ export const navLinks = [
   { href: "/expertises", label: "Expertises" },
   { href: "/collection", label: "Collection" },
   { href: "/realisations", label: "Réalisations" },
-  { href: "/devis", label: "Devis" },
+  { href: "/journal", label: "Journal" },
+  { href: "/a-propos", label: "À Propos" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export type ServiceSummary = {

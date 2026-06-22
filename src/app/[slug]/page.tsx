@@ -64,35 +64,48 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
       />
       <PageHero eyebrow={service.eyebrow} title={service.h1} text={service.intro} dark />
 
+      {/* Highlights — ivory bg, dark cards */}
       <section className="bg-ivory">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:py-28">
           <div>
-            <p className="text-xs uppercase text-bronze">{service.title}</p>
-            <h2 className="mt-5 font-serif text-4xl leading-tight text-charcoal sm:text-6xl">
-              Une intervention premium, pensée avant d’être exécutée.
+            <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
+              {service.title}
+            </p>
+            <h2 className="mt-3 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl">
+              Une intervention premium, pensée avant d'être exécutée.
             </h2>
-            <p className="mt-7 text-base leading-8 text-charcoal/70">
+            <p className="mt-4 text-sm leading-7 text-charcoal/65">
               Ouidesign privilégie les décisions cohérentes : esthétique, technique, confort,
               maintenance et valeur long terme du bien.
             </p>
           </div>
           <div className="grid gap-4">
             {service.highlights.map((highlight, index) => (
-              <article key={highlight} className="border border-charcoal/10 bg-ivory p-6">
-                <p className="text-xs uppercase text-bronze">{String(index + 1).padStart(2, "0")}</p>
-                <h3 className="mt-5 font-serif text-3xl text-charcoal">{highlight}</h3>
+              <article
+                key={highlight}
+                className="border border-bronze/20 bg-charcoal p-6 text-ivory"
+              >
+                <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bronze">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-4 font-serif text-2xl text-ivory">{highlight}</h3>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-smoke">
+      {/* Deliverables — dark bg */}
+      <section className="bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
-          <div className="grid gap-px bg-charcoal/12 md:grid-cols-2 lg:grid-cols-4">
+          <p className="mb-8 text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
+            Livrables
+          </p>
+          <div className="grid gap-px bg-bronze/15 md:grid-cols-2 lg:grid-cols-4">
             {service.deliverables.map((deliverable) => (
-              <article key={deliverable} className="bg-smoke p-7">
-                <h2 className="font-serif text-2xl text-charcoal">{deliverable}</h2>
+              <article key={deliverable} className="bg-charcoal p-7">
+                <div className="mb-4 h-px w-8 bg-bronze" />
+                <h2 className="font-serif text-xl text-ivory">{deliverable}</h2>
               </article>
             ))}
           </div>
@@ -101,9 +114,12 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
 
       <Faq items={service.faq} />
 
+      {/* Other expertises — ivory */}
       <section className="bg-ivory">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
-          <p className="text-xs uppercase text-bronze">Autres expertises</p>
+          <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
+            Autres expertises
+          </p>
           <div className="mt-8 flex flex-wrap gap-3">
             {mainServices
               .filter((item) => item.href !== `/${service.slug}`)
@@ -112,7 +128,7 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="border border-charcoal/12 px-4 py-3 text-sm text-charcoal/72 transition hover:border-bronze hover:text-bronze"
+                  className="border border-bronze/25 px-4 py-3 text-xs uppercase tracking-[0.14em] text-charcoal/70 transition hover:border-bronze hover:text-bronze"
                 >
                   {item.title}
                 </Link>
@@ -121,7 +137,7 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
           <Link
             href={whatsappHref(`Bonjour Ouidesign, je souhaite parler de ${service.title}.`)}
             target="_blank"
-            className="mt-10 inline-flex bg-charcoal px-6 py-4 text-sm uppercase text-ivory transition hover:bg-bronze hover:text-charcoal"
+            className="mt-10 inline-flex items-center gap-3 bg-bronze px-6 py-4 text-xs uppercase tracking-[0.18em] text-charcoal transition duration-300 hover:bg-charcoal hover:text-ivory"
           >
             Demander une orientation
           </Link>

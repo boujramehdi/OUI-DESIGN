@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #f4efe7;
-  --foreground: #1c1c1a;
+  --background: #F9F6F0;
+  --foreground: #1A1A1A;
 }
 
 * {
@@ -59,4 +59,9 @@ summary::-webkit-details-marker {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
