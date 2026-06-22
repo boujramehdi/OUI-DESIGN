@@ -18,7 +18,7 @@ export function CTASection({
     <section id="contact" className="relative overflow-hidden bg-charcoal text-ivory">
       {/* Background image */}
       <CinematicImage
-        src="/images/marrakech-final section.jpg"
+        src="/images/parlons-final-section.jpg"
         alt=""
         sizes="100vw"
         imageClassName="object-cover opacity-60"

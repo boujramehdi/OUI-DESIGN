@@ -107,7 +107,7 @@ const expertiseTiles = [
     title: "Solaire & Infrastructure",
     text: "Des solutions durables pour un avenir responsable.",
     href: "/solaire-villa-marrakech",
-    image: "/images/solaire.jpg",
+    image: "/images/solaire-infrastruction.jpg",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
   {
