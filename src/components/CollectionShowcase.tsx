@@ -6,10 +6,10 @@ import Link from "next/link";
 import { collectionItems } from "@/lib/site";
 
 const collectionImages = [
-  "/images/liftbar.jpg",
-  "/images/liftbar.jpg",
-  "/images/bureau.jpg",
-  "/images/cuisine.jpg",
+  "/images/liftbar.png",
+  "/images/mini-liftbar.png",
+  "/images/bureau.png",
+  "/images/cuisine.png",
 ];
 
 export function CollectionShowcase() {

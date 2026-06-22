@@ -58,28 +58,28 @@ const expertiseTiles = [
     title: "Rénovation Villas & Riads",
     text: "Redonner vie à l’existant avec exigence et respect de l’âme du lieu.",
     href: "/renovation-villa-marrakech",
-    image: "/images/riad&villa.jpg",
+    image: "/images/bar-vintage.png",
     className: "aspect-[4/5] sm:aspect-[16/11] lg:aspect-auto lg:col-span-6 lg:row-span-2",
   },
   {
     title: "Menuiserie Sur Mesure",
     text: "Des créations uniques, nobles et intemporelles.",
     href: "/menuiserie-sur-mesure-marrakech",
-    image: "/images/bureau.jpg",
+    image: "/images/bureau.png",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
   {
     title: "Cuisines Premium",
     text: "L’élégance fonctionnelle, au cœur de la maison.",
     href: "/collection#cuisines-premium",
-    image: "/images/cuisine.jpg",
+    image: "/images/cuisine.png",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
   {
     title: "Piscines & Locaux Techniques",
     text: "Design, confort et maîtrise technique totale.",
     href: "/piscine-local-technique-marrakech",
-    image: "/images/piscine.jpg",
+    image: "/images/piscine.ipg.png",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
   {
@@ -114,7 +114,7 @@ const expertiseTiles = [
     title: "Mobilier Intelligent",
     text: "Design et technologie au service du quotidien.",
     href: "/collection",
-    image: "/images/liftbar.jpg",
+    image: "/images/liftbar.png",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
 ];
@@ -230,7 +230,7 @@ export default function HomePage() {
         </div>
         <div className="reveal relative min-h-[300px] overflow-hidden sm:min-h-[400px] lg:min-h-[600px]">
           <CinematicImage
-            src="/images/marrakech.jpg"
+            src="/images/marrakech-final section.jpg"
             alt=""
             sizes="(min-width: 1024px) 66vw, 100vw"
             imageClassName="object-cover"
