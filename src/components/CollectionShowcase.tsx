@@ -89,8 +89,10 @@ export function CollectionShowcase() {
           {/* Right — numbered list */}
           <div className="reveal flex flex-col justify-center">
             {collectionItems.map((item, index) => (
-              <button
+              <Link
                 key={item.title}
+                href={`/collection/${item.slug}`}
+                onMouseEnter={() => setSelected(index)}
                 onClick={() => setSelected(index)}
                 className={`group relative flex flex-col overflow-hidden border-b border-charcoal/8 py-5 text-left transition-all duration-300 first:border-t first:border-charcoal/8 ${
                   selected === index
@@ -120,7 +122,7 @@ export function CollectionShowcase() {
                     className={`ml-3 shrink-0 transition-all duration-300 ${
                       selected === index
                         ? "translate-x-0 text-bronze"
-                        : "translate-x-1 text-charcoal/20 group-hover:translate-x-0 group-hover:text-charcoal/50"
+                        : "translate-x-1 text-charcoal/20 group-hover:translate-x-0 group-hover:text-bronze/60"
                     }`}
                   >
                     →
@@ -140,7 +142,7 @@ export function CollectionShowcase() {
                     {item.price}
                   </p>
                 </div>
-              </button>
+              </Link>
             ))}
 
             {/* Bottom CTA */}
