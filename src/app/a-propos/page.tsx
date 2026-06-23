@@ -142,7 +142,7 @@ export default function AProposPage() {
       </section>
 
       {/* Valeurs */}
-      <section className="bg-charcoal text-ivory overflow-hidden">
+      <section className="bg-sand text-charcoal overflow-hidden">
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
           <div className="mb-16 flex flex-col gap-2">
             <p className="reveal text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Nos valeurs</p>
@@ -155,7 +155,7 @@ export default function AProposPage() {
             {values.map((value, index) => (
               <article
                 key={value.title}
-                className="reveal group relative overflow-hidden bg-charcoal px-8 py-10 transition-colors duration-500 hover:bg-[#1c1915] sm:px-9 sm:py-12"
+                className="reveal group relative overflow-hidden bg-ivory px-8 py-10 transition-colors duration-500 hover:bg-[#cbb89a] sm:px-9 sm:py-12"
               >
                 {/* Bronze left sweep — slides in on hover */}
                 <div className="absolute left-0 top-0 h-full w-0 bg-bronze/8 transition-all duration-700 group-hover:w-full" />
@@ -164,7 +164,7 @@ export default function AProposPage() {
                 <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
 
                 {/* Ghost number — huge background */}
-                <span className="pointer-events-none absolute -right-2 -bottom-4 select-none font-serif font-medium leading-none text-ivory/[0.03] transition-all duration-700 group-hover:text-bronze/[0.1]"
+                <span className="pointer-events-none absolute -right-2 -bottom-4 select-none font-serif font-medium leading-none text-charcoal/[0.03] transition-all duration-700 group-hover:text-bronze/[0.1]"
                   style={{ fontSize: "clamp(7rem, 12vw, 10rem)" }}>
                   {String(index + 1).padStart(2, "0")}
                 </span>
@@ -175,10 +175,10 @@ export default function AProposPage() {
                     {String(index + 1).padStart(2, "0")}
                   </p>
                   <div className="mt-6 h-px w-8 bg-bronze/30 transition-all duration-500 group-hover:w-full group-hover:bg-bronze/50" />
-                  <h3 className="mt-5 text-[0.65rem] font-bold uppercase tracking-[0.26em] text-ivory transition-colors duration-300 group-hover:text-bronze">
+                  <h3 className="mt-5 text-[0.65rem] font-bold uppercase tracking-[0.26em] text-charcoal transition-colors duration-300 group-hover:text-bronze">
                     {value.title}
                   </h3>
-                  <p className="mt-3 text-xs leading-6 text-ivory/55 transition-colors duration-300 group-hover:text-ivory/80">
+                  <p className="mt-3 text-xs leading-6 text-charcoal/60 transition-colors duration-300 group-hover:text-charcoal/85">
                     {value.description}
                   </p>
                 </div>

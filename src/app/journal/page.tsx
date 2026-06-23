@@ -85,7 +85,7 @@ export default function JournalPage() {
       </section>
 
       {/* Topics */}
-      <section className="bg-charcoal text-ivory">
+      <section className="bg-sand text-charcoal">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
           <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Thèmes abordés</p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -102,7 +102,7 @@ export default function JournalPage() {
             ].map((tag) => (
               <span
                 key={tag}
-                className="border border-bronze/25 px-4 py-2 text-[0.6rem] uppercase tracking-[0.18em] text-ivory/60 transition-all duration-300 hover:border-bronze hover:bg-bronze/10 hover:text-ivory cursor-default"
+                className="border border-bronze/25 px-4 py-2 text-[0.6rem] uppercase tracking-[0.18em] text-charcoal/65 transition-all duration-300 hover:border-bronze hover:bg-bronze/10 hover:text-charcoal cursor-default"
               >
                 {tag}
               </span>

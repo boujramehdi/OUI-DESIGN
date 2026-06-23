@@ -50,7 +50,7 @@ const reviewsJsonLd = {
 
 export function TestimonialsSection() {
   return (
-    <section className="relative overflow-hidden bg-charcoal text-ivory">
+    <section className="relative overflow-hidden bg-sand text-charcoal">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
@@ -83,7 +83,7 @@ export function TestimonialsSection() {
               <div className="mt-3 h-px w-12 bg-bronze/40" />
             </div>
           </div>
-          <p className="max-w-xs text-[0.6rem] leading-6 text-ivory/35 lg:text-right lg:pb-1">
+          <p className="max-w-xs text-[0.6rem] leading-6 text-charcoal/40 lg:text-right lg:pb-1">
             Nos projets sont souvent confidentiels. Ces témoignages sont partagés
             avec l'accord explicite de nos clients.
           </p>
@@ -161,7 +161,7 @@ export function TestimonialsSection() {
         </div>
 
         {/* Bottom ambient strip */}
-        <div className="reveal mt-14 flex items-center justify-center gap-6 text-ivory/20">
+        <div className="reveal mt-14 flex items-center justify-center gap-6 text-charcoal/25">
           <span className="h-px w-12 bg-current opacity-40" />
           <span className="text-[0.55rem] uppercase tracking-[0.3em]">Confidentialité garantie</span>
           <span className="h-px w-12 bg-current opacity-40" />

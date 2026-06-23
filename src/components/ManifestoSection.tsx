@@ -1,6 +1,6 @@
 export function ManifestoSection() {
   return (
-    <section className="relative overflow-hidden bg-charcoal text-ivory">
+    <section className="relative overflow-hidden bg-sand text-charcoal">
       {/* Top gradient line */}
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-bronze/40 to-transparent" />
 
@@ -27,7 +27,7 @@ export function ManifestoSection() {
           {/* Heading */}
           <div className="reveal">
             <h2
-              className="font-serif font-medium italic leading-[1.04] text-ivory"
+              className="font-serif font-medium italic leading-[1.04] text-charcoal"
               style={{ fontSize: "clamp(1.75rem, 3.2vw, 2.75rem)" }}
             >
               Le luxe ne se limite pas à l'apparence.
@@ -37,7 +37,7 @@ export function ManifestoSection() {
 
           {/* Body text */}
           <div className="reveal lg:border-l lg:border-bronze/15 lg:pl-12">
-            <p className="text-sm leading-[1.9] text-ivory/55">
+            <p className="text-sm leading-[1.9] text-charcoal/60">
               Une villa d'exception doit être belle, intelligente, confortable et
               techniquement maîtrisée. Notre rôle est d'orchestrer chaque détail
               pour créer des lieux uniques, durables et inspirants.
@@ -56,7 +56,7 @@ export function ManifestoSection() {
             </p>
             <div className="flex flex-col items-start gap-1 lg:items-end">
               <span className="h-px w-8 bg-bronze/40" />
-              <span className="text-[0.52rem] uppercase tracking-[0.26em] text-ivory/30">
+              <span className="text-[0.52rem] uppercase tracking-[0.26em] text-charcoal/35">
                 Fondateur, Ouidesign
               </span>
             </div>
@@ -64,7 +64,7 @@ export function ManifestoSection() {
         </div>
 
         {/* Bottom ambient strip */}
-        <div className="reveal mt-10 flex items-center gap-5 text-ivory/20 lg:mt-12">
+        <div className="reveal mt-10 flex items-center gap-5 text-charcoal/25 lg:mt-12">
           <span className="text-[0.52rem] uppercase tracking-[0.28em]">Marrakech, Maroc</span>
           <span className="h-px w-5 bg-current opacity-40" />
           <span className="text-[0.52rem] uppercase tracking-[0.28em]">Architecture · Technique · Esthétique</span>

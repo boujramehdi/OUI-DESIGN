@@ -160,24 +160,24 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
         </div>
       </section>
 
-      {/* Deliverables — dark bg */}
-      <section className="bg-charcoal text-ivory">
+      {/* Deliverables — sand bg */}
+      <section className="bg-sand text-charcoal">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
           <div className="mb-12 flex items-end justify-between">
             <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Livrables</p>
             <span className="h-px flex-1 mx-8 bg-bronze/15" />
-            <p className="font-serif text-2xl text-ivory/20">{String(service.deliverables.length).padStart(2, "0")}</p>
+            <p className="font-serif text-2xl text-charcoal/25">{String(service.deliverables.length).padStart(2, "0")}</p>
           </div>
           <div className="grid gap-px bg-bronze/10 md:grid-cols-2 lg:grid-cols-4">
             {service.deliverables.map((deliverable, index) => (
-              <article key={deliverable} className="group relative overflow-hidden bg-charcoal p-8 transition-colors duration-300 hover:bg-[#1a1714]">
+              <article key={deliverable} className="group relative overflow-hidden bg-ivory p-8 transition-colors duration-300 hover:bg-[#cbb89a]">
                 {/* Background number */}
-                <span className="absolute -right-2 -top-3 font-serif text-[5rem] font-medium leading-none text-ivory/[0.03] transition-colors duration-300 group-hover:text-bronze/[0.06] select-none">
+                <span className="absolute -right-2 -top-3 font-serif text-[5rem] font-medium leading-none text-charcoal/[0.03] transition-colors duration-300 group-hover:text-bronze/[0.06] select-none">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 {/* Bronze line — grows on hover */}
                 <div className="mb-6 h-px w-6 bg-bronze/50 transition-all duration-500 group-hover:w-12 group-hover:bg-bronze" />
-                <h3 className="relative font-serif text-xl leading-tight text-ivory transition-colors duration-300 group-hover:text-ivory sm:text-2xl">
+                <h3 className="relative font-serif text-xl leading-tight text-charcoal transition-colors duration-300 group-hover:text-charcoal sm:text-2xl">
                   {deliverable}
                 </h3>
               </article>

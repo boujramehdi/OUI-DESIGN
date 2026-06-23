@@ -32,7 +32,7 @@ const stepIcons = [
 
 export function ProcessSection() {
   return (
-    <section className="bg-charcoal text-ivory overflow-hidden">
+    <section className="bg-sand text-charcoal overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
 
         {/* Header */}
@@ -43,7 +43,7 @@ export function ProcessSection() {
               Une approche claire<br className="hidden sm:block" /> et maîtrisée.
             </h2>
           </div>
-          <p className="max-w-xs text-sm leading-7 text-ivory/45 lg:text-right">
+          <p className="max-w-xs text-sm leading-7 text-charcoal/50 lg:text-right">
             Chaque projet suit la même rigueur — du premier diagnostic à la livraison finale.
           </p>
         </div>
@@ -53,7 +53,7 @@ export function ProcessSection() {
           {processSteps.map((step, index) => (
             <article
               key={step.title}
-              className="group relative flex flex-col bg-charcoal px-5 py-6 transition-colors duration-300 hover:bg-[#1a1714] sm:px-6 sm:py-8 md:px-7 md:py-10"
+              className="group relative flex flex-col bg-ivory px-5 py-6 transition-colors duration-300 hover:bg-[#cbb89a] sm:px-6 sm:py-8 md:px-7 md:py-10"
             >
               {/* Top: number + icon */}
               <div className="flex items-start justify-between">
@@ -69,10 +69,10 @@ export function ProcessSection() {
               <div className="mt-6 h-px w-8 bg-bronze/30 transition-all duration-500 group-hover:w-full group-hover:bg-bronze/50" />
 
               {/* Text */}
-              <h3 className="mt-5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-ivory/90">
+              <h3 className="mt-5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-charcoal/90">
                 {step.title}
               </h3>
-              <p className="mt-3 flex-1 text-xs leading-6 text-ivory/45 transition-colors duration-300 group-hover:text-ivory/65">
+              <p className="mt-3 flex-1 text-xs leading-6 text-charcoal/50 transition-colors duration-300 group-hover:text-charcoal/70">
                 {step.description}
               </p>
             </article>

@@ -102,18 +102,18 @@ export default function RealisationsPage() {
         text="Les projets Ouidesign sont souvent confidentiels. Cette page présente les typologies d'intervention et les standards appliqués à chaque propriété."
       />
 
-      {/* Stats — dark */}
-      <section className="bg-charcoal text-ivory">
+      {/* Stats — sand */}
+      <section className="bg-sand text-charcoal">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
           <div className="grid grid-cols-2 gap-px bg-bronze/10 lg:grid-cols-4">
             {stats.map((stat) => (
-              <div key={stat.label} className="group relative overflow-hidden bg-charcoal px-8 py-10 text-center transition-colors duration-500 hover:bg-[#1c1915]">
+              <div key={stat.label} className="group relative overflow-hidden bg-ivory px-8 py-10 text-center transition-colors duration-500 hover:bg-[#cbb89a]">
                 {/* Top pin line drops on hover */}
                 <div className="absolute left-1/2 top-0 h-0 w-px -translate-x-1/2 bg-bronze transition-all duration-500 group-hover:h-8" />
                 <p className="font-serif text-5xl font-medium text-bronze transition-transform duration-500 group-hover:scale-110 sm:text-6xl">
                   {stat.value}
                 </p>
-                <p className="mt-3 text-[0.6rem] uppercase tracking-[0.28em] text-ivory/50 transition-colors duration-300 group-hover:text-ivory/80">
+                <p className="mt-3 text-[0.6rem] uppercase tracking-[0.28em] text-charcoal/55 transition-colors duration-300 group-hover:text-charcoal/85">
                   {stat.label}
                 </p>
                 {/* Bottom pin line drops on hover */}
@@ -198,7 +198,7 @@ export default function RealisationsPage() {
       </section>
 
       {/* Notre standard */}
-      <section className="bg-charcoal text-ivory">
+      <section className="bg-sand text-charcoal">
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
           <div className="mb-14 lg:grid lg:grid-cols-[1fr_2fr] lg:gap-16 lg:items-end">
             <div>
@@ -209,7 +209,7 @@ export default function RealisationsPage() {
                 La réalisation doit être aussi précise que l'intention.
               </h2>
             </div>
-            <p className="mt-4 text-sm leading-7 text-ivory/55 lg:mt-0 lg:max-w-2xl">
+            <p className="mt-4 text-sm leading-7 text-charcoal/60 lg:mt-0 lg:max-w-2xl">
               Chaque décision visible renvoie à une décision invisible : alimentation, réseau,
               maintenance, ventilation, accès, sécurité, confort thermique et durabilité. Voici
               ce que nous appliquons à chaque projet, quelle qu'en soit l'échelle.
@@ -217,12 +217,12 @@ export default function RealisationsPage() {
           </div>
           <div className="grid gap-px bg-bronze/10 sm:grid-cols-2 lg:grid-cols-3">
             {standards.map((s) => (
-              <article key={s.title} className="reveal group relative overflow-hidden bg-charcoal p-8 transition-colors duration-500 hover:bg-[#1c1915] sm:p-9">
+              <article key={s.title} className="reveal group relative overflow-hidden bg-ivory p-8 transition-colors duration-500 hover:bg-[#cbb89a] sm:p-9">
                 {/* Top sweep */}
                 <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
                 <div className="mb-4 h-px w-8 bg-bronze transition-all duration-500 group-hover:w-full group-hover:bg-bronze/60" />
-                <h3 className="font-serif text-xl text-ivory transition-colors duration-300 group-hover:text-ivory sm:text-2xl">{s.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-ivory/55 transition-colors duration-300 group-hover:text-ivory/80">{s.description}</p>
+                <h3 className="font-serif text-xl text-charcoal transition-colors duration-300 group-hover:text-charcoal sm:text-2xl">{s.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-charcoal/60 transition-colors duration-300 group-hover:text-charcoal/85">{s.description}</p>
               </article>
             ))}
           </div>

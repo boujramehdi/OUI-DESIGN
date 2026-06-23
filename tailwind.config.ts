@@ -9,14 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // PRD palette
-        ivory:   "#F9F6F0",   // Warm Sand Light — light section backgrounds
-        charcoal:"#0D0E10",   // Deep Obsidian Black — dark backgrounds, footer
-        bronze:  "#C5A880",   // Luxury Muted Gold — accent, buttons, borders
-        sand:    "#E5DFD5",   // Border Light Subtle — dividers on light sections
-        stone:   "#8A8A8A",   // Text Secondary Muted — sub-labels, tags
-        smoke:   "#F9F6F0",   // alias of ivory (kept for compatibility)
-        "dark-border": "#222428", // grid lines on dark sections
+        ivory:   "#F4EFE7",   // Warm Ivory — main backgrounds
+        charcoal:"#1C1C1A",   // Deep Charcoal — dark sections / titles
+        bronze:  "#B8925F",   // Muted Bronze — buttons / accents
+        sand:    "#D8C6AD",   // Soft Sand — cards / overlays
+        stone:   "#B8A58C",   // Stone Beige — dividers / secondary text
+        smoke:   "#F4EFE7",   // alias of ivory (kept for compatibility)
+        "dark-border": "#2A2A27", // grid lines on dark sections
       },
       fontFamily: {
         serif:     ["var(--font-cormorant)", '"Iowan Old Style"', "Georgia", "serif"],
@@ -24,8 +23,8 @@ const config: Config = {
         signature: ["var(--font-signature)", "cursive"],
       },
       boxShadow: {
-        line:   "inset 0 0 0 1px rgba(197,168,128,0.12)",
-        bronze: "0 24px 80px rgba(197,168,128,0.20)",
+        line:   "inset 0 0 0 1px rgba(184,146,95,0.12)",
+        bronze: "0 24px 80px rgba(184,146,95,0.20)",
       },
     },
   },
