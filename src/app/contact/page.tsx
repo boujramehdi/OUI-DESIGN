@@ -233,6 +233,7 @@ export default function ContactPage() {
                 label: "WhatsApp",
                 value: siteConfig.phone,
                 sub: "Réponse rapide, 7j/7",
+                cta: "Contacter",
                 href: whatsappHref(),
                 external: true,
               },
@@ -245,6 +246,7 @@ export default function ContactPage() {
                 label: "Téléphone",
                 value: siteConfig.phone,
                 sub: "Lun–Sam · 9h–19h",
+                cta: "Appeler",
                 href: `tel:${siteConfig.phone}`,
                 external: false,
               },
@@ -258,6 +260,7 @@ export default function ContactPage() {
                 label: "Email",
                 value: siteConfig.email,
                 sub: "Réponse sous 24h",
+                cta: "Écrire",
                 href: `mailto:${siteConfig.email}`,
                 external: false,
               },
@@ -271,7 +274,8 @@ export default function ContactPage() {
                 label: "Localisation",
                 value: "Maroc",
                 sub: "Palmeraie · Hivernage · Targa",
-                href: undefined as string | undefined,
+                cta: "Voir les zones",
+                href: "#zones" as string | undefined,
                 external: false,
               },
             ].map((method) => {
@@ -295,12 +299,10 @@ export default function ContactPage() {
                   </p>
                   <p className="mt-1.5 text-xs text-ivory/45">{method.sub}</p>
 
-                  {method.href && (
-                    <span className="mt-6 flex items-center gap-2 text-[0.58rem] uppercase tracking-[0.22em] text-bronze/50 transition-all duration-300 group-hover:gap-3 group-hover:text-bronze">
-                      Contacter
-                      <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-                    </span>
-                  )}
+                  <span className="mt-6 flex items-center gap-2 text-[0.58rem] uppercase tracking-[0.22em] text-bronze/50 transition-all duration-300 group-hover:gap-3 group-hover:text-bronze">
+                    {method.cta}
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  </span>
                 </div>
               );
 
@@ -436,7 +438,7 @@ export default function ContactPage() {
       </section>
 
       {/* Zone d'intervention */}
-      <section className="bg-charcoal text-ivory">
+      <section id="zones" className="bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
