@@ -37,18 +37,18 @@ const signature = Monsieur_La_Doulaise({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Ouidesign | Architecture intelligente pour villas à Marrakech",
+    default: "Ouidesign | Architecture intelligente pour villas au Maroc",
     template: "%s | Ouidesign",
   },
   description: siteConfig.description,
   applicationName: "Ouidesign",
   keywords: [
     "Ouidesign",
-    "rénovation villa Marrakech",
-    "domotique Marrakech",
-    "menuiserie sur mesure Marrakech",
-    "smart home Marrakech",
-    "architecture intérieure Marrakech",
+    "rénovation villa Maroc",
+    "domotique Maroc",
+    "menuiserie sur mesure Maroc",
+    "smart home Maroc",
+    "architecture intérieure Maroc",
   ],
   icons: {
     icon: "/favicon.png",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_MA",
     siteName: "Ouidesign",
-    title: "Ouidesign | Architecture intelligente pour villas à Marrakech",
+    title: "Ouidesign | Architecture intelligente pour villas au Maroc",
     description: siteConfig.description,
     images: [
       {

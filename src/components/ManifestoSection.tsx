@@ -65,7 +65,7 @@ export function ManifestoSection() {
 
         {/* Bottom ambient strip */}
         <div className="reveal mt-10 flex items-center gap-5 text-ivory/25 lg:mt-12">
-          <span className="text-[0.52rem] uppercase tracking-[0.28em]">Marrakech, Maroc</span>
+          <span className="text-[0.52rem] uppercase tracking-[0.28em]">Maroc</span>
           <span className="h-px w-5 bg-current opacity-40" />
           <span className="text-[0.52rem] uppercase tracking-[0.28em]">Architecture · Technique · Esthétique</span>
         </div>

@@ -20,7 +20,7 @@ export const productData: ProductData[] = [
   {
     slug: "lift-bar",
     images: ["/images/liftbar.png", "/images/liftbar-catalog.jpg"],
-    imageAlt: "Lift Bar Ouidesign — bar motorisé laque noir pour villa Marrakech",
+    imageAlt: "Lift Bar Ouidesign — bar motorisé laque noir pour villa Maroc",
     fit: "object-cover",
     tagline: "Le silence est le nouveau luxe.",
     details: [
@@ -29,26 +29,26 @@ export const productData: ProductData[] = [
       "Vérin électrique silencieux — ouverture < 30 dB",
       "Accueil bouteilles, verrerie & espace de réception",
       "Dimensions sur mesure — s'adapte à votre espace",
-      "Livraison & installation incluses à Marrakech",
+      "Livraison & installation incluses au Maroc",
     ],
     reviews: [
       {
         author: "Karim B.",
-        location: "Palmeraie, Marrakech",
+        location: "Palmeraie, Maroc",
         rating: 5,
         text: "Impressionnant. Nos invités sont stupéfaits à chaque soirée. Le mécanisme est d'une silenciosité parfaite et la laque noire est d'une profondeur rare.",
         date: "Mars 2026",
       },
       {
         author: "Sophie M.",
-        location: "Hivernage, Marrakech",
+        location: "Hivernage, Maroc",
         rating: 5,
         text: "Exactement ce que je cherchais pour ma villa : un objet qui disparaît et se révèle. Qualité irréprochable, livraison soignée et équipe très professionnelle.",
         date: "Janvier 2026",
       },
       {
         author: "Youssef A.",
-        location: "Guéliz, Marrakech",
+        location: "Guéliz, Maroc",
         rating: 5,
         text: "Le Lift Bar est devenu la pièce signature de mon salon. Investissement justifié, service client au top, et le résultat dépasse les attentes.",
         date: "Novembre 2025",
@@ -67,12 +67,12 @@ export const productData: ProductData[] = [
       "Vérin électrique ultra-silencieux — ouverture < 30 dB",
       "Format compact — idéal suites, riads & Airbnb",
       "Coloris personnalisables sur commande",
-      "Livraison & installation incluses à Marrakech",
+      "Livraison & installation incluses au Maroc",
     ],
     reviews: [
       {
         author: "Nadia R.",
-        location: "Riad, Médina de Marrakech",
+        location: "Riad, Médina de Maroc",
         rating: 5,
         text: "Parfait pour ma suite VIP. Le vert sarcelle s'harmonise parfaitement avec mes murs en tadelakt. Mes clients Airbnb en parlent dans tous leurs avis.",
         date: "Avril 2026",
@@ -103,14 +103,14 @@ export const productData: ProductData[] = [
     reviews: [
       {
         author: "Hassan O.",
-        location: "Targa, Marrakech",
+        location: "Targa, Maroc",
         rating: 5,
         text: "Un objet unique qui fait l'unanimité. En apparence un vieux fût, mais quand le mécanisme s'active... les regards sont stupéfaits. C'est de la magie pure.",
         date: "Mars 2026",
       },
       {
         author: "Isabelle D.",
-        location: "Agdal, Marrakech",
+        location: "Agdal, Maroc",
         rating: 5,
         text: "J'avais cherché quelque chose d'original pendant des mois. Le Bar Vintage d'Ouidesign a surpassé toutes mes attentes. Artisanat et technologie parfaitement mariés.",
         date: "Décembre 2025",
@@ -120,7 +120,7 @@ export const productData: ProductData[] = [
   {
     slug: "bureau-assis-debout",
     images: ["/images/bureau-marrakech.png"],
-    imageAlt: "Bureau assis-debout Ouidesign — motorisé pour villa Marrakech",
+    imageAlt: "Bureau assis-debout Ouidesign — motorisé pour villa Maroc",
     fit: "object-cover",
     tagline: "L'invitation à la performance.",
     details: [
@@ -129,19 +129,19 @@ export const productData: ProductData[] = [
       "Silencieux & connectiques discrètes intégrées",
       "Sur mesure — plateau personnalisable",
       "Structure acier revêtu noir mat",
-      "Livraison & montage inclus à Marrakech",
+      "Livraison & montage inclus au Maroc",
     ],
     reviews: [
       {
         author: "Omar K.",
-        location: "Palmeraie, Marrakech",
+        location: "Palmeraie, Maroc",
         rating: 5,
         text: "Travaille depuis chez moi et ce bureau a transformé mon espace de travail. Le mécanisme est fluide, silencieux et la qualité des matériaux est au rendez-vous.",
         date: "Janvier 2026",
       },
       {
         author: "Marianne T.",
-        location: "Guéliz, Marrakech",
+        location: "Guéliz, Maroc",
         rating: 4,
         text: "Très beau bureau, livraison parfaite et service impeccable. Légèrement plus de délai que prévu mais le résultat vaut l'attente.",
         date: "Octobre 2025",
@@ -151,7 +151,7 @@ export const productData: ProductData[] = [
   {
     slug: "cuisines-premium",
     images: ["/images/cuisine-premium.png"],
-    imageAlt: "Cuisine premium Ouidesign — sur mesure pour villas à Marrakech",
+    imageAlt: "Cuisine premium Ouidesign — sur mesure pour villas au Maroc",
     fit: "object-cover",
     tagline: "Une continuité parfaite.",
     details: [
@@ -165,7 +165,7 @@ export const productData: ProductData[] = [
     reviews: [
       {
         author: "Rachida A.",
-        location: "Hivernage, Marrakech",
+        location: "Hivernage, Maroc",
         rating: 5,
         text: "Notre cuisine est devenue la pièce maîtresse de la maison. Chaque détail est pensé, chaque matériau est choisi avec soin. Ouidesign a su lire notre espace mieux que nous.",
         date: "Février 2026",

@@ -29,20 +29,20 @@ export type Article = {
 
 export const articles: Article[] = [
   {
-    slug: "renovation-villa-marrakech-budget",
+    slug: "renovation-villa-maroc-budget",
     category: "Rénovation",
-    title: "Rénovation de villa à Marrakech : par où commencer et comment cadrer le budget ?",
+    title: "Rénovation de villa au Maroc : par où commencer et comment cadrer le budget ?",
     excerpt:
       "Avant de lancer des travaux, une lecture technique et architecturale du lieu est indispensable. Voici les étapes clés pour un projet maîtrisé.",
     date: "Juin 2026",
     readTime: "6 min",
     featuredImage: "/images/riad&villa.jpg",
-    featuredImageAlt: "Rénovation villa et riad haut de gamme à Marrakech par Ouidesign",
-    metaTitle: "Rénovation villa Marrakech : budget et étapes — Guide Ouidesign",
+    featuredImageAlt: "Rénovation villa et riad haut de gamme au Maroc par Ouidesign",
+    metaTitle: "Rénovation villa Maroc : budget et étapes — Guide Ouidesign",
     metaDescription:
-      "Comment cadrer et budgéter une rénovation de villa ou riad à Marrakech ? Diagnostic, priorités techniques et conseils d'experts Ouidesign.",
+      "Comment cadrer et budgéter une rénovation de villa ou riad au Maroc ? Diagnostic, priorités techniques et conseils d'experts Ouidesign.",
     intro:
-      "Rénover une villa à Marrakech est une décision importante qui engage un budget conséquent et mobilise des mois de travaux. Le piège le plus courant : lancer les travaux sans avoir fait un diagnostic sérieux du bien. On découvre alors des surprises — humidité cachée, électricité non conforme, réseau d'eau défaillant — qui font exploser le budget initial. Voici comment aborder une rénovation avec méthode.",
+      "Rénover une villa au Maroc est une décision importante qui engage un budget conséquent et mobilise des mois de travaux. Le piège le plus courant : lancer les travaux sans avoir fait un diagnostic sérieux du bien. On découvre alors des surprises — humidité cachée, électricité non conforme, réseau d'eau défaillant — qui font exploser le budget initial. Voici comment aborder une rénovation avec méthode.",
     sections: [
       {
         heading: "Commencer par un diagnostic complet, pas par les finitions",
@@ -59,9 +59,9 @@ export const articles: Article[] = [
         ],
       },
       {
-        heading: "Cadrer le budget de rénovation à Marrakech",
+        heading: "Cadrer le budget de rénovation au Maroc",
         paragraphs: [
-          "À Marrakech, une rénovation haut de gamme de villa se situe généralement entre 3 000 et 8 000 dirhams le mètre carré selon l'état du bien, le niveau de finition souhaité et les équipements intégrés. Ce chiffre inclut la main-d'œuvre, les matériaux et la coordination, mais pas le mobilier.",
+          "Au Maroc, une rénovation haut de gamme de villa se situe généralement entre 3 000 et 8 000 dirhams le mètre carré selon l'état du bien, le niveau de finition souhaité et les équipements intégrés. Ce chiffre inclut la main-d'œuvre, les matériaux et la coordination, mais pas le mobilier.",
           "Il est sage de prévoir une réserve de 15 à 20 % du budget total pour les imprévus. Les villas anciennes de la Médina ou de la Palmeraie réservent souvent des surprises structurelles ou hydrauliques que personne ne peut anticiper avant d'ouvrir les murs.",
           "Un budget bien cadré distingue trois enveloppes : le nécessaire (ce qui est défaillant ou non conforme), le confort (climatisation, domotique, menuiserie), et l'esthétique (finitions, mobilier, décoration). Cette hiérarchie protège contre les arbitrages difficiles en cours de chantier.",
         ],
@@ -82,16 +82,16 @@ export const articles: Article[] = [
       },
     ],
     conclusion:
-      "Rénover une villa à Marrakech est un projet qui mérite autant de soin dans sa préparation que dans son exécution. Le diagnostic initial, la hiérarchisation des travaux et la coordination des équipes sont les trois piliers d'une rénovation réussie. Le reste — les matières, les couleurs, les luminaires — vient compléter une base solide.",
+      "Rénover une villa au Maroc est un projet qui mérite autant de soin dans sa préparation que dans son exécution. Le diagnostic initial, la hiérarchisation des travaux et la coordination des équipes sont les trois piliers d'une rénovation réussie. Le reste — les matières, les couleurs, les luminaires — vient compléter une base solide.",
     relatedSlugs: [
-      "smart-home-villa-marrakech-guide",
+      "smart-home-villa-maroc-guide",
       "menuiserie-sur-mesure-villa",
       "climatisation-villa-haut-de-gamme",
     ],
     relatedServices: [
       {
         title: "Rénovation Villas & Riads",
-        href: "/renovation-villa-marrakech",
+        href: "/renovation-villa-maroc",
         description: "Transformation complète avec coordination architecture, technique et finitions.",
       },
       {
@@ -101,26 +101,26 @@ export const articles: Article[] = [
       },
       {
         title: "Smart Home & Domotique",
-        href: "/smart-home-marrakech",
+        href: "/smart-home-maroc",
         description: "Intégrez la domotique dès la rénovation pour un résultat optimal.",
       },
     ],
   },
   {
-    slug: "smart-home-villa-marrakech-guide",
+    slug: "smart-home-villa-maroc-guide",
     category: "Domotique",
-    title: "Smart home pour villa à Marrakech : ce qu'il faut anticiper dès la rénovation",
+    title: "Smart home pour villa au Maroc : ce qu'il faut anticiper dès la rénovation",
     excerpt:
       "Câblage, réseau, scénarios lumière et climatisation : comment intégrer la domotique sans reprendre les murs après coup.",
     date: "Juin 2026",
     readTime: "5 min",
     featuredImage: "/images/Home-smart.png",
-    featuredImageAlt: "Installation smart home et domotique pour villa à Marrakech",
-    metaTitle: "Smart Home villa Marrakech : guide domotique — Ouidesign",
+    featuredImageAlt: "Installation smart home et domotique pour villa au Maroc",
+    metaTitle: "Smart Home villa Maroc : guide domotique — Ouidesign",
     metaDescription:
-      "Comment préparer et intégrer un système domotique dans une villa à Marrakech ? Réseau, câblage, scénarios et choix des systèmes : le guide complet.",
+      "Comment préparer et intégrer un système domotique dans une villa au Maroc ? Réseau, câblage, scénarios et choix des systèmes : le guide complet.",
     intro:
-      "La maison intelligente n'est pas une gadgeterie réservée aux appartements de luxe urbains. À Marrakech, avec la chaleur, les coupures de courant fréquentes et les villas souvent de grande surface, la domotique est une réponse concrète à des problèmes réels de confort, d'économie d'énergie et de sécurité. Mais elle se prépare, pas s'improvise.",
+      "La maison intelligente n'est pas une gadgeterie réservée aux appartements de luxe urbains. Au Maroc, avec la chaleur, les coupures de courant fréquentes et les villas souvent de grande surface, la domotique est une réponse concrète à des problèmes réels de confort, d'économie d'énergie et de sécurité. Mais elle se prépare, pas s'improvise.",
     sections: [
       {
         heading: "La domotique n'est pas un produit, c'est une infrastructure",
@@ -132,14 +132,14 @@ export const articles: Article[] = [
       {
         heading: "Le réseau informatique : le socle de tout le reste",
         paragraphs: [
-          "Avant de parler de domotique, il faut parler de réseau. Une villa de 400 m² à Marrakech a besoin d'un réseau WiFi maillé bien dimensionné pour ne pas avoir de zones mortes. Chaque pièce devrait avoir au minimum une prise RJ45 câblée pour les équipements critiques — TV, centrale domotique, enceintes — et des points d'accès WiFi correctement positionnés.",
+          "Avant de parler de domotique, il faut parler de réseau. Une villa de 400 m² au Maroc a besoin d'un réseau WiFi maillé bien dimensionné pour ne pas avoir de zones mortes. Chaque pièce devrait avoir au minimum une prise RJ45 câblée pour les équipements critiques — TV, centrale domotique, enceintes — et des points d'accès WiFi correctement positionnés.",
           "Un réseau mal pensé rend tous les équipements intelligents instables. L'interface domotique rame, les scénarios ne se déclenchent pas, les caméras se déconnectent. La qualité du réseau conditionne la qualité de toute l'expérience.",
         ],
       },
       {
         heading: "Lumière, stores, climatisation : les trois scénarios essentiels",
         paragraphs: [
-          "Un système domotique bien calibré pour une villa à Marrakech couvre au minimum trois dimensions. La lumière : scénarios d'ambiance pour le salon, la terrasse, le couloir la nuit, et les extérieurs. Les stores motorisés : programmation selon l'ensoleillement, la chaleur, ou le mode vacances. La climatisation : pilotage à distance, programmation nocturne, et gestion par zone.",
+          "Un système domotique bien calibré pour une villa au Maroc couvre au minimum trois dimensions. La lumière : scénarios d'ambiance pour le salon, la terrasse, le couloir la nuit, et les extérieurs. Les stores motorisés : programmation selon l'ensoleillement, la chaleur, ou le mode vacances. La climatisation : pilotage à distance, programmation nocturne, et gestion par zone.",
           "Ces trois domaines suffisent à transformer le confort quotidien d'une villa. Ils représentent aussi 80 % des demandes de nos clients qui passent à la domotique.",
         ],
       },
@@ -159,43 +159,43 @@ export const articles: Article[] = [
       },
     ],
     conclusion:
-      "La domotique pour villa à Marrakech n'est plus un luxe réservé à quelques propriétés d'exception. C'est une réponse technique concrète à des enjeux réels de confort, de sécurité et d'efficacité énergétique. Sa réussite tient dans la qualité de la préparation — réseau, câblage, choix du système — bien avant celle des équipements visibles.",
+      "La domotique pour villa au Maroc n'est plus un luxe réservé à quelques propriétés d'exception. C'est une réponse technique concrète à des enjeux réels de confort, de sécurité et d'efficacité énergétique. Sa réussite tient dans la qualité de la préparation — réseau, câblage, choix du système — bien avant celle des équipements visibles.",
     relatedSlugs: [
-      "renovation-villa-marrakech-budget",
-      "solaire-villa-marrakech",
+      "renovation-villa-maroc-budget",
+      "solaire-villa-maroc",
       "climatisation-villa-haut-de-gamme",
     ],
     relatedServices: [
       {
         title: "Smart Home & Domotique",
-        href: "/smart-home-marrakech",
+        href: "/smart-home-maroc",
         description: "Scénarios lumière, climatisation, accès et énergie réunis dans une interface simple.",
       },
       {
         title: "Sécurité & Caméras",
-        href: "/camera-surveillance-marrakech",
+        href: "/camera-surveillance-maroc",
         description: "Caméras, alarmes et contrôle d'accès intégrés à votre système domotique.",
       },
       {
         title: "Solaire & Infrastructure",
-        href: "/solaire-villa-marrakech",
+        href: "/solaire-villa-maroc",
         description: "Infrastructure réseau et énergie pour une villa autonome et connectée.",
       },
     ],
   },
   {
-    slug: "piscine-locale-technique-marrakech",
+    slug: "piscine-locale-technique-maroc",
     category: "Piscine",
     title: "Local technique piscine : pourquoi c'est la pièce la plus importante de votre propriété",
     excerpt:
       "La qualité d'une piscine dépend à 70% de ce qui se passe dans le local technique. Filtration, sécurité, maintenance : le guide complet.",
     date: "Mai 2026",
     featuredImage: "/images/piscine.jpg",
-    featuredImageAlt: "Piscine et local technique pour villa à Marrakech par Ouidesign",
+    featuredImageAlt: "Piscine et local technique pour villa au Maroc par Ouidesign",
     readTime: "7 min",
-    metaTitle: "Local technique piscine Marrakech : guide complet — Ouidesign",
+    metaTitle: "Local technique piscine Maroc : guide complet — Ouidesign",
     metaDescription:
-      "Pourquoi un local technique piscine bien conçu est essentiel pour une villa à Marrakech ? Filtration, sécurité électrique, accès maintenance et longévité des équipements.",
+      "Pourquoi un local technique piscine bien conçu est essentiel pour une villa au Maroc ? Filtration, sécurité électrique, accès maintenance et longévité des équipements.",
     intro:
       "Quand on parle de piscine dans une villa, on pense au bassin, aux margelles, à l'éclairage et au revêtement. Rarement au local technique. Pourtant, c'est lui qui conditionne la qualité de l'eau, la longévité des équipements, la facilité de maintenance et la sécurité électrique de l'ensemble. Un beau bassin avec un mauvais local technique, c'est une belle voiture sans moteur.",
     sections: [
@@ -216,7 +216,7 @@ export const articles: Article[] = [
       {
         heading: "Dimensionner correctement la filtration",
         paragraphs: [
-          "La règle de base : le volume total du bassin doit être filtré en 4 à 6 heures. Pour un bassin de 60 m³, cela signifie une pompe capable de traiter 10 à 15 m³/heure. À Marrakech, avec des températures qui favorisent la prolifération des algues en été, il vaut mieux être au-dessus de la fourchette basse.",
+          "La règle de base : le volume total du bassin doit être filtré en 4 à 6 heures. Pour un bassin de 60 m³, cela signifie une pompe capable de traiter 10 à 15 m³/heure. Au Maroc, avec des températures qui favorisent la prolifération des algues en été, il vaut mieux être au-dessus de la fourchette basse.",
           "Le type de filtre compte aussi. Le filtre à sable est le plus répandu et le moins cher à l'achat, mais nécessite des contre-lavages réguliers. Le filtre à diatomées offre une filtration plus fine mais un entretien plus technique. Le filtre à cartouche est silencieux et efficace mais les cartouches représentent un coût récurrent.",
         ],
       },
@@ -224,7 +224,7 @@ export const articles: Article[] = [
         heading: "Électricité et sécurité : les normes à respecter",
         paragraphs: [
           "Un local technique piscine est un environnement humide. La norme électrique impose des volumes de protection autour du bassin, des disjoncteurs différentiels 30mA, une mise à la terre de l'ensemble des équipements et une alimentation sur tableau dédié.",
-          "En pratique, beaucoup d'installations à Marrakech ne respectent pas ces normes. Ce n'est pas anodin : un défaut d'isolation dans une piscine peut être mortel. C'est la première chose à vérifier avant d'acheter une villa avec piscine existante.",
+          "En pratique, beaucoup d'installations au Maroc ne respectent pas ces normes. Ce n'est pas anodin : un défaut d'isolation dans une piscine peut être mortel. C'est la première chose à vérifier avant d'acheter une villa avec piscine existante.",
         ],
       },
       {
@@ -238,24 +238,24 @@ export const articles: Article[] = [
     conclusion:
       "Un local technique piscine bien conçu est un investissement invisible qui se remarque à l'usage : eau claire toute l'année, maintenance rapide, équipements qui durent. C'est la différence entre une piscine qui fait la fierté de la propriété et une piscine qui devient une source de problèmes récurrents.",
     relatedSlugs: [
-      "renovation-villa-marrakech-budget",
-      "solaire-villa-marrakech",
-      "smart-home-villa-marrakech-guide",
+      "renovation-villa-maroc-budget",
+      "solaire-villa-maroc",
+      "smart-home-villa-maroc-guide",
     ],
     relatedServices: [
       {
         title: "Piscines & Locaux Techniques",
-        href: "/piscine-local-technique-marrakech",
-        description: "Création, rénovation, filtration et local technique pour villas à Marrakech.",
+        href: "/piscine-local-technique-maroc",
+        description: "Création, rénovation, filtration et local technique pour villas au Maroc.",
       },
       {
         title: "Rénovation Villas & Riads",
-        href: "/renovation-villa-marrakech",
+        href: "/renovation-villa-maroc",
         description: "Coordination complète des travaux de votre propriété.",
       },
       {
         title: "Smart Home & Domotique",
-        href: "/smart-home-marrakech",
+        href: "/smart-home-maroc",
         description: "Pilotez votre piscine et vos équipements depuis votre téléphone.",
       },
     ],
@@ -263,30 +263,30 @@ export const articles: Article[] = [
   {
     slug: "menuiserie-sur-mesure-villa",
     category: "Menuiserie",
-    title: "Menuiserie sur mesure : comment choisir ses matériaux pour le climat de Marrakech",
+    title: "Menuiserie sur mesure : comment choisir ses matériaux pour le climat du Maroc",
     excerpt:
       "Entre chaleur, humidité saisonnière et exigences esthétiques, le choix du bois, des finitions et de la quincaillerie est stratégique.",
     date: "Mai 2026",
     featuredImage: "/images/menuiserie-dressing.png",
-    featuredImageAlt: "Menuiserie sur mesure et dressing premium pour villa à Marrakech par Ouidesign",
+    featuredImageAlt: "Menuiserie sur mesure et dressing premium pour villa au Maroc par Ouidesign",
     readTime: "5 min",
-    metaTitle: "Menuiserie sur mesure villa Marrakech : guide matériaux — Ouidesign",
+    metaTitle: "Menuiserie sur mesure villa Maroc : guide matériaux — Ouidesign",
     metaDescription:
-      "Quels bois, finitions et quincailleries choisir pour une menuiserie sur mesure durable à Marrakech ? Les conseils d'Ouidesign pour un résultat premium et résistant.",
+      "Quels bois, finitions et quincailleries choisir pour une menuiserie sur mesure durable au Maroc ? Les conseils d'Ouidesign pour un résultat premium et résistant.",
     intro:
-      "La menuiserie sur mesure est l'une des choses qui définissent le niveau d'une villa de l'intérieur. Dressings alignés au millimètre, portes silencieuses et équilibrées, bibliothèques qui épousent un mur entier : c'est ce que les visiteurs remarquent sans forcément savoir pourquoi. Mais à Marrakech, le choix des matériaux est crucial — le climat est exigeant, et une menuiserie mal adaptée se déforme, gonfle ou se fissure en quelques années.",
+      "La menuiserie sur mesure est l'une des choses qui définissent le niveau d'une villa de l'intérieur. Dressings alignés au millimètre, portes silencieuses et équilibrées, bibliothèques qui épousent un mur entier : c'est ce que les visiteurs remarquent sans forcément savoir pourquoi. Mais au Maroc, le choix des matériaux est crucial — le climat est exigeant, et une menuiserie mal adaptée se déforme, gonfle ou se fissure en quelques années.",
     sections: [
       {
-        heading: "Le défi du climat marrakchi pour le bois",
+        heading: "Le défi du climat marocain pour le bois",
         paragraphs: [
-          "Marrakech a un climat semi-aride avec des étés très secs et chauds, et des hivers où l'humidité peut être surprenante. Cette variation entre saison sèche et humide est ce qui fatigue le bois. Le bois massif non traité travaille — il gonfle en hiver et se rétracte en été — ce qui peut provoquer des déformations, des joints qui s'ouvrent ou des portes qui coincent.",
+          "Le Maroc a un climat semi-aride avec des étés très secs et chauds, et des hivers où l'humidité peut être surprenante. Cette variation entre saison sèche et humide est ce qui fatigue le bois. Le bois massif non traité travaille — il gonfle en hiver et se rétracte en été — ce qui peut provoquer des déformations, des joints qui s'ouvrent ou des portes qui coincent.",
           "La solution n'est pas d'éviter le bois, c'est de bien le choisir et de bien le traiter.",
         ],
       },
       {
         heading: "Bois massif vs panneaux dérivés : quoi choisir et quand",
         paragraphs: [
-          "Le bois massif est noble, durable et réparable. Il est adapté aux pièces d'apparat — portes principales, éléments sculptés, boiseries murales — où son aspect authentique est valorisé. Mais il exige une essence stable et un traitement de qualité. Le noyer, le chêne et le teck sont parmi les essences les plus adaptées au climat de Marrakech.",
+          "Le bois massif est noble, durable et réparable. Il est adapté aux pièces d'apparat — portes principales, éléments sculptés, boiseries murales — où son aspect authentique est valorisé. Mais il exige une essence stable et un traitement de qualité. Le noyer, le chêne et le teck sont parmi les essences les plus adaptées au climat du Maroc.",
           "Les panneaux dérivés — MDF, contreplaqué, panneau de particules — sont plus stables dimensionnellement et moins coûteux. Ils sont idéaux pour les structures de dressings, les corps d'armoires, les faux plafonds en bois et les éléments où la façade de finition (placage, laque, stratifié) est ce qui compte. La quincaillerie cachera les chants et les fixations.",
         ],
       },
@@ -306,20 +306,20 @@ export const articles: Article[] = [
       },
     ],
     conclusion:
-      "La menuiserie sur mesure à Marrakech est une décision qui s'étale sur des décennies. Bien choisie, elle vieillit bien, résiste au climat et s'apprécie chaque jour. Mal choisie, elle devient une source de déceptions et de reprises coûteuses. Le choix des matériaux, des finitions et de la quincaillerie mérite la même attention que le design lui-même.",
+      "La menuiserie sur mesure au Maroc est une décision qui s'étale sur des décennies. Bien choisie, elle vieillit bien, résiste au climat et s'apprécie chaque jour. Mal choisie, elle devient une source de déceptions et de reprises coûteuses. Le choix des matériaux, des finitions et de la quincaillerie mérite la même attention que le design lui-même.",
     relatedSlugs: [
-      "renovation-villa-marrakech-budget",
-      "smart-home-villa-marrakech-guide",
+      "renovation-villa-maroc-budget",
+      "smart-home-villa-maroc-guide",
     ],
     relatedServices: [
       {
         title: "Menuiserie Sur Mesure",
-        href: "/menuiserie-sur-mesure-marrakech",
+        href: "/menuiserie-sur-mesure-maroc",
         description: "Dressings, portes, bibliothèques et rangements dessinés pour votre espace.",
       },
       {
         title: "Rénovation Villas & Riads",
-        href: "/renovation-villa-marrakech",
+        href: "/renovation-villa-maroc",
         description: "La menuiserie intégrée dans une rénovation complète et cohérente.",
       },
       {
@@ -330,26 +330,26 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "solaire-villa-marrakech",
+    slug: "solaire-villa-maroc",
     category: "Infrastructure",
-    title: "Solaire pour villa à Marrakech : dimensionnement, stockage et retour sur investissement",
+    title: "Solaire pour villa au Maroc : dimensionnement, stockage et retour sur investissement",
     excerpt:
-      "Le solaire est pertinent à Marrakech, mais il doit être étudié sérieusement. Voici les questions à poser avant tout projet.",
+      "Le solaire est pertinent au Maroc, mais il doit être étudié sérieusement. Voici les questions à poser avant tout projet.",
     date: "Avril 2026",
     readTime: "6 min",
     featuredImage: "/images/solaire-infrastruction.jpg",
-    featuredImageAlt: "Infrastructure solaire pour villa à Marrakech — installation Ouidesign",
-    metaTitle: "Solaire villa Marrakech : dimensionnement et ROI — Ouidesign",
+    featuredImageAlt: "Infrastructure solaire pour villa au Maroc — installation Ouidesign",
+    metaTitle: "Solaire villa Maroc : dimensionnement et ROI — Ouidesign",
     metaDescription:
-      "Comment dimensionner une installation solaire pour une villa à Marrakech ? Stockage, retour sur investissement et intégration avec la domotique : le guide Ouidesign.",
+      "Comment dimensionner une installation solaire pour une villa au Maroc ? Stockage, retour sur investissement et intégration avec la domotique : le guide Ouidesign.",
     intro:
-      "Marrakech bénéficie d'un ensoleillement exceptionnel — plus de 3 000 heures de soleil par an, parmi les meilleurs au monde pour le photovoltaïque. Pourtant, beaucoup d'installations solaires dans les villas déçoivent : production surestimée, réseau électrique non préparé, stockage mal dimensionné. Le solaire est pertinent, mais il mérite une étude sérieuse.",
+      "Le Maroc bénéficie d'un ensoleillement exceptionnel — plus de 3 000 heures de soleil par an, parmi les meilleurs au monde pour le photovoltaïque. Pourtant, beaucoup d'installations solaires dans les villas déçoivent : production surestimée, réseau électrique non préparé, stockage mal dimensionné. Le solaire est pertinent, mais il mérite une étude sérieuse.",
     sections: [
       {
         heading: "Évaluer les besoins réels avant de dimensionner",
         paragraphs: [
           "La première étape d'un projet solaire est un audit de consommation. Quelle est la consommation mensuelle en kWh ? Quels sont les équipements les plus énergivores — climatisation, piscine, chauffe-eau ? À quelle période de l'année la consommation est-elle la plus élevée ?",
-          "À Marrakech, la climatisation représente souvent 60 à 70 % de la consommation électrique d'une villa en été. C'est l'équipement le plus pertinent à alimenter en solaire, car il consomme le plus quand le soleil est le plus fort.",
+          "Au Maroc, la climatisation représente souvent 60 à 70 % de la consommation électrique d'une villa en été. C'est l'équipement le plus pertinent à alimenter en solaire, car il consomme le plus quand le soleil est le plus fort.",
         ],
       },
       {
@@ -362,14 +362,14 @@ export const articles: Article[] = [
       {
         heading: "Dimensionner correctement : puissance crête et surface nécessaire",
         paragraphs: [
-          "En pratique, une installation de 6 kWc (kilowatts-crête) — soit environ 15 à 18 panneaux standard — produit entre 9 000 et 10 000 kWh par an à Marrakech. C'est suffisant pour couvrir la consommation de base d'une villa de 300 m² sans piscine.",
+          "En pratique, une installation de 6 kWc (kilowatts-crête) — soit environ 15 à 18 panneaux standard — produit entre 9 000 et 10 000 kWh par an au Maroc. C'est suffisant pour couvrir la consommation de base d'une villa de 300 m² sans piscine.",
           "Pour une villa avec piscine, climatisation multi-split et éclairage extérieur, une installation de 10 à 15 kWc est plus adaptée. La surface de toiture disponible, son orientation (idéalement sud ou sud-ouest) et son ombrage potentiel sont les facteurs déterminants.",
         ],
       },
       {
         heading: "Le stockage par batteries : pertinent ou pas ?",
         paragraphs: [
-          "Les batteries lithium ont vu leur prix divisé par trois en cinq ans. Pour une villa à Marrakech, un système de stockage de 10 à 20 kWh peut assurer une autonomie nocturne et couvrir les coupures courtes du réseau ONEE — fréquentes dans certains quartiers.",
+          "Les batteries lithium ont vu leur prix divisé par trois en cinq ans. Pour une villa au Maroc, un système de stockage de 10 à 20 kWh peut assurer une autonomie nocturne et couvrir les coupures courtes du réseau ONEE — fréquentes dans certains quartiers.",
           "Le retour sur investissement d'un système avec stockage est de 7 à 10 ans selon les prix de l'électricité et le taux d'utilisation. Sans stockage, il descend à 5 à 7 ans. Ces chiffres s'améliorent chaque année avec la baisse du coût des équipements.",
         ],
       },
@@ -382,26 +382,26 @@ export const articles: Article[] = [
       },
     ],
     conclusion:
-      "Le solaire pour villa à Marrakech est un investissement rentable et sensé. Mais il demande une étude sérieuse, une installation professionnelle et une intégration réfléchie dans l'infrastructure de la propriété. Évitez les devis au rabais et les promesses de production irréalistes : le solaire bien fait dure 25 ans.",
+      "Le solaire pour villa au Maroc est un investissement rentable et sensé. Mais il demande une étude sérieuse, une installation professionnelle et une intégration réfléchie dans l'infrastructure de la propriété. Évitez les devis au rabais et les promesses de production irréalistes : le solaire bien fait dure 25 ans.",
     relatedSlugs: [
-      "smart-home-villa-marrakech-guide",
-      "renovation-villa-marrakech-budget",
-      "piscine-locale-technique-marrakech",
+      "smart-home-villa-maroc-guide",
+      "renovation-villa-maroc-budget",
+      "piscine-locale-technique-maroc",
     ],
     relatedServices: [
       {
         title: "Solaire & Infrastructure",
-        href: "/solaire-villa-marrakech",
+        href: "/solaire-villa-maroc",
         description: "Énergie solaire, réseau et infrastructure technique pour votre villa.",
       },
       {
         title: "Smart Home & Domotique",
-        href: "/smart-home-marrakech",
+        href: "/smart-home-maroc",
         description: "Optimisez votre consommation solaire avec des scénarios intelligents.",
       },
       {
         title: "Climatisation",
-        href: "/climatisation-marrakech",
+        href: "/climatisation-maroc",
         description: "Intégrez la climatisation dans votre stratégie énergétique solaire.",
       },
     ],
@@ -415,12 +415,12 @@ export const articles: Article[] = [
     date: "Avril 2026",
     readTime: "4 min",
     featuredImage: "/images/climatisation.jpg",
-    featuredImageAlt: "Climatisation premium intégrée pour villa haut de gamme à Marrakech",
-    metaTitle: "Climatisation premium villa Marrakech : guide complet — Ouidesign",
+    featuredImageAlt: "Climatisation premium intégrée pour villa haut de gamme au Maroc",
+    metaTitle: "Climatisation premium villa Maroc : guide complet — Ouidesign",
     metaDescription:
-      "Comment choisir et intégrer une climatisation premium pour villa à Marrakech ? Silence, puissance, esthétique et domotique : les conseils d'Ouidesign.",
+      "Comment choisir et intégrer une climatisation premium pour villa au Maroc ? Silence, puissance, esthétique et domotique : les conseils d'Ouidesign.",
     intro:
-      "À Marrakech, la climatisation n'est pas un confort optionnel — c'est une nécessité fonctionnelle pour habiter confortablement une villa entre mai et septembre. Mais une climatisation mal choisie ou mal intégrée peut ruiner l'ambiance d'une pièce : bruit constant, courants d'air, unités intérieures mal positionnées, passages techniques disgracieux. Voici comment faire les bons choix.",
+      "Au Maroc, la climatisation n'est pas un confort optionnel — c'est une nécessité fonctionnelle pour habiter confortablement une villa entre mai et septembre. Mais une climatisation mal choisie ou mal intégrée peut ruiner l'ambiance d'une pièce : bruit constant, courants d'air, unités intérieures mal positionnées, passages techniques disgracieux. Voici comment faire les bons choix.",
     sections: [
       {
         heading: "Dimensionner selon les volumes, pas selon les habitudes",
@@ -452,26 +452,26 @@ export const articles: Article[] = [
       },
     ],
     conclusion:
-      "La climatisation d'une villa premium à Marrakech se conçoit comme tout le reste : avec soin, en amont, dans le cadre d'une réflexion globale sur le confort, l'esthétique et la maintenance. Un système bien dimensionné, silencieux et correctement intégré sera encore parfait dans quinze ans. Un système choisi à la va-vite sera une source d'irritation quotidienne.",
+      "La climatisation d'une villa premium au Maroc se conçoit comme tout le reste : avec soin, en amont, dans le cadre d'une réflexion globale sur le confort, l'esthétique et la maintenance. Un système bien dimensionné, silencieux et correctement intégré sera encore parfait dans quinze ans. Un système choisi à la va-vite sera une source d'irritation quotidienne.",
     relatedSlugs: [
-      "renovation-villa-marrakech-budget",
-      "smart-home-villa-marrakech-guide",
-      "solaire-villa-marrakech",
+      "renovation-villa-maroc-budget",
+      "smart-home-villa-maroc-guide",
+      "solaire-villa-maroc",
     ],
     relatedServices: [
       {
         title: "Climatisation",
-        href: "/climatisation-marrakech",
-        description: "Dimensionnement, intégration et confort thermique pour villas à Marrakech.",
+        href: "/climatisation-maroc",
+        description: "Dimensionnement, intégration et confort thermique pour villas au Maroc.",
       },
       {
         title: "Smart Home & Domotique",
-        href: "/smart-home-marrakech",
+        href: "/smart-home-maroc",
         description: "Pilotez votre climatisation par zone depuis votre téléphone.",
       },
       {
         title: "Rénovation Villas & Riads",
-        href: "/renovation-villa-marrakech",
+        href: "/renovation-villa-maroc",
         description: "Intégrez la climatisation proprement lors d'une rénovation complète.",
       },
     ],

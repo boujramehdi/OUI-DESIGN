@@ -7,7 +7,7 @@ import { whatsappHref } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contrat de prestation Ouidesign — Cadre et engagements",
   description:
-    "Découvrez le cadre contractuel Ouidesign : devis détaillé, bon de commande, jalons de paiement et engagements qualité pour votre projet de villa à Marrakech.",
+    "Découvrez le cadre contractuel Ouidesign : devis détaillé, bon de commande, jalons de paiement et engagements qualité pour votre projet de villa au Maroc.",
   alternates: {
     canonical: "/contrat",
   },
@@ -245,7 +245,7 @@ export default function ContratPage() {
             <div className="mt-8 flex shrink-0 flex-col gap-3 lg:mt-0">
               <Link
                 href={whatsappHref(
-                  "Bonjour Ouidesign, je souhaite recevoir un devis contractuel pour mon projet à Marrakech."
+                  "Bonjour Ouidesign, je souhaite recevoir un devis contractuel pour mon projet au Maroc."
                 )}
                 target="_blank"
                 className="inline-flex items-center gap-3 bg-bronze px-6 py-4 text-xs uppercase tracking-[0.18em] text-charcoal transition duration-300 hover:bg-ivory"

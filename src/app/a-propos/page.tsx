@@ -5,9 +5,9 @@ import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "À propos de Ouidesign — Architecture intelligente à Marrakech",
+  title: "À propos de Ouidesign — Architecture intelligente au Maroc",
   description:
-    "Ouidesign est une entreprise spécialisée dans la rénovation, l'architecture intérieure, la domotique et l'infrastructure pour villas et riads haut de gamme à Marrakech.",
+    "Ouidesign est une entreprise spécialisée dans la rénovation, l'architecture intérieure, la domotique et l'infrastructure pour villas et riads haut de gamme au Maroc.",
   alternates: {
     canonical: "/a-propos",
   },
@@ -37,14 +37,14 @@ const values = [
 ];
 
 const expertise = [
-  { label: "Rénovation complète de villas et riads", href: "/renovation-villa-marrakech", image: "/images/riad-courtyard.png" },
-  { label: "Architecture intérieure et direction esthétique", href: "/renovation-villa-marrakech#architecture", image: "/images/menuiserie-dressing.png" },
-  { label: "Menuiserie sur mesure et mobilier intégré", href: "/menuiserie-sur-mesure-marrakech", image: "/images/bureau-marrakech.png" },
-  { label: "Smart home, domotique et réseau", href: "/smart-home-marrakech", image: "/images/smart-home-2.png" },
-  { label: "Piscines et locaux techniques", href: "/piscine-local-technique-marrakech", image: "/images/piscine-sunset.png" },
-  { label: "Sécurité, caméras et contrôle d'accès", href: "/camera-surveillance-marrakech", image: "/images/securiter.jpg" },
-  { label: "Climatisation et confort thermique", href: "/climatisation-marrakech", image: "/images/Home-smart.png" },
-  { label: "Solaire et infrastructure durable", href: "/solaire-villa-marrakech", image: "/images/solaire-infrastruction.jpg" },
+  { label: "Rénovation complète de villas et riads", href: "/renovation-villa-maroc", image: "/images/riad-courtyard.png" },
+  { label: "Architecture intérieure et direction esthétique", href: "/renovation-villa-maroc#architecture", image: "/images/menuiserie-dressing.png" },
+  { label: "Menuiserie sur mesure et mobilier intégré", href: "/menuiserie-sur-mesure-maroc", image: "/images/bureau-marrakech.png" },
+  { label: "Smart home, domotique et réseau", href: "/smart-home-maroc", image: "/images/smart-home-2.png" },
+  { label: "Piscines et locaux techniques", href: "/piscine-local-technique-maroc", image: "/images/piscine-sunset.png" },
+  { label: "Sécurité, caméras et contrôle d'accès", href: "/camera-surveillance-maroc", image: "/images/securiter.jpg" },
+  { label: "Climatisation et confort thermique", href: "/climatisation-maroc", image: "/images/Home-smart.png" },
+  { label: "Solaire et infrastructure durable", href: "/solaire-villa-maroc", image: "/images/solaire-infrastruction.jpg" },
 ];
 
 export default function AProposPage() {
@@ -53,7 +53,7 @@ export default function AProposPage() {
       <PageHero
         eyebrow="À propos"
         title="Une vision complète de la villa moderne au Maroc."
-        text="Ouidesign accompagne les propriétaires exigeants dans la transformation, la conception et l'équipement de leurs villas et riads à Marrakech."
+        text="Ouidesign accompagne les propriétaires exigeants dans la transformation, la conception et l'équipement de leurs villas et riads au Maroc."
       />
 
       {/* Histoire */}
@@ -67,7 +67,7 @@ export default function AProposPage() {
                 Né de l'exigence du terrain.
               </h2>
               <p className="mt-6 text-sm leading-7 text-charcoal/65 sm:text-base sm:leading-8">
-                Ouidesign est né d'un constat simple : les villas de Marrakech méritent un interlocuteur
+                Ouidesign est né d'un constat simple : les villas du Maroc méritent un interlocuteur
                 unique capable de penser architecture, technique et confort dans un seul projet cohérent.
               </p>
               <p className="mt-4 text-sm leading-7 text-charcoal/65 sm:text-base sm:leading-8">
@@ -76,7 +76,7 @@ export default function AProposPage() {
                 et réalise de bout en bout, avec une responsabilité claire sur le résultat.
               </p>
               <p className="mt-4 text-sm leading-7 text-charcoal/65 sm:text-base sm:leading-8">
-                Basés à Marrakech, nous intervenons dans la Palmeraie, l'Hivernage, Targa, Agdal,
+                Basés au Maroc, nous intervenons dans la Palmeraie, l'Hivernage, Targa, Agdal,
                 Guéliz, la Route de l'Ourika et sur toutes les propriétés qui méritent une attention
                 sans compromis.
               </p>
@@ -84,14 +84,14 @@ export default function AProposPage() {
             <div className="relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[400px]">
               <Image
                 src="/images/villa-sunset.png"
-                alt="Villa haut de gamme au coucher du soleil — projet Ouidesign Marrakech"
+                alt="Villa haut de gamme au coucher du soleil — projet Ouidesign Maroc"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover opacity-90 transition duration-700 hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/30 to-transparent" />
               <div className="absolute bottom-5 left-6">
-                <p className="text-[0.5rem] uppercase tracking-[0.3em] text-ivory/50">Marrakech</p>
+                <p className="text-[0.5rem] uppercase tracking-[0.3em] text-ivory/50">Maroc</p>
                 <p className="mt-1 font-serif text-lg text-ivory/80">Villa de la Palmeraie</p>
               </div>
             </div>
@@ -193,7 +193,7 @@ export default function AProposPage() {
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Ancrage local</p>
             <h2 className="mt-4 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl">
-              Marrakech et ses environs, sans exception.
+              Le Maroc et ses propriétés d'exception.
             </h2>
             <p className="mt-6 text-sm leading-7 text-charcoal/60 sm:text-base">
               De la Palmeraie à l'Hivernage, de Targa à la Route de l'Ourika, chaque projet est

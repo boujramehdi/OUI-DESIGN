@@ -68,13 +68,13 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
       telephone: "+212 649 055 897",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Marrakech",
+        addressLocality: "Maroc",
         addressCountry: "MA",
       },
     },
     areaServed: {
-      "@type": "City",
-      name: "Marrakech",
+      "@type": "Country",
+      name: "Maroc",
     },
     serviceType: service.title,
   };
@@ -221,7 +221,7 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
         </div>
       </section>
 
-      <CTASection title="Parlons de votre propriété à Marrakech." />
+      <CTASection title="Parlons de votre propriété au Maroc." />
     </>
   );
 }

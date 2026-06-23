@@ -6,9 +6,9 @@ import { PageHero } from "@/components/PageHero";
 import { whatsappHref } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Réalisations villas et riads à Marrakech",
+  title: "Réalisations villas et riads au Maroc",
   description:
-    "Découvrez les typologies de projets Ouidesign : villas familiales, riads de réception, propriétés Airbnb premium et maisons d'hôtes à Marrakech.",
+    "Découvrez les typologies de projets Ouidesign : villas familiales, riads de réception, propriétés Airbnb premium et maisons d'hôtes au Maroc.",
   alternates: {
     canonical: "/realisations",
   },
@@ -77,9 +77,9 @@ const standards = [
       "Ce qu'on voit doit être beau. Ce qu'on ne voit pas doit être fiable. Les deux sont aussi importants.",
   },
   {
-    title: "Durabilité marrakchie",
+    title: "Durabilité marocaine",
     description:
-      "Matériaux, équipements et systèmes sélectionnés pour résister au climat de Marrakech sur le long terme.",
+      "Matériaux, équipements et systèmes sélectionnés pour résister au climat du Maroc sur le long terme.",
   },
   {
     title: "Confidentialité garantie",
@@ -174,10 +174,10 @@ export default function RealisationsPage() {
         <div className="mx-auto max-w-7xl px-5 pb-4 pt-4 sm:px-8">
           <div className="grid gap-1 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { src: "/images/riad-courtyard.png", alt: "Rénovation riad et villa haut de gamme à Marrakech par Ouidesign", label: "Rénovation", pos: "object-center" },
-              { src: "/images/Home-smart.png", alt: "Installation smart home et domotique pour villa à Marrakech", label: "Smart Home", pos: "object-top" },
-              { src: "/images/piscine-sunset.png", alt: "Piscine et local technique pour villa à Marrakech", label: "Piscine", pos: "object-bottom" },
-              { src: "/images/solaire-infrastruction.jpg", alt: "Infrastructure solaire pour villa à Marrakech", label: "Solaire", pos: "object-center" },
+              { src: "/images/riad-courtyard.png", alt: "Rénovation riad et villa haut de gamme au Maroc par Ouidesign", label: "Rénovation", pos: "object-center" },
+              { src: "/images/Home-smart.png", alt: "Installation smart home et domotique pour villa au Maroc", label: "Smart Home", pos: "object-top" },
+              { src: "/images/piscine-sunset.png", alt: "Piscine et local technique pour villa au Maroc", label: "Piscine", pos: "object-bottom" },
+              { src: "/images/solaire-infrastruction.jpg", alt: "Infrastructure solaire pour villa au Maroc", label: "Solaire", pos: "object-center" },
             ].map((img) => (
               <div key={img.src} className="reveal group relative aspect-square overflow-hidden">
                 <Image

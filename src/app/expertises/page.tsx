@@ -5,9 +5,9 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { authorityPillars, mainServices } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Expertises villa, riad et smart living à Marrakech",
+  title: "Expertises villa, riad et smart living au Maroc",
   description:
-    "Découvrez les expertises Ouidesign : rénovation de villas, architecture intérieure, menuiserie sur mesure, cuisines premium, domotique, sécurité, piscine, climatisation et solaire à Marrakech.",
+    "Découvrez les expertises Ouidesign : rénovation de villas, architecture intérieure, menuiserie sur mesure, cuisines premium, domotique, sécurité, piscine, climatisation et solaire au Maroc.",
   alternates: {
     canonical: "/expertises",
   },

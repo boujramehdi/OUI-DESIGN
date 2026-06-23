@@ -30,12 +30,11 @@ const localBusinessJsonLd = {
   telephone: siteConfig.phone,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Marrakech",
+    addressLocality: "Maroc",
     addressCountry: "MA",
   },
   areaServed: [
     "Maroc",
-    "Marrakech",
     "Casablanca",
     "Rabat",
     "Tanger",
@@ -72,10 +71,10 @@ const homeFaqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Combien coûte une rénovation de villa à Marrakech ?",
+      name: "Combien coûte une rénovation de villa au Maroc ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Une rénovation haut de gamme à Marrakech se situe généralement entre 3 000 et 8 000 DH/m² selon l’état du bien, le niveau de finition et les équipements intégrés. Ouidesign propose un diagnostic initial pour cadrer le budget avec précision.",
+        text: "Une rénovation haut de gamme au Maroc se situe généralement entre 3 000 et 8 000 DH/m² selon l’état du bien, le niveau de finition et les équipements intégrés. Ouidesign propose un diagnostic initial pour cadrer le budget avec précision.",
       },
     },
     {
@@ -88,7 +87,7 @@ const homeFaqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "La domotique est-elle adaptée aux villas de Marrakech ?",
+      name: "La domotique est-elle adaptée aux villas du Maroc ?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Absolument. La domotique répond à des problèmes concrets : gestion de la climatisation à distance, contrôle des accès, scénarios lumière et économies d’énergie. Le meilleur moment pour l’intégrer est pendant la rénovation.",
@@ -112,14 +111,14 @@ const expertiseTiles = [
   {
     title: "Rénovation Villas & Riads",
     text: "Redonner vie à l’existant avec exigence et respect de l’âme du lieu.",
-    href: "/renovation-villa-marrakech",
+    href: "/renovation-villa-maroc",
     image: "/images/riad-courtyard.png",
     className: "aspect-[4/5] sm:aspect-[16/11] lg:aspect-auto lg:col-span-6 lg:row-span-2",
   },
   {
     title: "Menuiserie Sur Mesure",
     text: "Des créations uniques, nobles et intemporelles.",
-    href: "/menuiserie-sur-mesure-marrakech",
+    href: "/menuiserie-sur-mesure-maroc",
     image: "/images/menuiserie-dressing.png",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
@@ -133,35 +132,35 @@ const expertiseTiles = [
   {
     title: "Piscines & Locaux Techniques",
     text: "Design, confort et maîtrise technique totale.",
-    href: "/piscine-local-technique-marrakech",
+    href: "/piscine-local-technique-maroc",
     image: "/images/piscine.ipg.png",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
   {
     title: "Smart Home & Domotique",
     text: "La maison intelligente, simplement.",
-    href: "/smart-home-marrakech",
+    href: "/smart-home-maroc",
     image: "/images/smart-home-2.png",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
   {
     title: "Sécurité & Caméras",
     text: "Protéger ce qui compte, avec discrétion.",
-    href: "/camera-surveillance-marrakech",
+    href: "/camera-surveillance-maroc",
     image: "/images/securiter.jpg",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
   {
     title: "Climatisation",
     text: "Confort absolu, en toute saison.",
-    href: "/climatisation-marrakech",
+    href: "/climatisation-maroc",
     image: "/images/climatisation.jpg",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
   {
     title: "Solaire & Infrastructure",
     text: "Des solutions durables pour un avenir responsable.",
-    href: "/solaire-villa-marrakech",
+    href: "/solaire-villa-maroc",
     image: "/images/solaire-infrastruction.jpg",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
@@ -295,7 +294,7 @@ export default function HomePage() {
         <div className="reveal relative min-h-[300px] overflow-hidden bg-charcoal sm:min-h-[400px] lg:min-h-[600px]">
           <CinematicImage
             src="/images/mosques2.png"
-            alt="Mosquée Koutoubia et Atlas enneigé — Marrakech, zone d'intervention Ouidesign"
+            alt="Mosquée Koutoubia et Atlas enneigé — Maroc, zone d'intervention Ouidesign"
             sizes="(min-width: 1024px) 66vw, 100vw"
             imageClassName="object-cover object-center"
           />

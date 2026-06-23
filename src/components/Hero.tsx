@@ -57,14 +57,14 @@ export function Hero() {
       <div className="relative mx-auto flex w-full max-w-7xl items-center px-5 pb-28 pt-32 sm:px-8 md:pb-44 lg:pb-52 lg:pt-44">
         <div className="max-w-4xl">
           <p className="mb-8 text-[0.65rem] uppercase tracking-[0.42em] text-bronze">
-            OUIDESIGN · MARRAKECH
+            OUIDESIGN · MAROC
           </p>
           <h1 className="max-w-2xl font-serif text-[2.2rem] font-medium leading-[1.02] text-ivory sm:text-4xl lg:text-[4.5rem] lg:leading-[1.0]">
             Architecture <br />intelligente pour villas<br />d'exception.
           </h1>
           <p className="mt-2 max-w-2xl text-sm leading-7 text-ivory/72">
             Rénovation, menuiserie sur mesure, smart home, piscines, sécurité,
-            climatisation et solaire à Marrakech.
+            climatisation et solaire au Maroc.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link

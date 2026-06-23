@@ -67,7 +67,7 @@ export function TestimonialsSection() {
             <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full border-2 border-bronze/50 shadow-[0_0_32px_rgba(184,146,95,0.18)] transition-transform duration-500 hover:scale-105">
               <Image
                 src="/images/ouidesign-profile.png"
-                alt="Ouidesign — architecture intelligente à Marrakech"
+                alt="Ouidesign — architecture intelligente au Maroc"
                 fill
                 sizes="80px"
                 className="object-cover"

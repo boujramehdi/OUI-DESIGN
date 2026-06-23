@@ -120,7 +120,7 @@ export function OrderModal({ productTitle, price, priceNote, onClose }: OrderMod
             <div className="mt-4 space-y-3 rounded bg-charcoal/4 p-5 text-xs">
               <div className="flex justify-between">
                 <span className="text-charcoal/50">Banque</span>
-                <span className="font-medium text-charcoal">CIH Bank — Marrakech</span>
+                <span className="font-medium text-charcoal">CIH Bank — Maroc</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-charcoal/50">Bénéficiaire</span>
@@ -153,7 +153,7 @@ export function OrderModal({ productTitle, price, priceNote, onClose }: OrderMod
         )}
 
         <p className="border-t border-charcoal/8 px-5 py-4 text-center text-[0.55rem] uppercase tracking-[0.18em] text-charcoal/30 sm:px-8">
-          Ouidesign · Design · Innovation · Confort · Marrakech
+          Ouidesign · Design · Innovation · Confort · Maroc
         </p>
       </div>
     </div>

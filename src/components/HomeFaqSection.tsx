@@ -4,9 +4,9 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "Combien coûte une rénovation de villa à Marrakech ?",
+    question: "Combien coûte une rénovation de villa au Maroc ?",
     answer:
-      "Une rénovation haut de gamme à Marrakech se situe généralement entre 3 000 et 8 000 DH/m² selon l'état du bien, le niveau de finition et les équipements intégrés (domotique, piscine, climatisation). Une réserve de 15 à 20 % pour les imprévus est recommandée. Ouidesign vous propose un diagnostic initial pour cadrer le budget avec précision.",
+      "Une rénovation haut de gamme au Maroc se situe généralement entre 3 000 et 8 000 DH/m² selon l'état du bien, le niveau de finition et les équipements intégrés (domotique, piscine, climatisation). Une réserve de 15 à 20 % pour les imprévus est recommandée. Ouidesign vous propose un diagnostic initial pour cadrer le budget avec précision.",
   },
   {
     question: "Ouidesign peut-il gérer l'intégralité d'un projet de villa ?",
@@ -14,14 +14,14 @@ const faqs = [
       "Oui. Ouidesign coordonne tous les corps de métier : architecture intérieure, menuiserie, électricité, plomberie, climatisation, domotique, piscine et sécurité. Un seul interlocuteur de la conception à la livraison, avec une responsabilité claire sur l'ensemble du résultat.",
   },
   {
-    question: "La domotique est-elle adaptée aux villas de Marrakech ?",
+    question: "La domotique est-elle adaptée aux villas du Maroc ?",
     answer:
-      "Absolument. La domotique répond à des problèmes concrets à Marrakech : gestion de la climatisation à distance, contrôle des accès pour les locations, supervision de la sécurité, scénarios lumière et économies d'énergie. Le meilleur moment pour l'intégrer est pendant la rénovation, quand les murs sont ouverts.",
+      "Absolument. La domotique répond à des problèmes concrets au Maroc : gestion de la climatisation à distance, contrôle des accès pour les locations, supervision de la sécurité, scénarios lumière et économies d'énergie. Le meilleur moment pour l'intégrer est pendant la rénovation, quand les murs sont ouverts.",
   },
   {
-    question: "Ouidesign intervient-il sur des projets hors de Marrakech ?",
+    question: "Ouidesign intervient-il partout au Maroc ?",
     answer:
-      "Notre ancrage principal est Marrakech et ses environs — Palmeraie, Route de l'Ourika, Targa, Agdal, Guéliz, Hivernage. Nous pouvons intervenir sur Casablanca, Essaouira, Agadir ou d'autres villes marocaines pour des projets d'envergure. Contactez-nous pour en discuter.",
+      "Oui. Nous intervenons dans tout le Maroc — Palmeraie, Route de l'Ourika, Targa, Agdal, Guéliz, Hivernage, Casablanca, Essaouira, Agadir et d'autres villes pour des projets d'envergure. Contactez-nous pour en discuter.",
   },
   {
     question: "Comment se passe un premier contact avec Ouidesign ?",
@@ -29,9 +29,9 @@ const faqs = [
       "Un message WhatsApp suffit pour démarrer. Décrivez votre projet — type de bien, localisation, nature des travaux envisagés. Ouidesign vous répond rapidement avec une première lecture et, si le projet correspond à notre expertise, propose une visite ou un diagnostic sur place.",
   },
   {
-    question: "Le solaire est-il vraiment rentable pour une villa à Marrakech ?",
+    question: "Le solaire est-il vraiment rentable pour une villa au Maroc ?",
     answer:
-      "Oui, avec plus de 3 000 heures d'ensoleillement par an, Marrakech est parmi les meilleurs endroits au monde pour le photovoltaïque. Le retour sur investissement d'une installation correctement dimensionnée est généralement de 5 à 8 ans. L'intégration avec la domotique permet d'optimiser la consommation en temps réel.",
+      "Oui, avec plus de 3 000 heures d'ensoleillement par an, le Maroc est parmi les meilleurs endroits au monde pour le photovoltaïque. Le retour sur investissement d'une installation correctement dimensionnée est généralement de 5 à 8 ans. L'intégration avec la domotique permet d'optimiser la consommation en temps réel.",
   },
 ];
 

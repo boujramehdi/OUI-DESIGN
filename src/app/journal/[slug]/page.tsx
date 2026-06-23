@@ -159,7 +159,7 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
           <div className="mt-10 flex items-center gap-5 border-t border-bronze/15 pt-8">
             <div className="h-px w-8 bg-bronze/40" />
             <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bronze">
-              Par l'équipe Ouidesign · Marrakech
+              Par l'équipe Ouidesign · Maroc
             </p>
           </div>
         </div>
@@ -221,7 +221,7 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
         </section>
       )}
 
-      <CTASection title="Un projet à Marrakech ? Parlons-en." />
+      <CTASection title="Un projet au Maroc ? Parlons-en." />
     </>
   );
 }

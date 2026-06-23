@@ -37,11 +37,11 @@ export type ServiceSummary = {
 export const mainServices: ServiceSummary[] = [
   {
     title: "Rénovation Villas & Riads",
-    href: "/renovation-villa-marrakech",
+    href: "/renovation-villa-maroc",
     kicker: "Patrimoine privé",
     image: "/images/riad-courtyard.png",
     description:
-      "Transformation complète de villas, riads et maisons d’hôtes avec une lecture architecturale, technique et esthétique du lieu.",
+      "Transformation complète de villas, riads et maisons d'hôtes avec une lecture architecturale, technique et esthétique du lieu.",
   },
   {
     title: "Architecture Intérieure",
@@ -53,11 +53,11 @@ export const mainServices: ServiceSummary[] = [
   },
   {
     title: "Menuiserie Sur Mesure",
-    href: "/menuiserie-sur-mesure-marrakech",
+    href: "/menuiserie-sur-mesure-maroc",
     kicker: "Atelier précis",
     image: "/images/menuiserie-dressing.png",
     description:
-      "Dressings, portes, bibliothèques, panneaux muraux et solutions intégrées dessinés pour l’espace et fabriqués avec exigence.",
+      "Dressings, portes, bibliothèques, panneaux muraux et solutions intégrées dessinés pour l'espace et fabriqués avec exigence.",
   },
   {
     title: "Cuisines Premium",
@@ -77,7 +77,7 @@ export const mainServices: ServiceSummary[] = [
   },
   {
     title: "Piscines & Locaux Techniques",
-    href: "/piscine-local-technique-marrakech",
+    href: "/piscine-local-technique-maroc",
     kicker: "Eau maîtrisée",
     image: "/images/piscine-sunset.png",
     description:
@@ -85,7 +85,7 @@ export const mainServices: ServiceSummary[] = [
   },
   {
     title: "Smart Home & Domotique",
-    href: "/smart-home-marrakech",
+    href: "/smart-home-maroc",
     kicker: "Maison intelligente",
     image: "/images/smart-home-2.png",
     description:
@@ -93,23 +93,23 @@ export const mainServices: ServiceSummary[] = [
   },
   {
     title: "Sécurité & Caméras",
-    href: "/camera-surveillance-marrakech",
+    href: "/camera-surveillance-maroc",
     kicker: "Protection discrète",
     image: "/images/securiter.jpg",
     description:
-      "Caméras, contrôle d’accès, alarmes et supervision réseau intégrés sans perturber l’architecture de la propriété.",
+      "Caméras, contrôle d'accès, alarmes et supervision réseau intégrés sans perturber l'architecture de la propriété.",
   },
   {
     title: "Climatisation",
-    href: "/climatisation-marrakech",
+    href: "/climatisation-maroc",
     kicker: "Confort thermique",
     image: "/images/climatisation.jpg",
     description:
-      "Dimensionnement, pose et intégration de systèmes de climatisation adaptés au climat de Marrakech et aux villas haut de gamme.",
+      "Dimensionnement, pose et intégration de systèmes de climatisation adaptés au climat du Maroc et aux villas haut de gamme.",
   },
   {
     title: "Solaire & Infrastructure",
-    href: "/solaire-villa-marrakech",
+    href: "/solaire-villa-maroc",
     kicker: "Autonomie raisonnée",
     image: "/images/solaire-infrastruction.jpg",
     description:
@@ -131,7 +131,7 @@ export const authorityPillars = [
   {
     title: "Infrastructure",
     description:
-      "Des réseaux, locaux techniques, protections et équipements pensés pour durer dans le climat de Marrakech.",
+      "Des réseaux, locaux techniques, protections et équipements pensés pour durer dans le climat du Maroc.",
   },
 ];
 
@@ -148,7 +148,7 @@ export const collectionItems: CollectionItem[] = [
     slug: "lift-bar",
     title: "Lift Bar",
     description:
-      "Plus qu’un bar, une déclaration architecturale. Fermé, il s’impose comme un monolithe de laque noire impénétrable. Une pression active le mécanisme silencieux pour révéler un intérieur sculpté en miroir et lumière.",
+      "Plus qu'un bar, une déclaration architecturale. Fermé, il s'impose comme un monolithe de laque noire impénétrable. Une pression active le mécanisme silencieux pour révéler un intérieur sculpté en miroir et lumière.",
     price: "85 000 MAD",
     priceNote: "Prix de base — personnalisation sur devis",
   },
@@ -156,7 +156,7 @@ export const collectionItems: CollectionItem[] = [
     slug: "mini-lift-bar",
     title: "Mini Lift Bar — Vert Sarcelle",
     description:
-      "Plus qu’un meuble, une présence qui s’impose. Fermé, un volume pur en laque Vert Sarcelle poli à la main. Ouvert, verre, miroir et métal s’élèvent avec précision — l’expression d’un luxe maîtrisé pour les intérieurs exigeants.",
+      "Plus qu'un meuble, une présence qui s'impose. Fermé, un volume pur en laque Vert Sarcelle poli à la main. Ouvert, verre, miroir et métal s'élèvent avec précision — l'expression d'un luxe maîtrisé pour les intérieurs exigeants.",
     price: "45 000 MAD",
     priceNote: "Coloris & dimensions sur mesure",
   },
@@ -164,7 +164,7 @@ export const collectionItems: CollectionItem[] = [
     slug: "bar-vintage",
     title: "Le Bar Vintage",
     description:
-      "En apparence, un fût de chêne chargé d’histoire. En réalité, le gardien insoupçonné de votre collection. Un mécanisme lift élève vos bouteilles de l’ombre vers la lumière — le charme de l’ancien, la magie de la mécanique.",
+      "En apparence, un fût de chêne chargé d'histoire. En réalité, le gardien insoupçonné de votre collection. Un mécanisme lift élève vos bouteilles de l'ombre vers la lumière — le charme de l'ancien, la magie de la mécanique.",
     price: "28 000 MAD",
     priceNote: "Sur commande — délai 4 à 6 semaines",
   },
@@ -172,7 +172,7 @@ export const collectionItems: CollectionItem[] = [
     slug: "bureau-assis-debout",
     title: "Bureau assis-debout",
     description:
-      "Un poste de travail qui redéfinit l’ergonomie par l’élégance. Plateau anthracite mat et chaleur du bois naturel — il s’ajuste silencieusement à votre hauteur idéale d’une simple pression, pour un bureau toujours épuré.",
+      "Un poste de travail qui redéfinit l'ergonomie par l'élégance. Plateau anthracite mat et chaleur du bois naturel — il s'ajuste silencieusement à votre hauteur idéale d'une simple pression, pour un bureau toujours épuré.",
     price: "18 000 MAD",
     priceNote: "Plateau & finitions personnalisables",
   },
@@ -180,7 +180,7 @@ export const collectionItems: CollectionItem[] = [
     slug: "cuisines-premium",
     title: "Cuisines premium",
     description:
-      "Des cuisines sur mesure où volumes clairs, rangements invisibles, matériaux nobles et électroménager intégré s’alignent dans une continuité parfaite. Le regard glisse sans obstacle.",
+      "Des cuisines sur mesure où volumes clairs, rangements invisibles, matériaux nobles et électroménager intégré s'alignent dans une continuité parfaite. Le regard glisse sans obstacle.",
     price: "Sur devis",
     priceNote: "À partir de 120 000 MAD selon les volumes",
   },
@@ -190,7 +190,7 @@ export const processSteps = [
   {
     title: "Diagnostic",
     description:
-      "Visite, contraintes, usage, état technique, potentiel architectural et priorités d’investissement.",
+      "Visite, contraintes, usage, état technique, potentiel architectural et priorités d'investissement.",
   },
   {
     title: "Conception",
@@ -238,17 +238,17 @@ export type ServicePage = {
 
 export const servicePages: ServicePage[] = [
   {
-    slug: "renovation-villa-marrakech",
-    title: "Rénovation villa Marrakech",
-    metaTitle: "Rénovation villa à Marrakech",
+    slug: "renovation-villa-maroc",
+    title: "Rénovation villa Maroc",
+    metaTitle: "Rénovation villa au Maroc",
     metaDescription:
-      "Rénovation haut de gamme de villas, riads et maisons d’hôtes à Marrakech, avec architecture intérieure, technique et finitions premium.",
-    h1: "Rénovation de villas et riads haut de gamme à Marrakech",
-    eyebrow: "Villas, riads, maisons d’hôtes",
+      "Rénovation haut de gamme de villas, riads et maisons d'hôtes au Maroc, avec architecture intérieure, technique et finitions premium.",
+    h1: "Rénovation de villas et riads haut de gamme au Maroc",
+    eyebrow: "Villas, riads, maisons d'hôtes",
     intro:
       "Ouidesign accompagne les propriétaires qui veulent transformer une villa existante en lieu de vie premium, confortable, techniquement fiable et adapté aux usages contemporains.",
     heroImage: "/images/riad-courtyard.png",
-    heroImageAlt: "Rénovation riad et villa haut de gamme à Marrakech par Ouidesign",
+    heroImageAlt: "Rénovation riad et villa haut de gamme au Maroc par Ouidesign",
     heroImagePosition: "object-center",
     highlights: [
       "Lecture architecturale et technique avant travaux",
@@ -265,7 +265,7 @@ export const servicePages: ServicePage[] = [
       {
         question: "Ouidesign rénove-t-il des villas déjà habitées ?",
         answer:
-          "Oui. Le phasage dépend de l’ampleur des travaux, des zones à isoler et des contraintes de confort pendant le chantier.",
+          "Oui. Le phasage dépend de l'ampleur des travaux, des zones à isoler et des contraintes de confort pendant le chantier.",
       },
       {
         question: "Pouvez-vous intervenir sur un riad ancien ?",
@@ -275,22 +275,22 @@ export const servicePages: ServicePage[] = [
       {
         question: "La domotique peut-elle être prévue dès la rénovation ?",
         answer:
-          "Oui. C’est même le meilleur moment pour anticiper câblage, réseau, sécurité, climatisation, éclairage et scénarios d’usage.",
+          "Oui. C'est même le meilleur moment pour anticiper câblage, réseau, sécurité, climatisation, éclairage et scénarios d'usage.",
       },
     ],
   },
   {
-    slug: "menuiserie-sur-mesure-marrakech",
-    title: "Menuiserie sur mesure Marrakech",
-    metaTitle: "Menuiserie sur mesure à Marrakech",
+    slug: "menuiserie-sur-mesure-maroc",
+    title: "Menuiserie sur mesure Maroc",
+    metaTitle: "Menuiserie sur mesure au Maroc",
     metaDescription:
-      "Menuiserie premium pour villas et riads à Marrakech : dressings, portes, panneaux muraux, bibliothèques et rangements intégrés.",
-    h1: "Menuiserie sur mesure pour villas premium à Marrakech",
+      "Menuiserie premium pour villas et riads au Maroc : dressings, portes, panneaux muraux, bibliothèques et rangements intégrés.",
+    h1: "Menuiserie sur mesure pour villas premium au Maroc",
     eyebrow: "Bois, détails, intégration",
     intro:
-      "La menuiserie Ouidesign donne à l’intérieur sa précision : portes alignées, dressings élégants, rangements discrets et éléments intégrés au dessin global.",
+      "La menuiserie Ouidesign donne à l'intérieur sa précision : portes alignées, dressings élégants, rangements discrets et éléments intégrés au dessin global.",
     heroImage: "/images/menuiserie-dressing.png",
-    heroImageAlt: "Menuiserie sur mesure et dressing premium pour villa à Marrakech par Ouidesign",
+    heroImageAlt: "Menuiserie sur mesure et dressing premium pour villa au Maroc par Ouidesign",
     heroImagePosition: "object-top",
     highlights: [
       "Conception adaptée aux volumes et aux usages",
@@ -310,9 +310,9 @@ export const servicePages: ServicePage[] = [
           "Oui. Les dimensions, usages, finitions et détails sont adaptés à la villa ou au riad concerné.",
       },
       {
-        question: "Pouvez-vous intégrer de l’éclairage dans les meubles ?",
+        question: "Pouvez-vous intégrer de l'éclairage dans les meubles ?",
         answer:
-          "Oui. Les rubans LED, capteurs, prises et scénarios d’éclairage peuvent être anticipés dans le dessin.",
+          "Oui. Les rubans LED, capteurs, prises et scénarios d'éclairage peuvent être anticipés dans le dessin.",
       },
       {
         question: "Intervenez-vous uniquement sur de grandes rénovations ?",
@@ -322,17 +322,17 @@ export const servicePages: ServicePage[] = [
     ],
   },
   {
-    slug: "smart-home-marrakech",
-    title: "Smart home Marrakech",
-    metaTitle: "Smart Home et domotique à Marrakech",
+    slug: "smart-home-maroc",
+    title: "Smart home Maroc",
+    metaTitle: "Smart Home et domotique au Maroc",
     metaDescription:
-      "Domotique premium pour villas à Marrakech : lumière, climat, stores, accès, sécurité, audio, réseau et scénarios intelligents.",
-    h1: "Smart home et domotique pour villas à Marrakech",
+      "Domotique premium pour villas au Maroc : lumière, climat, stores, accès, sécurité, audio, réseau et scénarios intelligents.",
+    h1: "Smart home et domotique pour villas au Maroc",
     eyebrow: "Confort invisible",
     intro:
       "Ouidesign conçoit des maisons intelligentes où la technologie disparaît derrière des gestes simples, des scénarios fiables et une infrastructure correctement préparée.",
     heroImage: "/images/smart-home-2.png",
-    heroImageAlt: "Smart home et domotique pour villa à Marrakech — installation Ouidesign",
+    heroImageAlt: "Smart home et domotique pour villa au Maroc — installation Ouidesign",
     heroImagePosition: "object-top",
     heroImageOverlay: "bg-gradient-to-br from-[#2C1810]/40 via-amber-900/15 to-transparent",
     highlights: [
@@ -350,7 +350,7 @@ export const servicePages: ServicePage[] = [
       {
         question: "La domotique est-elle adaptée aux locations Airbnb ?",
         answer:
-          "Oui. Les accès, climatisation, caméras autorisées, éclairage et scénarios peuvent simplifier l’accueil et l’exploitation.",
+          "Oui. Les accès, climatisation, caméras autorisées, éclairage et scénarios peuvent simplifier l'accueil et l'exploitation.",
       },
       {
         question: "Faut-il rénover toute la villa pour installer la domotique ?",
@@ -360,26 +360,26 @@ export const servicePages: ServicePage[] = [
       {
         question: "Pouvez-vous reprendre une installation existante ?",
         answer:
-          "Oui. Ouidesign peut auditer le réseau, les modules, l’interface et proposer une remise en ordre progressive.",
+          "Oui. Ouidesign peut auditer le réseau, les modules, l'interface et proposer une remise en ordre progressive.",
       },
     ],
   },
   {
-    slug: "camera-surveillance-marrakech",
-    title: "Caméra surveillance Marrakech",
-    metaTitle: "Caméras de surveillance à Marrakech",
+    slug: "camera-surveillance-maroc",
+    title: "Caméra surveillance Maroc",
+    metaTitle: "Caméras de surveillance au Maroc",
     metaDescription:
-      "Installation de caméras, alarmes et contrôle d’accès pour villas, riads et maisons d’hôtes à Marrakech.",
-    h1: "Sécurité et caméras pour villas à Marrakech",
+      "Installation de caméras, alarmes et contrôle d'accès pour villas, riads et maisons d'hôtes au Maroc.",
+    h1: "Sécurité et caméras pour villas au Maroc",
     eyebrow: "Protection discrète",
     intro:
-      "La sécurité d’une villa premium doit être efficace sans alourdir l’architecture. Ouidesign intègre caméras, réseau, accès et supervision avec sobriété.",
+      "La sécurité d'une villa premium doit être efficace sans alourdir l'architecture. Ouidesign intègre caméras, réseau, accès et supervision avec sobriété.",
     heroImage: "/images/securiter.jpg",
-    heroImageAlt: "Système de sécurité et caméras discrets pour villa à Marrakech par Ouidesign",
+    heroImageAlt: "Système de sécurité et caméras discrets pour villa au Maroc par Ouidesign",
     heroImagePosition: "object-center",
     highlights: [
       "Caméras extérieures et intérieures positionnées avec soin",
-      "Contrôle d’accès, alarmes et réseau sécurisé",
+      "Contrôle d'accès, alarmes et réseau sécurisé",
       "Supervision adaptée aux propriétaires, managers et équipes",
     ],
     deliverables: [
@@ -392,32 +392,32 @@ export const servicePages: ServicePage[] = [
       {
         question: "Peut-on consulter les caméras à distance ?",
         answer:
-          "Oui, sous réserve d’une configuration réseau correcte et d’un accès sécurisé pour les personnes autorisées.",
+          "Oui, sous réserve d'une configuration réseau correcte et d'un accès sécurisé pour les personnes autorisées.",
       },
       {
         question: "Les caméras peuvent-elles rester discrètes ?",
         answer:
-          "Oui. Le positionnement, la couleur, le câblage et les supports sont pensés pour limiter l’impact visuel.",
+          "Oui. Le positionnement, la couleur, le câblage et les supports sont pensés pour limiter l'impact visuel.",
       },
       {
         question: "Travaillez-vous aussi sur les alarmes ?",
         answer:
-          "Oui. Les alarmes, détecteurs et contrôles d’accès peuvent être intégrés au dispositif global.",
+          "Oui. Les alarmes, détecteurs et contrôles d'accès peuvent être intégrés au dispositif global.",
       },
     ],
   },
   {
-    slug: "climatisation-marrakech",
-    title: "Climatisation Marrakech",
-    metaTitle: "Climatisation pour villa à Marrakech",
+    slug: "climatisation-maroc",
+    title: "Climatisation Maroc",
+    metaTitle: "Climatisation pour villa au Maroc",
     metaDescription:
-      "Climatisation premium pour villas à Marrakech : dimensionnement, intégration, confort thermique et coordination technique.",
-    h1: "Climatisation premium pour villas à Marrakech",
+      "Climatisation premium pour villas au Maroc : dimensionnement, intégration, confort thermique et coordination technique.",
+    h1: "Climatisation premium pour villas au Maroc",
     eyebrow: "Confort thermique",
     intro:
-      "Dans le climat de Marrakech, la climatisation doit être puissante, silencieuse, bien dimensionnée et intégrée à l’architecture intérieure.",
+      "Dans le climat du Maroc, la climatisation doit être puissante, silencieuse, bien dimensionnée et intégrée à l'architecture intérieure.",
     heroImage: "/images/climatisation.jpg",
-    heroImageAlt: "Climatisation premium intégrée pour villa à Marrakech par Ouidesign",
+    heroImageAlt: "Climatisation premium intégrée pour villa au Maroc par Ouidesign",
     heroImagePosition: "object-center",
     highlights: [
       "Dimensionnement selon volumes, orientation et usage",
@@ -428,18 +428,18 @@ export const servicePages: ServicePage[] = [
       "Audit thermique des espaces",
       "Sélection des systèmes adaptés",
       "Coordination des réservations et passages",
-      "Tests, réglages et conseils d’entretien",
+      "Tests, réglages et conseils d'entretien",
     ],
     faq: [
       {
         question: "Quelle climatisation choisir pour une grande villa ?",
         answer:
-          "Le choix dépend des volumes, de l’isolation, de l’exposition, du niveau sonore attendu et de la stratégie de maintenance.",
+          "Le choix dépend des volumes, de l'isolation, de l'exposition, du niveau sonore attendu et de la stratégie de maintenance.",
       },
       {
         question: "La climatisation peut-elle être pilotée par domotique ?",
         answer:
-          "Oui. Elle peut être intégrée à des scénarios de confort, d’économie d’énergie et de gestion à distance.",
+          "Oui. Elle peut être intégrée à des scénarios de confort, d'économie d'énergie et de gestion à distance.",
       },
       {
         question: "Intervenez-vous sur des installations existantes ?",
@@ -449,17 +449,17 @@ export const servicePages: ServicePage[] = [
     ],
   },
   {
-    slug: "piscine-local-technique-marrakech",
-    title: "Piscine local technique Marrakech",
-    metaTitle: "Piscine et local technique à Marrakech",
+    slug: "piscine-local-technique-maroc",
+    title: "Piscine local technique Maroc",
+    metaTitle: "Piscine et local technique au Maroc",
     metaDescription:
-      "Conception et rénovation de piscines, locaux techniques, filtration, éclairage et intégration pour villas à Marrakech.",
-    h1: "Piscines et locaux techniques pour villas à Marrakech",
+      "Conception et rénovation de piscines, locaux techniques, filtration, éclairage et intégration pour villas au Maroc.",
+    h1: "Piscines et locaux techniques pour villas au Maroc",
     eyebrow: "Eau, filtration, précision",
     intro:
       "Une belle piscine commence souvent dans un local technique bien pensé. Ouidesign coordonne esthétique, hydraulique, filtration, éclairage et maintenance.",
     heroImage: "/images/piscine-sunset.png",
-    heroImageAlt: "Piscine haut de gamme au coucher du soleil pour villa à Marrakech par Ouidesign",
+    heroImageAlt: "Piscine haut de gamme au coucher du soleil pour villa au Maroc par Ouidesign",
     heroImagePosition: "object-bottom",
     highlights: [
       "Création ou rénovation de bassins",
@@ -470,7 +470,7 @@ export const servicePages: ServicePage[] = [
       "Diagnostic bassin et équipements",
       "Conception du local technique",
       "Coordination hydraulique et électrique",
-      "Essais, réglages et passation d’usage",
+      "Essais, réglages et passation d'usage",
     ],
     faq: [
       {
@@ -481,7 +481,7 @@ export const servicePages: ServicePage[] = [
       {
         question: "Pourquoi le local technique est-il important ?",
         answer:
-          "Il conditionne la qualité de filtration, l’accès maintenance, la sécurité électrique et la longévité des équipements.",
+          "Il conditionne la qualité de filtration, l'accès maintenance, la sécurité électrique et la longévité des équipements.",
       },
       {
         question: "La piscine peut-elle être intégrée à la domotique ?",
@@ -491,17 +491,17 @@ export const servicePages: ServicePage[] = [
     ],
   },
   {
-    slug: "solaire-villa-marrakech",
-    title: "Solaire villa Marrakech",
-    metaTitle: "Solaire et infrastructure pour villa à Marrakech",
+    slug: "solaire-villa-maroc",
+    title: "Solaire villa Maroc",
+    metaTitle: "Solaire et infrastructure pour villa au Maroc",
     metaDescription:
-      "Solutions solaires et infrastructure technique pour villas à Marrakech : énergie, réseau, baie technique et préparation durable.",
-    h1: "Solaire et infrastructure technique pour villas à Marrakech",
+      "Solutions solaires et infrastructure technique pour villas au Maroc : énergie, réseau, baie technique et préparation durable.",
+    h1: "Solaire et infrastructure technique pour villas au Maroc",
     eyebrow: "Autonomie et préparation",
     intro:
-      "Ouidesign prépare les villas haut de gamme à une gestion plus intelligente de l’énergie, du réseau et des équipements critiques.",
+      "Ouidesign prépare les villas haut de gamme à une gestion plus intelligente de l'énergie, du réseau et des équipements critiques.",
     heroImage: "/images/solaire-infrastruction.jpg",
-    heroImageAlt: "Infrastructure solaire et technique pour villa à Marrakech par Ouidesign",
+    heroImageAlt: "Infrastructure solaire et technique pour villa au Maroc par Ouidesign",
     heroImagePosition: "object-center",
     highlights: [
       "Préparation électrique et solaire",
@@ -516,14 +516,14 @@ export const servicePages: ServicePage[] = [
     ],
     faq: [
       {
-        question: "Le solaire convient-il aux villas de Marrakech ?",
+        question: "Le solaire convient-il aux villas du Maroc ?",
         answer:
-          "Oui, mais il doit être étudié selon les usages, la toiture, l’orientation, la puissance nécessaire et la stratégie de stockage.",
+          "Oui, mais il doit être étudié selon les usages, la toiture, l'orientation, la puissance nécessaire et la stratégie de stockage.",
       },
       {
         question: "Ouidesign installe-t-il aussi le réseau informatique ?",
         answer:
-          "Oui. Réseau, Wi-Fi, baie technique et câblage peuvent être pensés avec l’énergie et la domotique.",
+          "Oui. Réseau, Wi-Fi, baie technique et câblage peuvent être pensés avec l'énergie et la domotique.",
       },
       {
         question: "Peut-on préparer une villa maintenant pour évoluer plus tard ?",

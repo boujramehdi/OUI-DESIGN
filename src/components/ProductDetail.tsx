@@ -216,7 +216,7 @@ export function ProductDetail({
             <div className="anim-fade-in anim-delay-6 mt-6 grid grid-cols-3 gap-2 border-t border-bronze/10 pt-6 sm:gap-4">
               {[
                 { icon: "🛡", label: "Garantie qualité" },
-                { icon: "🚚", label: "Livraison Marrakech" },
+                { icon: "🚚", label: "Livraison Maroc" },
                 { icon: "✦", label: "Sur mesure" },
               ].map((t) => (
                 <div key={t.label} className="text-center">

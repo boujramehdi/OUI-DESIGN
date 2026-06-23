@@ -28,7 +28,7 @@ export default function ConfidentialitePage() {
             </h2>
             <p>
               <strong className="text-charcoal">{siteConfig.name}</strong><br />
-              Marrakech, Maroc<br />
+              Maroc<br />
               Email : {siteConfig.email}<br />
               Téléphone : {siteConfig.phone}
             </p>

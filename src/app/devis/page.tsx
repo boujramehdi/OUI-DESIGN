@@ -8,14 +8,14 @@ import { siteConfig, whatsappHref } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Demander un devis ou une orientation",
   description:
-    "Demandez une orientation Ouidesign pour votre projet de rénovation, architecture intérieure, domotique, menuiserie, piscine ou solaire à Marrakech.",
+    "Demandez une orientation Ouidesign pour votre projet de rénovation, architecture intérieure, domotique, menuiserie, piscine ou solaire au Maroc.",
   alternates: {
     canonical: "/devis",
   },
 };
 
 const briefItems = [
-  "Localisation de la propriété à Marrakech",
+  "Localisation de la propriété au Maroc",
   "Type de bien : villa, riad, maison d'hôtes ou espace hospitality",
   "Nature du projet : rénovation, menuiserie, smart home, piscine, climatisation ou solaire",
   "Niveau d'urgence et période souhaitée",
@@ -64,7 +64,7 @@ export default function DevisPage() {
           </div>
           <p className="mt-6 text-xs text-charcoal/40">
             * Prix en dirhams marocains (DH), hors mobilier et décoration. Hors taxes le cas
-            échéant. Valables pour des projets à Marrakech en 2026.
+            échéant. Valables pour des projets au Maroc en 2026.
           </p>
         </div>
       </section>
@@ -153,7 +153,7 @@ export default function DevisPage() {
             </div>
             <Link
               href={whatsappHref(
-                "Bonjour Ouidesign, je souhaite demander un devis pour mon projet à Marrakech."
+                "Bonjour Ouidesign, je souhaite demander un devis pour mon projet au Maroc."
               )}
               target="_blank"
               className="mt-8 inline-flex items-center gap-3 bg-bronze px-6 py-4 text-xs uppercase tracking-[0.18em] text-charcoal transition duration-300 hover:bg-ivory lg:mt-0"

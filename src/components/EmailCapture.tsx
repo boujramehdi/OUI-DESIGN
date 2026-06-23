@@ -11,9 +11,9 @@ export function EmailCapture() {
     e.preventDefault();
     if (!email) return;
 
-    const subject = encodeURIComponent("Guide rénovation villa Marrakech — Ouidesign");
+    const subject = encodeURIComponent("Guide rénovation villa Maroc — Ouidesign");
     const body = encodeURIComponent(
-      `Bonjour,\n\nJe souhaite recevoir le guide Ouidesign sur la rénovation de villa à Marrakech.\n\nMon email : ${email}\n\nMerci.`
+      `Bonjour,\n\nJe souhaite recevoir le guide Ouidesign sur la rénovation de villa au Maroc.\n\nMon email : ${email}\n\nMerci.`
     );
     window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
     setSent(true);
@@ -36,7 +36,7 @@ export function EmailCapture() {
               <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Guide gratuit</p>
               <h2 className="mt-4 font-serif text-3xl font-medium leading-tight sm:text-4xl">
                 Recevez notre guide :<br />
-                <span className="text-bronze">Rénover sa villa à Marrakech.</span>
+                <span className="text-bronze">Rénover sa villa au Maroc.</span>
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-ivory/60">
                 Budget, étapes, erreurs à éviter, équipements techniques et checklist complète.

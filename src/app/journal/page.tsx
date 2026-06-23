@@ -6,9 +6,9 @@ import { PageHero } from "@/components/PageHero";
 import { articles } from "@/lib/articles";
 
 export const metadata: Metadata = {
-  title: "Journal Ouidesign — Conseils villas et architecture à Marrakech",
+  title: "Journal Ouidesign — Conseils villas et architecture au Maroc",
   description:
-    "Conseils d'experts, tendances et guides pratiques pour la rénovation, la domotique et l'architecture de villas et riads haut de gamme à Marrakech.",
+    "Conseils d'experts, tendances et guides pratiques pour la rénovation, la domotique et l'architecture de villas et riads haut de gamme au Maroc.",
   alternates: {
     canonical: "/journal",
   },
@@ -20,7 +20,7 @@ export default function JournalPage() {
       <PageHero
         eyebrow="Journal"
         title="Guides, conseils et références pour votre villa."
-        text="Des articles écrits par l'équipe Ouidesign pour vous aider à mieux comprendre, décider et investir dans votre propriété à Marrakech."
+        text="Des articles écrits par l'équipe Ouidesign pour vous aider à mieux comprendre, décider et investir dans votre propriété au Maroc."
       />
 
       {/* Articles grid */}

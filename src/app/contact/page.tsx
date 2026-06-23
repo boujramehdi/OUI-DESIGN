@@ -269,7 +269,7 @@ export default function ContactPage() {
                   </svg>
                 ),
                 label: "Localisation",
-                value: "Marrakech, Maroc",
+                value: "Maroc",
                 sub: "Palmeraie · Hivernage · Targa",
                 href: undefined as string | undefined,
                 external: false,
@@ -442,7 +442,7 @@ export default function ContactPage() {
             <div>
               <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Zone d'intervention</p>
               <h2 className="mt-3 font-serif text-2xl font-medium text-ivory sm:text-3xl">
-                Nous intervenons à Marrakech et ses environs.
+                Nous intervenons au Maroc et ses environs.
               </h2>
             </div>
             <div className="flex flex-wrap gap-2">

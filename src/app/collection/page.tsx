@@ -9,7 +9,7 @@ import { collectionItems, whatsappHref } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Collection mobilier intelligent et cuisines premium",
   description:
-    "Collection Ouidesign : Lift Bar, Mini Lift Bar, bureaux assis-debout, cuisines premium et mobilier intelligent pour villas et riads à Marrakech.",
+    "Collection Ouidesign : Lift Bar, Mini Lift Bar, bureaux assis-debout, cuisines premium et mobilier intelligent pour villas et riads au Maroc.",
   alternates: {
     canonical: "/collection",
   },
@@ -20,7 +20,7 @@ const collectionWithImages = [
     ...collectionItems[0],
     image: "/images/liftbar.png",
     images: ["/images/liftbar.png", "/images/liftbar-catalog.jpg"],
-    imageAlt: "Lift Bar Ouidesign — bar motorisé laque noir pour villa Marrakech",
+    imageAlt: "Lift Bar Ouidesign — bar motorisé laque noir pour villa Maroc",
     fit: "object-cover",
     tagline: "Le silence est le nouveau luxe.",
     details: [
@@ -61,7 +61,7 @@ const collectionWithImages = [
   {
     ...collectionItems[3],
     image: "/images/bureau-marrakech.png",
-    imageAlt: "Bureau assis-debout Ouidesign — poste de travail motorisé dans villa à Marrakech",
+    imageAlt: "Bureau assis-debout Ouidesign — poste de travail motorisé dans villa au Maroc",
     fit: "object-cover",
     tagline: "L'invitation à la performance.",
     details: [
@@ -74,7 +74,7 @@ const collectionWithImages = [
   {
     ...collectionItems[4],
     image: "/images/cuisine-premium.png",
-    imageAlt: "Cuisine premium Ouidesign — sur mesure pour villas à Marrakech",
+    imageAlt: "Cuisine premium Ouidesign — sur mesure pour villas au Maroc",
     fit: "object-cover",
     tagline: "Une continuité parfaite.",
     details: [
@@ -130,7 +130,7 @@ export default function CollectionPage() {
           <div className="relative aspect-[4/3] overflow-hidden lg:aspect-auto">
             <Image
               src="/images/cuisine-premium.png"
-              alt="Cuisine premium sur mesure Ouidesign pour villa à Marrakech"
+              alt="Cuisine premium sur mesure Ouidesign pour villa au Maroc"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

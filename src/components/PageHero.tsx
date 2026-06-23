@@ -109,7 +109,7 @@ export function PageHero({ eyebrow, title, text, dark = false, image, imageAlt =
 
         {/* Bottom ambient label */}
         <div className={`anim-fade-in anim-delay-6 mt-14 flex items-center gap-6 ${dark ? "text-ivory/25" : "text-charcoal/28"}`}>
-          <span className="text-[0.55rem] uppercase tracking-[0.3em]">Marrakech, Maroc</span>
+          <span className="text-[0.55rem] uppercase tracking-[0.3em]">Maroc</span>
           <span className="h-px w-6 bg-current opacity-40" />
           <span className="text-[0.55rem] uppercase tracking-[0.3em]">Ouidesign · 2026</span>
         </div>

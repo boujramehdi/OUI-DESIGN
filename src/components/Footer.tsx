@@ -24,7 +24,7 @@ export function Footer() {
           </div>
           <p className="mt-7 max-w-xs text-sm leading-7 text-ivory/62">
             Architecture, intelligence et confort. Nous créons des villas d'exception
-            à Marrakech et ses environs.
+            au Maroc.
           </p>
           <p className="mt-5 font-serif text-[1.6rem] italic font-normal text-bronze/70 leading-tight">
             Hamza
@@ -123,7 +123,7 @@ export function Footer() {
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              Marrakech, Maroc
+              Maroc
             </span>
           </div>
           <Link

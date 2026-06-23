@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Mentions légales",
-  description: "Mentions légales du site Ouidesign — architecture et rénovation de villas à Marrakech.",
+  description: "Mentions légales du site Ouidesign — architecture et rénovation de villas au Maroc.",
   alternates: {
     canonical: "/mentions-legales",
   },
@@ -29,7 +29,7 @@ export default function MentionsLegalesPage() {
             <p>
               <strong className="text-charcoal">{siteConfig.name}</strong><br />
               Société à Responsabilité Limitée (SARL)<br />
-              Adresse : Marrakech, Maroc<br />
+              Adresse : Maroc<br />
               Téléphone : {siteConfig.phone}<br />
               Email : {siteConfig.email}
             </p>
