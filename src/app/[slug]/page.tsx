@@ -194,30 +194,56 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
       {/* Other expertises — ivory */}
       <section className="bg-ivory">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
-          <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
-            Autres expertises
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+
+          <div className="mb-10 flex items-end justify-between gap-6">
+            <div>
+              <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Autres expertises</p>
+              <h2 className="mt-3 font-serif text-2xl font-medium text-charcoal sm:text-3xl">
+                Ouidesign va plus loin.
+              </h2>
+            </div>
+            <Link
+              href={whatsappHref(`Bonjour Ouidesign, je souhaite parler de ${service.title}.`)}
+              target="_blank"
+              className="hidden shrink-0 items-center gap-3 bg-bronze px-6 py-3.5 text-xs uppercase tracking-[0.18em] text-charcoal transition duration-300 hover:bg-charcoal hover:text-ivory sm:inline-flex"
+            >
+              Demander une orientation
+            </Link>
+          </div>
+
+          <div className="grid gap-px bg-bronze/10 sm:grid-cols-2 lg:grid-cols-3">
             {mainServices
               .filter((item) => item.href !== `/${service.slug}`)
               .slice(0, 6)
-              .map((item) => (
+              .map((item, index) => (
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="border border-bronze/25 px-4 py-3 text-xs uppercase tracking-[0.14em] text-charcoal/70 transition hover:border-bronze hover:text-bronze"
+                  className="group relative flex items-center justify-between overflow-hidden bg-ivory px-7 py-6 transition-all duration-300 hover:bg-sand"
                 >
-                  {item.title}
+                  {/* Top sweep */}
+                  <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-500 group-hover:w-full" />
+                  <div className="flex items-center gap-5">
+                    <span className="font-serif text-sm text-bronze/30 transition-colors duration-300 group-hover:text-bronze/70">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-xs uppercase tracking-[0.16em] text-charcoal/70 transition-colors duration-300 group-hover:text-charcoal">
+                      {item.title}
+                    </span>
+                  </div>
+                  <span className="text-bronze/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-bronze">→</span>
                 </Link>
               ))}
           </div>
+
           <Link
             href={whatsappHref(`Bonjour Ouidesign, je souhaite parler de ${service.title}.`)}
             target="_blank"
-            className="mt-10 inline-flex items-center gap-3 bg-bronze px-6 py-4 text-xs uppercase tracking-[0.18em] text-charcoal transition duration-300 hover:bg-charcoal hover:text-ivory"
+            className="mt-6 inline-flex items-center gap-3 bg-bronze px-6 py-4 text-xs uppercase tracking-[0.18em] text-charcoal transition duration-300 hover:bg-charcoal hover:text-ivory sm:hidden"
           >
             Demander une orientation
           </Link>
+
         </div>
       </section>
 
