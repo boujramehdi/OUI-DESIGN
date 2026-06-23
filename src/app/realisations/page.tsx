@@ -139,25 +139,25 @@ export default function RealisationsPage() {
             {projectTypes.map((project, index) => (
               <article
                 key={project.title}
-                className="reveal group relative flex flex-col overflow-hidden border border-bronze/20 bg-charcoal p-8 text-ivory transition-all duration-500 hover:border-bronze/50 hover:bg-[#1c1915] sm:p-9"
+                className="reveal group relative flex flex-col overflow-hidden border border-bronze/20 bg-sand p-8 text-charcoal transition-all duration-500 hover:border-bronze/50 hover:bg-[#c9b598] sm:p-9"
               >
                 {/* Top bronze sweep */}
                 <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
                 <div className="flex items-start justify-between gap-4">
-                  <p className="text-[0.58rem] uppercase tracking-[0.26em] text-bronze/70 transition-colors duration-300 group-hover:text-bronze">
+                  <p className="text-[0.58rem] uppercase tracking-[0.26em] text-charcoal/65 transition-colors duration-300 group-hover:text-bronze">
                     {project.kicker}
                   </p>
                   <p className="shrink-0 font-serif text-3xl leading-none text-bronze/25 transition-colors duration-300 group-hover:text-bronze/60">
                     {String(index + 1).padStart(2, "0")}
                   </p>
                 </div>
-                <h3 className="mt-5 font-serif text-2xl text-ivory transition-all duration-300 group-hover:-translate-y-0.5">{project.title}</h3>
-                <p className="mt-4 flex-1 text-sm leading-7 text-ivory/60 transition-colors duration-300 group-hover:text-ivory/80">{project.text}</p>
+                <h3 className="mt-5 font-serif text-2xl text-charcoal transition-all duration-300 group-hover:-translate-y-0.5">{project.title}</h3>
+                <p className="mt-4 flex-1 text-sm leading-7 text-charcoal/65 transition-colors duration-300 group-hover:text-charcoal/80">{project.text}</p>
                 <div className="mt-7 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="border border-bronze/20 px-2.5 py-1 text-[0.55rem] uppercase tracking-[0.16em] text-ivory/45 transition-colors duration-300 group-hover:border-bronze/50 group-hover:text-ivory/70"
+                      className="border border-bronze/20 px-2.5 py-1 text-[0.55rem] uppercase tracking-[0.16em] text-charcoal/55 transition-colors duration-300 group-hover:border-bronze/50 group-hover:text-charcoal/80"
                     >
                       {tag}
                     </span>
@@ -175,7 +175,7 @@ export default function RealisationsPage() {
           <div className="grid gap-1 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { src: "/images/riad-courtyard.png", alt: "Rénovation riad et villa haut de gamme à Marrakech par Ouidesign", label: "Rénovation" },
-              { src: "/images/smart-home.jpg", alt: "Installation smart home et domotique pour villa à Marrakech", label: "Smart Home" },
+              { src: "/images/Home-smart.png", alt: "Installation smart home et domotique pour villa à Marrakech", label: "Smart Home" },
               { src: "/images/piscine-sunset.png", alt: "Piscine et local technique pour villa à Marrakech", label: "Piscine" },
               { src: "/images/solaire-infrastruction.jpg", alt: "Infrastructure solaire pour villa à Marrakech", label: "Solaire" },
             ].map((img) => (

@@ -40,10 +40,10 @@ const expertise = [
   { label: "Rénovation complète de villas et riads", href: "/renovation-villa-marrakech", image: "/images/riad-courtyard.png" },
   { label: "Architecture intérieure et direction esthétique", href: "/renovation-villa-marrakech#architecture", image: "/images/menuiserie-dressing.png" },
   { label: "Menuiserie sur mesure et mobilier intégré", href: "/menuiserie-sur-mesure-marrakech", image: "/images/bureau-marrakech.png" },
-  { label: "Smart home, domotique et réseau", href: "/smart-home-marrakech", image: "/images/smart-home.jpg" },
+  { label: "Smart home, domotique et réseau", href: "/smart-home-marrakech", image: "/images/smart-home-2.png" },
   { label: "Piscines et locaux techniques", href: "/piscine-local-technique-marrakech", image: "/images/piscine-sunset.png" },
   { label: "Sécurité, caméras et contrôle d'accès", href: "/camera-surveillance-marrakech", image: "/images/securiter.jpg" },
-  { label: "Climatisation et confort thermique", href: "/climatisation-marrakech", image: "/images/smart-home.jpg" },
+  { label: "Climatisation et confort thermique", href: "/climatisation-marrakech", image: "/images/Home-smart.png" },
   { label: "Solaire et infrastructure durable", href: "/solaire-villa-marrakech", image: "/images/solaire-infrastruction.jpg" },
 ];
 
@@ -54,7 +54,6 @@ export default function AProposPage() {
         eyebrow="À propos"
         title="Une vision complète de la villa moderne au Maroc."
         text="Ouidesign accompagne les propriétaires exigeants dans la transformation, la conception et l'équipement de leurs villas et riads à Marrakech."
-        dark
       />
 
       {/* Histoire */}

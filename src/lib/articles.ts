@@ -114,7 +114,7 @@ export const articles: Article[] = [
       "Câblage, réseau, scénarios lumière et climatisation : comment intégrer la domotique sans reprendre les murs après coup.",
     date: "Juin 2026",
     readTime: "5 min",
-    featuredImage: "/images/smart-home.jpg",
+    featuredImage: "/images/Home-smart.png",
     featuredImageAlt: "Installation smart home et domotique pour villa à Marrakech",
     metaTitle: "Smart Home villa Marrakech : guide domotique — Ouidesign",
     metaDescription:

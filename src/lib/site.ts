@@ -87,7 +87,7 @@ export const mainServices: ServiceSummary[] = [
     title: "Smart Home & Domotique",
     href: "/smart-home-marrakech",
     kicker: "Maison intelligente",
-    image: "/images/smart-home.jpg",
+    image: "/images/smart-home-2.png",
     description:
       "Scénarios lumière, climatisation, stores, audio, accès et énergie réunis dans une expérience simple et fiable.",
   },
@@ -327,7 +327,7 @@ export const servicePages: ServicePage[] = [
     eyebrow: "Confort invisible",
     intro:
       "Ouidesign conçoit des maisons intelligentes où la technologie disparaît derrière des gestes simples, des scénarios fiables et une infrastructure correctement préparée.",
-    heroImage: "/images/smart-home.jpg",
+    heroImage: "/images/smart-home-2.png",
     heroImageAlt: "Smart home et domotique pour villa à Marrakech — installation Ouidesign",
     highlights: [
       "Scénarios lumière, climatisation, stores et accès",

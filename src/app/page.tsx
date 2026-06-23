@@ -141,7 +141,7 @@ const expertiseTiles = [
     title: "Smart Home & Domotique",
     text: "La maison intelligente, simplement.",
     href: "/smart-home-marrakech",
-    image: "/images/smart-home.jpg",
+    image: "/images/smart-home-2.png",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
   {
@@ -294,7 +294,7 @@ export default function HomePage() {
         </div>
         <div className="reveal relative min-h-[300px] overflow-hidden bg-charcoal sm:min-h-[400px] lg:min-h-[600px]">
           <CinematicImage
-            src="/images/mosquet.png"
+            src="/images/mosques2.png"
             alt="Mosquée Koutoubia et Atlas enneigé — Marrakech, zone d'intervention Ouidesign"
             sizes="(min-width: 1024px) 66vw, 100vw"
             imageClassName="object-contain object-center"
