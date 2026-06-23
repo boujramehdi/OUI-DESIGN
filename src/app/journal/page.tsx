@@ -32,9 +32,9 @@ export default function JournalPage() {
         <div className="flex flex-col lg:flex-row lg:min-h-[100svh]">
 
           {/* LEFT — sticky hero */}
-          <div className="relative flex flex-col overflow-hidden
+          <div className="relative flex min-h-[100svh] flex-col overflow-hidden
                           px-8 pb-12 pt-[90px] sm:px-12
-                          lg:sticky lg:top-0 lg:h-screen lg:w-[46%] lg:pb-14">
+                          lg:sticky lg:top-0 lg:h-screen lg:min-h-0 lg:w-[46%] lg:pb-14">
 
             {/* Ghost watermark */}
             <span
