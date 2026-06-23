@@ -122,9 +122,9 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
         eyebrow={service.eyebrow}
         title={service.h1}
         text={service.intro}
-        dark
         image={service.heroImage}
         imageAlt={service.heroImageAlt}
+        imagePosition={service.heroImagePosition}
       />
 
       {/* Highlights — ivory bg, dark cards */}
@@ -146,14 +146,14 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
             {service.highlights.map((highlight, index) => (
               <article
                 key={highlight}
-                className="group relative overflow-hidden border border-bronze/20 bg-charcoal p-6 text-ivory transition-all duration-500 hover:border-bronze/50 hover:bg-[#1c1915]"
+                className="group relative overflow-hidden border border-bronze/20 bg-sand p-6 text-charcoal transition-all duration-500 hover:border-bronze/50 hover:bg-[#cbb89a]"
               >
                 {/* Top sweep */}
                 <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
                 <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bronze transition-colors duration-300 group-hover:text-bronze">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-4 font-serif text-2xl text-ivory transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-ivory">{highlight}</h3>
+                <h3 className="mt-4 font-serif text-2xl text-charcoal transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-charcoal">{highlight}</h3>
               </article>
             ))}
           </div>

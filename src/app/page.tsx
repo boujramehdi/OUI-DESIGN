@@ -199,7 +199,7 @@ function ExpertiseTile({
         src={tile.image}
         alt={tile.title}
         sizes="(min-width: 1024px) 33vw, 100vw"
-        imageClassName="object-cover opacity-[0.88] transition duration-700 group-hover:scale-105"
+        imageClassName="object-cover object-center opacity-[0.88] transition duration-700 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/35 to-transparent" />
       <div className="relative mt-auto w-full p-4 sm:p-6 lg:p-10">

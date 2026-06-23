@@ -229,6 +229,7 @@ export type ServicePage = {
   intro: string;
   heroImage?: string;
   heroImageAlt?: string;
+  heroImagePosition?: string;
   highlights: string[];
   deliverables: string[];
   faq: FaqItem[];
@@ -247,6 +248,7 @@ export const servicePages: ServicePage[] = [
       "Ouidesign accompagne les propriétaires qui veulent transformer une villa existante en lieu de vie premium, confortable, techniquement fiable et adapté aux usages contemporains.",
     heroImage: "/images/riad-courtyard.png",
     heroImageAlt: "Rénovation riad et villa haut de gamme à Marrakech par Ouidesign",
+    heroImagePosition: "object-center",
     highlights: [
       "Lecture architecturale et technique avant travaux",
       "Coordination des lots intérieurs, extérieurs et techniques",
@@ -288,6 +290,7 @@ export const servicePages: ServicePage[] = [
       "La menuiserie Ouidesign donne à l’intérieur sa précision : portes alignées, dressings élégants, rangements discrets et éléments intégrés au dessin global.",
     heroImage: "/images/menuiserie-dressing.png",
     heroImageAlt: "Menuiserie sur mesure et dressing premium pour villa à Marrakech par Ouidesign",
+    heroImagePosition: "object-top",
     highlights: [
       "Conception adaptée aux volumes et aux usages",
       "Matériaux, quincaillerie et finitions sélectionnés",
@@ -329,6 +332,7 @@ export const servicePages: ServicePage[] = [
       "Ouidesign conçoit des maisons intelligentes où la technologie disparaît derrière des gestes simples, des scénarios fiables et une infrastructure correctement préparée.",
     heroImage: "/images/smart-home-2.png",
     heroImageAlt: "Smart home et domotique pour villa à Marrakech — installation Ouidesign",
+    heroImagePosition: "object-top",
     highlights: [
       "Scénarios lumière, climatisation, stores et accès",
       "Réseau, Wi-Fi, baie technique et sécurité",
@@ -370,6 +374,7 @@ export const servicePages: ServicePage[] = [
       "La sécurité d’une villa premium doit être efficace sans alourdir l’architecture. Ouidesign intègre caméras, réseau, accès et supervision avec sobriété.",
     heroImage: "/images/securiter.jpg",
     heroImageAlt: "Système de sécurité et caméras discrets pour villa à Marrakech par Ouidesign",
+    heroImagePosition: "object-center",
     highlights: [
       "Caméras extérieures et intérieures positionnées avec soin",
       "Contrôle d’accès, alarmes et réseau sécurisé",
@@ -411,6 +416,7 @@ export const servicePages: ServicePage[] = [
       "Dans le climat de Marrakech, la climatisation doit être puissante, silencieuse, bien dimensionnée et intégrée à l’architecture intérieure.",
     heroImage: "/images/climatisation.jpg",
     heroImageAlt: "Climatisation premium intégrée pour villa à Marrakech par Ouidesign",
+    heroImagePosition: "object-center",
     highlights: [
       "Dimensionnement selon volumes, orientation et usage",
       "Intégration esthétique des unités et passages techniques",
@@ -452,6 +458,7 @@ export const servicePages: ServicePage[] = [
       "Une belle piscine commence souvent dans un local technique bien pensé. Ouidesign coordonne esthétique, hydraulique, filtration, éclairage et maintenance.",
     heroImage: "/images/piscine-sunset.png",
     heroImageAlt: "Piscine haut de gamme au coucher du soleil pour villa à Marrakech par Ouidesign",
+    heroImagePosition: "object-bottom",
     highlights: [
       "Création ou rénovation de bassins",
       "Organisation claire du local technique",
@@ -493,6 +500,7 @@ export const servicePages: ServicePage[] = [
       "Ouidesign prépare les villas haut de gamme à une gestion plus intelligente de l’énergie, du réseau et des équipements critiques.",
     heroImage: "/images/solaire-infrastruction.jpg",
     heroImageAlt: "Infrastructure solaire et technique pour villa à Marrakech par Ouidesign",
+    heroImagePosition: "object-center",
     highlights: [
       "Préparation électrique et solaire",
       "Baie technique, réseau, Wi-Fi et protections",

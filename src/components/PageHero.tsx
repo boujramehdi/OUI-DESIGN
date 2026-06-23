@@ -7,9 +7,10 @@ type PageHeroProps = {
   dark?: boolean;
   image?: string;
   imageAlt?: string;
+  imagePosition?: string;
 };
 
-export function PageHero({ eyebrow, title, text, dark = false, image, imageAlt = "" }: PageHeroProps) {
+export function PageHero({ eyebrow, title, text, dark = false, image, imageAlt = "", imagePosition = "object-center" }: PageHeroProps) {
   const bg = dark ? "bg-charcoal text-ivory" : "bg-ivory text-charcoal";
   const textMuted = dark ? "text-ivory/55" : "text-charcoal/55";
 
@@ -42,7 +43,7 @@ export function PageHero({ eyebrow, title, text, dark = false, image, imageAlt =
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               priority
-              className="object-cover transition duration-700 hover:scale-[1.03]"
+              className={`${imagePosition} object-cover transition duration-700 hover:scale-[1.03]`}
             />
             <div
               className={`absolute inset-0 ${dark ? "bg-gradient-to-r from-charcoal/30 to-transparent" : "bg-gradient-to-r from-ivory/20 to-transparent"}`}

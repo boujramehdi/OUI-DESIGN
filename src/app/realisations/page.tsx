@@ -174,10 +174,10 @@ export default function RealisationsPage() {
         <div className="mx-auto max-w-7xl px-5 pb-4 pt-4 sm:px-8">
           <div className="grid gap-1 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { src: "/images/riad-courtyard.png", alt: "Rénovation riad et villa haut de gamme à Marrakech par Ouidesign", label: "Rénovation" },
-              { src: "/images/Home-smart.png", alt: "Installation smart home et domotique pour villa à Marrakech", label: "Smart Home" },
-              { src: "/images/piscine-sunset.png", alt: "Piscine et local technique pour villa à Marrakech", label: "Piscine" },
-              { src: "/images/solaire-infrastruction.jpg", alt: "Infrastructure solaire pour villa à Marrakech", label: "Solaire" },
+              { src: "/images/riad-courtyard.png", alt: "Rénovation riad et villa haut de gamme à Marrakech par Ouidesign", label: "Rénovation", pos: "object-center" },
+              { src: "/images/Home-smart.png", alt: "Installation smart home et domotique pour villa à Marrakech", label: "Smart Home", pos: "object-top" },
+              { src: "/images/piscine-sunset.png", alt: "Piscine et local technique pour villa à Marrakech", label: "Piscine", pos: "object-bottom" },
+              { src: "/images/solaire-infrastruction.jpg", alt: "Infrastructure solaire pour villa à Marrakech", label: "Solaire", pos: "object-center" },
             ].map((img) => (
               <div key={img.src} className="reveal group relative aspect-square overflow-hidden">
                 <Image
@@ -185,7 +185,7 @@ export default function RealisationsPage() {
                   alt={img.alt}
                   fill
                   sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover opacity-75 transition duration-700 group-hover:opacity-100 group-hover:scale-108"
+                  className={`${img.pos} object-cover opacity-75 transition duration-700 group-hover:opacity-100 group-hover:scale-108`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent transition duration-500 group-hover:from-charcoal/30" />
                 <p className="absolute bottom-4 left-5 text-[0.55rem] uppercase tracking-[0.28em] text-ivory/60 transition duration-300 group-hover:text-bronze">
