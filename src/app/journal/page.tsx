@@ -52,8 +52,8 @@ export default function JournalPage() {
             <div className="absolute inset-x-0 top-[90px] h-px bg-ivory/6" />
             <div className="absolute bottom-0 right-0 top-[90px] w-px bg-ivory/6" />
 
-            {/* Eyebrow */}
-            <div className="relative anim-fade-in flex items-center gap-4">
+            {/* Eyebrow — vertically centred on the navbar (h-[90px] → top: 45px) */}
+            <div className="absolute left-8 top-[45px] -translate-y-1/2 anim-fade-in flex items-center gap-4 sm:left-12">
               <span className="hero-line-grow inline-block h-px bg-bronze/65" />
               <p className="text-[0.62rem] uppercase tracking-[0.4em] text-bronze">Journal Ouidesign</p>
             </div>
