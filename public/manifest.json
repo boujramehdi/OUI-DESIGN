@@ -1,0 +1,38 @@
+{
+  "name": "Ouidesign — Architecture intelligente à Marrakech",
+  "short_name": "Ouidesign",
+  "description": "Rénovation, domotique, menuiserie et architecture pour villas et riads haut de gamme à Marrakech.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D0E10",
+  "theme_color": "#C5A880",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/images/ouidesign-profile.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/ouidesign-profile.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "lifestyle"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Demander un devis",
+      "url": "/devis",
+      "description": "Demandez une orientation pour votre projet villa"
+    },
+    {
+      "name": "Nos expertises",
+      "url": "/expertises",
+      "description": "Découvrir toutes nos expertises"
+    }
+  ]
+}

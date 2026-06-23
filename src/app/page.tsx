@@ -6,6 +6,10 @@ import { Hero } from "@/components/Hero";
 import { ManifestoSection } from "@/components/ManifestoSection";
 import { ProcessSection } from "@/components/ProcessSection";
 import { CollectionShowcase } from "@/components/CollectionShowcase";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { HomeFaqSection } from "@/components/HomeFaqSection";
+import { EmailCapture } from "@/components/EmailCapture";
+import { TrustBar } from "@/components/TrustBar";
 import { authorityPillars, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -47,7 +51,58 @@ const localBusinessJsonLd = {
   ],
   description: siteConfig.description,
   priceRange: "$$$",
-  sameAs: [siteConfig.url],
+  sameAs: [
+    siteConfig.url,
+    "https://www.instagram.com/ouidesign.ma",
+    "https://www.facebook.com/ouidesign",
+    "https://www.linkedin.com/company/ouidesign",
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "47",
+    bestRating: "5",
+    worstRating: "1",
+  },
+};
+
+const homeFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Combien coûte une rénovation de villa à Marrakech ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Une rénovation haut de gamme à Marrakech se situe généralement entre 3 000 et 8 000 DH/m² selon l’état du bien, le niveau de finition et les équipements intégrés. Ouidesign propose un diagnostic initial pour cadrer le budget avec précision.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Ouidesign peut-il gérer l’intégralité d’un projet de villa ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Oui. Ouidesign coordonne tous les corps de métier : architecture intérieure, menuiserie, électricité, climatisation, domotique, piscine et sécurité. Un seul interlocuteur de la conception à la livraison.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "La domotique est-elle adaptée aux villas de Marrakech ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolument. La domotique répond à des problèmes concrets : gestion de la climatisation à distance, contrôle des accès, scénarios lumière et économies d’énergie. Le meilleur moment pour l’intégrer est pendant la rénovation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Comment se passe un premier contact avec Ouidesign ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Un message WhatsApp suffit pour démarrer. Décrivez votre projet — type de bien, localisation, nature des travaux. Ouidesign vous répond rapidement et propose une visite ou un diagnostic sur place.",
+      },
+    },
+  ],
 };
 
 // PRD grid: Row 1 → 50% large | 25% stacked pair | 25% stacked pair
@@ -58,21 +113,21 @@ const expertiseTiles = [
     title: "Rénovation Villas & Riads",
     text: "Redonner vie à l’existant avec exigence et respect de l’âme du lieu.",
     href: "/renovation-villa-marrakech",
-    image: "/images/riad&villa.jpg",
+    image: "/images/riad-courtyard.png",
     className: "aspect-[4/5] sm:aspect-[16/11] lg:aspect-auto lg:col-span-6 lg:row-span-2",
   },
   {
     title: "Menuiserie Sur Mesure",
     text: "Des créations uniques, nobles et intemporelles.",
     href: "/menuiserie-sur-mesure-marrakech",
-    image: "/images/bureau.png",
+    image: "/images/menuiserie-dressing.png",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
   {
     title: "Cuisines Premium",
     text: "L’élégance fonctionnelle, au cœur de la maison.",
     href: "/collection#cuisines-premium",
-    image: "/images/cuisine.png",
+    image: "/images/cuisine-premium.png",
     className: "aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:col-span-3",
   },
   {
@@ -142,20 +197,20 @@ function ExpertiseTile({
     >
       <CinematicImage
         src={tile.image}
-        alt=""
+        alt={tile.title}
         sizes="(min-width: 1024px) 33vw, 100vw"
         imageClassName="object-cover opacity-[0.88] transition duration-700 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/35 to-transparent" />
-      <div className="relative mt-auto w-full p-6 sm:p-10">
-        <div className="mb-5 h-px w-14 bg-bronze transition-all duration-500 group-hover:w-24" />
-        <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bronze">
+      <div className="relative mt-auto w-full p-4 sm:p-6 lg:p-10">
+        <div className="mb-3 h-px w-10 bg-bronze transition-all duration-500 group-hover:w-20 sm:mb-5 sm:w-14" />
+        <p className="text-[0.58rem] uppercase tracking-[0.24em] text-bronze sm:text-[0.6rem] sm:tracking-[0.28em]">
           {String(index + 1).padStart(2, "0")}
         </p>
-        <h3 className="mt-3 max-w-xl font-serif text-2xl font-medium leading-tight sm:text-3xl">
+        <h3 className="mt-2 max-w-xl font-serif text-xl font-medium leading-tight sm:text-2xl lg:text-3xl">
           {tile.title}
         </h3>
-        <p className="mt-3 max-w-xl text-xs leading-6 text-ivory/70 sm:text-sm sm:leading-7">{tile.text}</p>
+        <p className="mt-2 max-w-xl text-[0.7rem] leading-5 text-ivory/70 sm:mt-3 sm:text-xs sm:leading-6 lg:text-sm lg:leading-7">{tile.text}</p>
       </div>
     </Link>
   );
@@ -168,7 +223,12 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqJsonLd) }}
+      />
       <Hero />
+      <TrustBar />
       <ManifestoSection />
 
       <section className="bg-ivory">
@@ -181,14 +241,16 @@ export default function HomePage() {
           </div>
           <div className="grid gap-6 sm:grid-cols-3 sm:gap-8">
             {authorityPillars.map((pillar, index) => (
-              <article key={pillar.title} className="reveal">
-                <p className="font-serif text-5xl leading-none text-bronze/70">
+              <article key={pillar.title} className="reveal group relative overflow-hidden border-t border-bronze/15 pt-6 transition-colors duration-300 hover:border-bronze/50">
+                {/* Bronze sweep line on hover */}
+                <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
+                <p className="font-serif text-5xl leading-none text-bronze/70 transition-all duration-500 group-hover:scale-110 group-hover:text-bronze origin-left inline-block">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-4 text-[0.65rem] uppercase tracking-[0.22em] text-charcoal">
+                <h3 className="mt-4 text-[0.65rem] uppercase tracking-[0.22em] text-charcoal transition-colors duration-300 group-hover:text-bronze">
                   {pillar.title}
                 </h3>
-                <p className="mt-3 text-xs leading-6 text-charcoal/62">{pillar.description}</p>
+                <p className="mt-3 text-xs leading-6 text-charcoal/62 transition-colors duration-300 group-hover:text-charcoal/85">{pillar.description}</p>
               </article>
             ))}
           </div>
@@ -204,6 +266,8 @@ export default function HomePage() {
       </section>
 
       <CollectionShowcase />
+
+      <TestimonialsSection />
 
       <ProcessSection />
 
@@ -221,23 +285,27 @@ export default function HomePage() {
             {serviceAreas.map((area) => (
               <span
                 key={area}
-                className="border border-bronze/30 px-3 py-2 text-[0.58rem] uppercase tracking-[0.18em] text-ivory/70 sm:px-4 sm:py-3 sm:text-[0.62rem]"
+                className="border border-bronze/30 px-3 py-2 text-[0.58rem] uppercase tracking-[0.18em] text-ivory/70 transition-all duration-300 hover:border-bronze hover:bg-bronze/10 hover:text-ivory sm:px-4 sm:py-3 sm:text-[0.62rem]"
               >
                 {area}
               </span>
             ))}
           </div>
         </div>
-        <div className="reveal relative min-h-[300px] overflow-hidden sm:min-h-[400px] lg:min-h-[600px]">
+        <div className="reveal relative min-h-[300px] overflow-hidden bg-charcoal sm:min-h-[400px] lg:min-h-[600px]">
           <CinematicImage
-            src="/images/marrakech-final section.jpg"
-            alt=""
+            src="/images/mosquet.png"
+            alt="Mosquée Koutoubia et Atlas enneigé — Marrakech, zone d'intervention Ouidesign"
             sizes="(min-width: 1024px) 66vw, 100vw"
-            imageClassName="object-cover"
+            imageClassName="object-contain object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/45 via-transparent to-charcoal/15" />
         </div>
       </section>
+
+      <HomeFaqSection />
+
+      <EmailCapture />
 
       <CTASection />
     </>

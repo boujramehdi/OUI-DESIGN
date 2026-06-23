@@ -10,18 +10,17 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:grid-cols-2 sm:px-8 sm:py-20 lg:grid-cols-[1.4fr_1fr_0.8fr_0.9fr] lg:gap-14 lg:py-24">
         {/* Brand */}
         <div className="lg:pr-8">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <Image
               src="/images/ouidesign-profile.png"
               alt="Logo Ouidesign"
-              width={48}
-              height={48}
-              className="rounded-full ring-1 ring-bronze/35"
+              width={40}
+              height={40}
+              className="rounded-full ring-1 ring-bronze/35 transition-all duration-300 hover:ring-bronze/70 hover:shadow-[0_0_16px_rgba(184,146,95,0.2)]"
             />
-            <div className="flex flex-col leading-none gap-1">
-              <span className="font-serif text-xl font-medium tracking-[0.12em] text-ivory">OUI</span>
-              <span className="text-[0.5rem] uppercase tracking-[0.36em] text-bronze">DESIGN</span>
-            </div>
+            <span className="font-serif text-[1.5rem] font-medium tracking-[-0.01em] text-ivory">
+              Ouidesign
+            </span>
           </div>
           <p className="mt-7 max-w-xs text-sm leading-7 text-ivory/62">
             Architecture, intelligence et confort. Nous créons des villas d'exception
@@ -29,10 +28,10 @@ export function Footer() {
           </p>
           <Link
             href="/realisations"
-            className="mt-6 inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-bronze transition hover:text-ivory"
+            className="group mt-6 inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-bronze transition hover:text-ivory"
           >
             Découvrir nos réalisations
-            <span className="h-px w-8 bg-bronze/50" />
+            <span className="h-px w-8 bg-bronze/50 transition-all duration-300 group-hover:w-14 group-hover:bg-ivory/60" />
           </Link>
           {/* Social */}
           <div className="mt-8 flex items-center gap-5">
@@ -136,7 +135,7 @@ export function Footer() {
 
       <div className="border-t border-ivory/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 text-[0.6rem] uppercase tracking-[0.18em] text-ivory/40 sm:px-8 md:flex-row md:items-center md:justify-between">
-          <p>© Ouidesign 2024 — Tous droits réservés</p>
+          <p>© Ouidesign 2026 — Tous droits réservés</p>
           <div className="flex gap-6">
             <Link href="/mentions-legales" className="transition hover:text-ivory/70">
               Mentions légales

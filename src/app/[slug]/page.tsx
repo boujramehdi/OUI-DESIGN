@@ -56,13 +56,76 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
     })),
   };
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.metaDescription,
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Ouidesign",
+      url: "https://ouidesign.ma",
+      telephone: "+212 649 055 897",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Marrakech",
+        addressCountry: "MA",
+      },
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Marrakech",
+    },
+    serviceType: service.title,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: "https://ouidesign.ma",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Expertises",
+        item: "https://ouidesign.ma/expertises",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.title,
+        item: `https://ouidesign.ma/${service.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <PageHero eyebrow={service.eyebrow} title={service.h1} text={service.intro} dark />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <PageHero
+        eyebrow={service.eyebrow}
+        title={service.h1}
+        text={service.intro}
+        dark
+        image={service.heroImage}
+        imageAlt={service.heroImageAlt}
+      />
 
       {/* Highlights — ivory bg, dark cards */}
       <section className="bg-ivory">
@@ -83,12 +146,14 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
             {service.highlights.map((highlight, index) => (
               <article
                 key={highlight}
-                className="border border-bronze/20 bg-charcoal p-6 text-ivory"
+                className="group relative overflow-hidden border border-bronze/20 bg-charcoal p-6 text-ivory transition-all duration-500 hover:border-bronze/50 hover:bg-[#1c1915]"
               >
-                <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bronze">
+                {/* Top sweep */}
+                <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
+                <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bronze transition-colors duration-300 group-hover:text-bronze">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-4 font-serif text-2xl text-ivory">{highlight}</h3>
+                <h3 className="mt-4 font-serif text-2xl text-ivory transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-ivory">{highlight}</h3>
               </article>
             ))}
           </div>
@@ -98,14 +163,23 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
       {/* Deliverables — dark bg */}
       <section className="bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
-          <p className="mb-8 text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
-            Livrables
-          </p>
-          <div className="grid gap-px bg-bronze/15 md:grid-cols-2 lg:grid-cols-4">
-            {service.deliverables.map((deliverable) => (
-              <article key={deliverable} className="bg-charcoal p-7">
-                <div className="mb-4 h-px w-8 bg-bronze" />
-                <h2 className="font-serif text-xl text-ivory">{deliverable}</h2>
+          <div className="mb-12 flex items-end justify-between">
+            <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Livrables</p>
+            <span className="h-px flex-1 mx-8 bg-bronze/15" />
+            <p className="font-serif text-2xl text-ivory/20">{String(service.deliverables.length).padStart(2, "0")}</p>
+          </div>
+          <div className="grid gap-px bg-bronze/10 md:grid-cols-2 lg:grid-cols-4">
+            {service.deliverables.map((deliverable, index) => (
+              <article key={deliverable} className="group relative overflow-hidden bg-charcoal p-8 transition-colors duration-300 hover:bg-[#1a1714]">
+                {/* Background number */}
+                <span className="absolute -right-2 -top-3 font-serif text-[5rem] font-medium leading-none text-ivory/[0.03] transition-colors duration-300 group-hover:text-bronze/[0.06] select-none">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                {/* Bronze line — grows on hover */}
+                <div className="mb-6 h-px w-6 bg-bronze/50 transition-all duration-500 group-hover:w-12 group-hover:bg-bronze" />
+                <h3 className="relative font-serif text-xl leading-tight text-ivory transition-colors duration-300 group-hover:text-ivory sm:text-2xl">
+                  {deliverable}
+                </h3>
               </article>
             ))}
           </div>

@@ -31,6 +31,7 @@ export type ServiceSummary = {
   href: string;
   kicker: string;
   description: string;
+  image?: string;
 };
 
 export const mainServices: ServiceSummary[] = [
@@ -38,6 +39,7 @@ export const mainServices: ServiceSummary[] = [
     title: "Rénovation Villas & Riads",
     href: "/renovation-villa-marrakech",
     kicker: "Patrimoine privé",
+    image: "/images/riad-courtyard.png",
     description:
       "Transformation complète de villas, riads et maisons d’hôtes avec une lecture architecturale, technique et esthétique du lieu.",
   },
@@ -45,6 +47,7 @@ export const mainServices: ServiceSummary[] = [
     title: "Architecture Intérieure",
     href: "/expertises#architecture-interieure",
     kicker: "Volumes et matières",
+    image: "/images/villa-sunset.png",
     description:
       "Plans, ambiances, finitions et circulation pensés pour une villa fluide, contemporaine et profondément confortable.",
   },
@@ -52,6 +55,7 @@ export const mainServices: ServiceSummary[] = [
     title: "Menuiserie Sur Mesure",
     href: "/menuiserie-sur-mesure-marrakech",
     kicker: "Atelier précis",
+    image: "/images/menuiserie-dressing.png",
     description:
       "Dressings, portes, bibliothèques, panneaux muraux et solutions intégrées dessinés pour l’espace et fabriqués avec exigence.",
   },
@@ -59,6 +63,7 @@ export const mainServices: ServiceSummary[] = [
     title: "Cuisines Premium",
     href: "/collection#cuisines-premium",
     kicker: "Cuisine signature",
+    image: "/images/cuisine-premium.png",
     description:
       "Cuisines élégantes, ergonomiques et robustes, avec quincaillerie premium, rangements intelligents et finitions nobles.",
   },
@@ -66,6 +71,7 @@ export const mainServices: ServiceSummary[] = [
     title: "Mobilier Intelligent",
     href: "/collection",
     kicker: "Fonction invisible",
+    image: "/images/liftbar.png",
     description:
       "Lift Bar, Mini Lift Bar, bureaux assis-debout et mobilier motorisé pour des intérieurs qui gagnent en liberté.",
   },
@@ -73,6 +79,7 @@ export const mainServices: ServiceSummary[] = [
     title: "Piscines & Locaux Techniques",
     href: "/piscine-local-technique-marrakech",
     kicker: "Eau maîtrisée",
+    image: "/images/piscine-sunset.png",
     description:
       "Création, rénovation, filtration, locaux techniques, éclairage et maintenance pensée dès la conception.",
   },
@@ -80,6 +87,7 @@ export const mainServices: ServiceSummary[] = [
     title: "Smart Home & Domotique",
     href: "/smart-home-marrakech",
     kicker: "Maison intelligente",
+    image: "/images/smart-home.jpg",
     description:
       "Scénarios lumière, climatisation, stores, audio, accès et énergie réunis dans une expérience simple et fiable.",
   },
@@ -87,6 +95,7 @@ export const mainServices: ServiceSummary[] = [
     title: "Sécurité & Caméras",
     href: "/camera-surveillance-marrakech",
     kicker: "Protection discrète",
+    image: "/images/securiter.jpg",
     description:
       "Caméras, contrôle d’accès, alarmes et supervision réseau intégrés sans perturber l’architecture de la propriété.",
   },
@@ -94,6 +103,7 @@ export const mainServices: ServiceSummary[] = [
     title: "Climatisation",
     href: "/climatisation-marrakech",
     kicker: "Confort thermique",
+    image: "/images/climatisation.jpg",
     description:
       "Dimensionnement, pose et intégration de systèmes de climatisation adaptés au climat de Marrakech et aux villas haut de gamme.",
   },
@@ -101,6 +111,7 @@ export const mainServices: ServiceSummary[] = [
     title: "Solaire & Infrastructure",
     href: "/solaire-villa-marrakech",
     kicker: "Autonomie raisonnée",
+    image: "/images/solaire-infrastruction.jpg",
     description:
       "Préparation électrique, solaire, réseau, baies techniques et infrastructure durable pour une villa prête pour demain.",
   },
@@ -124,26 +135,54 @@ export const authorityPillars = [
   },
 ];
 
-export const collectionItems = [
+export type CollectionItem = {
+  slug: string;
+  title: string;
+  description: string;
+  price: string;
+  priceNote: string;
+};
+
+export const collectionItems: CollectionItem[] = [
   {
+    slug: "lift-bar",
     title: "Lift Bar",
     description:
-      "Un bar escamotable et motorisé qui révèle la réception au bon moment et préserve la pureté de l’espace.",
+      "Plus qu’un bar, une déclaration architecturale. Fermé, il s’impose comme un monolithe de laque noire impénétrable. Une pression active le mécanisme silencieux pour révéler un intérieur sculpté en miroir et lumière.",
+    price: "85 000 MAD",
+    priceNote: "Prix de base — personnalisation sur devis",
   },
   {
-    title: "Mini Lift Bar",
+    slug: "mini-lift-bar",
+    title: "Mini Lift Bar — Vert Sarcelle",
     description:
-      "Une version compacte pour suites, salons privés, riads et villas Airbnb où chaque détail compte.",
+      "Plus qu’un meuble, une présence qui s’impose. Fermé, un volume pur en laque Vert Sarcelle poli à la main. Ouvert, verre, miroir et métal s’élèvent avec précision — l’expression d’un luxe maîtrisé pour les intérieurs exigeants.",
+    price: "45 000 MAD",
+    priceNote: "Coloris & dimensions sur mesure",
   },
   {
+    slug: "bar-vintage",
+    title: "Le Bar Vintage",
+    description:
+      "En apparence, un fût de chêne chargé d’histoire. En réalité, le gardien insoupçonné de votre collection. Un mécanisme lift élève vos bouteilles de l’ombre vers la lumière — le charme de l’ancien, la magie de la mécanique.",
+    price: "28 000 MAD",
+    priceNote: "Sur commande — délai 4 à 6 semaines",
+  },
+  {
+    slug: "bureau-assis-debout",
     title: "Bureau assis-debout",
     description:
-      "Un poste de travail premium, silencieux et réglable, pensé pour les villas qui accueillent aussi le travail nomade.",
+      "Un poste de travail qui redéfinit l’ergonomie par l’élégance. Plateau anthracite mat et chaleur du bois naturel — il s’ajuste silencieusement à votre hauteur idéale d’une simple pression, pour un bureau toujours épuré.",
+    price: "18 000 MAD",
+    priceNote: "Plateau & finitions personnalisables",
   },
   {
+    slug: "cuisines-premium",
     title: "Cuisines premium",
     description:
-      "Des cuisines sur mesure où rangements, ergonomie, matériaux et appareils s’alignent dans une vraie pièce de vie.",
+      "Des cuisines sur mesure où volumes clairs, rangements invisibles, matériaux nobles et électroménager intégré s’alignent dans une continuité parfaite. Le regard glisse sans obstacle.",
+    price: "Sur devis",
+    priceNote: "À partir de 120 000 MAD selon les volumes",
   },
 ];
 
@@ -188,6 +227,8 @@ export type ServicePage = {
   h1: string;
   eyebrow: string;
   intro: string;
+  heroImage?: string;
+  heroImageAlt?: string;
   highlights: string[];
   deliverables: string[];
   faq: FaqItem[];
@@ -204,6 +245,8 @@ export const servicePages: ServicePage[] = [
     eyebrow: "Villas, riads, maisons d’hôtes",
     intro:
       "Ouidesign accompagne les propriétaires qui veulent transformer une villa existante en lieu de vie premium, confortable, techniquement fiable et adapté aux usages contemporains.",
+    heroImage: "/images/riad-courtyard.png",
+    heroImageAlt: "Rénovation riad et villa haut de gamme à Marrakech par Ouidesign",
     highlights: [
       "Lecture architecturale et technique avant travaux",
       "Coordination des lots intérieurs, extérieurs et techniques",
@@ -243,6 +286,8 @@ export const servicePages: ServicePage[] = [
     eyebrow: "Bois, détails, intégration",
     intro:
       "La menuiserie Ouidesign donne à l’intérieur sa précision : portes alignées, dressings élégants, rangements discrets et éléments intégrés au dessin global.",
+    heroImage: "/images/menuiserie-dressing.png",
+    heroImageAlt: "Menuiserie sur mesure et dressing premium pour villa à Marrakech par Ouidesign",
     highlights: [
       "Conception adaptée aux volumes et aux usages",
       "Matériaux, quincaillerie et finitions sélectionnés",
@@ -282,6 +327,8 @@ export const servicePages: ServicePage[] = [
     eyebrow: "Confort invisible",
     intro:
       "Ouidesign conçoit des maisons intelligentes où la technologie disparaît derrière des gestes simples, des scénarios fiables et une infrastructure correctement préparée.",
+    heroImage: "/images/smart-home.jpg",
+    heroImageAlt: "Smart home et domotique pour villa à Marrakech — installation Ouidesign",
     highlights: [
       "Scénarios lumière, climatisation, stores et accès",
       "Réseau, Wi-Fi, baie technique et sécurité",
@@ -321,6 +368,8 @@ export const servicePages: ServicePage[] = [
     eyebrow: "Protection discrète",
     intro:
       "La sécurité d’une villa premium doit être efficace sans alourdir l’architecture. Ouidesign intègre caméras, réseau, accès et supervision avec sobriété.",
+    heroImage: "/images/securiter.jpg",
+    heroImageAlt: "Système de sécurité et caméras discrets pour villa à Marrakech par Ouidesign",
     highlights: [
       "Caméras extérieures et intérieures positionnées avec soin",
       "Contrôle d’accès, alarmes et réseau sécurisé",
@@ -360,6 +409,8 @@ export const servicePages: ServicePage[] = [
     eyebrow: "Confort thermique",
     intro:
       "Dans le climat de Marrakech, la climatisation doit être puissante, silencieuse, bien dimensionnée et intégrée à l’architecture intérieure.",
+    heroImage: "/images/climatisation.jpg",
+    heroImageAlt: "Climatisation premium intégrée pour villa à Marrakech par Ouidesign",
     highlights: [
       "Dimensionnement selon volumes, orientation et usage",
       "Intégration esthétique des unités et passages techniques",
@@ -399,6 +450,8 @@ export const servicePages: ServicePage[] = [
     eyebrow: "Eau, filtration, précision",
     intro:
       "Une belle piscine commence souvent dans un local technique bien pensé. Ouidesign coordonne esthétique, hydraulique, filtration, éclairage et maintenance.",
+    heroImage: "/images/piscine-sunset.png",
+    heroImageAlt: "Piscine haut de gamme au coucher du soleil pour villa à Marrakech par Ouidesign",
     highlights: [
       "Création ou rénovation de bassins",
       "Organisation claire du local technique",
@@ -438,6 +491,8 @@ export const servicePages: ServicePage[] = [
     eyebrow: "Autonomie et préparation",
     intro:
       "Ouidesign prépare les villas haut de gamme à une gestion plus intelligente de l’énergie, du réseau et des équipements critiques.",
+    heroImage: "/images/solaire-infrastruction.jpg",
+    heroImageAlt: "Infrastructure solaire et technique pour villa à Marrakech par Ouidesign",
     highlights: [
       "Préparation électrique et solaire",
       "Baie technique, réseau, Wi-Fi et protections",
@@ -477,6 +532,8 @@ export const staticRoutes = [
   "/collection",
   "/realisations",
   "/devis",
+  "/a-propos",
+  "/journal",
 ];
 
 export function getServicePage(slug: string) {

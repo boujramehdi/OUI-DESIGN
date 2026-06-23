@@ -19,9 +19,9 @@ const config: Config = {
         "dark-border": "#222428", // grid lines on dark sections
       },
       fontFamily: {
-        serif:     ['"Cormorant Garamond"', '"Iowan Old Style"', "Georgia", "serif"],
-        sans:      ['"Inter"', '"Avenir Next"', "Avenir", "Helvetica", "Arial", "sans-serif"],
-        signature: ['"Monsieur La Doulaise"', "cursive"],
+        serif:     ["var(--font-cormorant)", '"Iowan Old Style"', "Georgia", "serif"],
+        sans:      ["var(--font-inter)", '"Avenir Next"', "Avenir", "Helvetica", "Arial", "sans-serif"],
+        signature: ["var(--font-signature)", "cursive"],
       },
       boxShadow: {
         line:   "inset 0 0 0 1px rgba(197,168,128,0.12)",

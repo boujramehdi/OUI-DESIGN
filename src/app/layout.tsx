@@ -1,9 +1,37 @@
 import type { Metadata, Viewport } from "next";
+import { Cormorant_Garamond, Inter, Monsieur_La_Doulaise } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { CookieBanner } from "@/components/CookieBanner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { RevealObserver } from "@/components/RevealObserver";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { siteConfig } from "@/lib/site";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cormorant",
+  display: "swap",
+  preload: true,
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+  preload: true,
+});
+
+const signature = Monsieur_La_Doulaise({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-signature",
+  display: "swap",
+  preload: false,
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -24,6 +52,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.png",
     apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
+  verification: {
+    // Ajouter ici votre code Google Search Console après vérification :
+    // google: "VOTRE_CODE_ICI",
   },
   openGraph: {
     type: "website",
@@ -50,20 +83,18 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr" data-scroll-behavior="smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Monsieur+La+Doulaise&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html
+      lang="fr"
+      className={`${cormorant.variable} ${inter.variable} ${signature.variable}`}
+    >
       <body>
         <Header />
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
+        <CookieBanner />
+        <RevealObserver />
+        <Analytics />
       </body>
     </html>
   );

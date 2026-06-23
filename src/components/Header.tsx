@@ -3,15 +3,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { navLinks } from "@/lib/site";
 
 export function Header() {
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   function isActive(href: string) {
     if (href === "/") return pathname === "/";
     if (href.startsWith("/#")) return pathname === "/";
     return pathname.startsWith(href);
+  }
+
+  function closeMenu() {
+    setMenuOpen(false);
   }
 
   return (
@@ -23,17 +29,14 @@ export function Header() {
           <Image
             src="/images/ouidesign-profile.png"
             alt="Logo Ouidesign"
-            width={42}
-            height={42}
+            width={38}
+            height={38}
             loading="eager"
-            className="rounded-full ring-1 ring-bronze/30"
+            className="rounded-full ring-1 ring-bronze/30 transition-all duration-300 hover:ring-bronze/70"
           />
-          <div className="flex flex-col leading-none gap-[3px]">
-            <span className="font-serif text-[1.15rem] font-medium tracking-[0.12em] text-ivory">
-              OUI
-            </span>
-            <span className="text-[0.48rem] uppercase tracking-[0.4em] text-bronze">DESIGN</span>
-          </div>
+          <span className="font-serif text-[1.55rem] font-medium tracking-[-0.01em] text-ivory transition-colors duration-300 hover:text-bronze/90">
+            Ouidesign
+          </span>
         </Link>
 
         {/* Desktop nav */}
@@ -73,36 +76,54 @@ export function Header() {
         </Link>
 
         {/* Mobile burger */}
-        <details className="group relative lg:hidden">
-          <summary className="list-none cursor-pointer border border-ivory/25 px-4 py-[0.6rem] text-[0.6rem] uppercase tracking-[0.16em] text-ivory transition hover:border-bronze hover:text-bronze">
-            Menu
-          </summary>
-          <div className="absolute right-0 mt-2 w-72 origin-top-right border border-bronze/20 bg-[rgba(28,28,26,0.97)] p-4 opacity-0 shadow-lg backdrop-blur-xl transition-all duration-300 group-open:opacity-100">
-            <nav className="grid gap-0.5">
-              {navLinks.map((link) => {
-                const active = isActive(link.href);
-                return (
+        <div className="relative lg:hidden">
+          <button
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-expanded={menuOpen}
+            aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            className="cursor-pointer border border-ivory/25 px-4 py-[0.6rem] text-[0.6rem] uppercase tracking-[0.16em] text-ivory transition hover:border-bronze hover:text-bronze"
+          >
+            {menuOpen ? "Fermer" : "Menu"}
+          </button>
+
+          {menuOpen && (
+            <>
+              {/* Backdrop */}
+              <div
+                className="fixed inset-0 z-[-1]"
+                onClick={closeMenu}
+                aria-hidden="true"
+              />
+              <div className="absolute right-0 mt-2 w-[calc(100vw-2.5rem)] max-w-[18rem] origin-top-right border border-bronze/20 bg-[rgba(28,28,26,0.97)] p-4 shadow-lg backdrop-blur-xl">
+                <nav className="grid gap-0.5">
+                  {navLinks.map((link) => {
+                    const active = isActive(link.href);
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={closeMenu}
+                        className={`flex items-center gap-3 px-3 py-3 text-xs uppercase tracking-[0.14em] transition hover:text-bronze ${
+                          active ? "text-bronze" : "text-ivory/70"
+                        }`}
+                      >
+                        {active && <span className="h-px w-4 shrink-0 bg-bronze" />}
+                        {link.label}
+                      </Link>
+                    );
+                  })}
                   <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`flex items-center gap-3 px-3 py-3 text-xs uppercase tracking-[0.14em] transition hover:text-bronze ${
-                      active ? "text-bronze" : "text-ivory/70"
-                    }`}
+                    href="/#contact"
+                    onClick={closeMenu}
+                    className="mt-3 bg-bronze px-3 py-3 text-center text-[0.65rem] uppercase tracking-[0.16em] text-charcoal transition hover:bg-ivory"
                   >
-                    {active && <span className="h-px w-4 shrink-0 bg-bronze" />}
-                    {link.label}
+                    Demander une orientation
                   </Link>
-                );
-              })}
-              <Link
-                href="/#contact"
-                className="mt-3 bg-bronze px-3 py-3 text-center text-[0.65rem] uppercase tracking-[0.16em] text-charcoal transition hover:bg-ivory"
-              >
-                Demander une orientation
-              </Link>
-            </nav>
-          </div>
-        </details>
+                </nav>
+              </div>
+            </>
+          )}
+        </div>
 
       </div>
     </header>

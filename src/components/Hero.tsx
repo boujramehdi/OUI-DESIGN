@@ -17,7 +17,7 @@ export function Hero() {
   return (
     <section className="relative isolate flex min-h-svh overflow-hidden bg-charcoal text-ivory">
       <CinematicImage
-        src="/images/Hero-villa.jpg"
+        src="/images/villa-sunset.png"
         alt=""
         sizes="100vw"
         preload
