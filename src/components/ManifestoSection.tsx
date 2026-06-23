@@ -47,8 +47,8 @@ export function ManifestoSection() {
           {/* Signature block */}
           <div className="reveal flex flex-col items-start gap-3 lg:items-end lg:pb-1">
             <p
-              className="font-signature leading-tight text-bronze/85"
-              style={{ fontSize: "1.65rem" }}
+              className="font-serif italic leading-tight text-bronze/85"
+              style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.2rem)", fontWeight: 400 }}
             >
               Hamza
               <br />
