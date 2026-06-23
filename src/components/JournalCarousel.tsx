@@ -58,8 +58,15 @@ export function JournalCarousel({ articles }: { articles: Article[] }) {
       {/* Left bleed — merges with hero panel on desktop */}
       <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-charcoal/60 to-transparent lg:w-32" />
 
+      {/* ── Full-slide clickable link (behind controls) ────── */}
+      <Link
+        href={`/journal/${a.slug}`}
+        className="absolute inset-0 z-[1]"
+        aria-label={`Lire : ${a.title}`}
+      />
+
       {/* ── Top bar ────────────────────────────────────────── */}
-      <div className="absolute left-0 right-0 top-0 flex items-center justify-between px-8 pt-8 sm:px-10">
+      <div className="absolute left-0 right-0 top-0 z-[2] flex items-center justify-between px-8 pt-8 sm:px-10">
         {/* Category badge */}
         <div className="border border-bronze/40 bg-charcoal/50 px-3 py-1.5 backdrop-blur-md">
           <span className="text-[0.48rem] uppercase tracking-[0.34em] text-bronze">
@@ -82,7 +89,7 @@ export function JournalCarousel({ articles }: { articles: Article[] }) {
       {/* ── Article content (bottom) ───────────────────────── */}
       <Link
         href={`/journal/${a.slug}`}
-        className="group absolute bottom-0 left-0 right-0 px-8 pb-24 sm:px-10 lg:pb-20"
+        className="group absolute bottom-0 left-0 right-0 z-[2] px-8 pb-24 sm:px-10 lg:pb-20"
       >
         {/* Bronze rule */}
         <div className="mb-5 h-px w-10 bg-bronze/50 transition-all duration-500 group-hover:w-20" />
@@ -112,7 +119,7 @@ export function JournalCarousel({ articles }: { articles: Article[] }) {
       </Link>
 
       {/* ── Navigation — numbered lines ─────────────────────── */}
-      <div className="absolute bottom-7 left-0 right-0 flex items-end justify-center gap-5">
+      <div className="absolute bottom-7 left-0 right-0 z-[3] flex items-end justify-center gap-5">
         {articles.map((_, i) => (
           <button
             key={i}
@@ -141,7 +148,7 @@ export function JournalCarousel({ articles }: { articles: Article[] }) {
       </div>
 
       {/* ── Arrow controls ──────────────────────────────────── */}
-      <div className="absolute right-6 top-1/2 flex -translate-y-1/2 flex-col gap-2 sm:right-8">
+      <div className="absolute right-6 top-1/2 z-[3] flex -translate-y-1/2 flex-col gap-2 sm:right-8">
         <button
           onClick={back}
           aria-label="Article précédent"
