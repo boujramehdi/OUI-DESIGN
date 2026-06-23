@@ -90,22 +90,27 @@ export function ContactForm() {
         <label htmlFor="property" className="text-[0.6rem] uppercase tracking-[0.28em] text-bronze">
           Type de bien
         </label>
-        <select
-          id="property"
-          name="property"
-          required
-          defaultValue=""
-          className="border border-bronze/25 bg-ivory px-4 py-3 text-sm text-charcoal focus:border-bronze focus:outline-none"
-        >
-          <option value="" disabled>
-            Sélectionner…
-          </option>
-          <option>Villa</option>
-          <option>Riad</option>
-          <option>Maison d'hôtes</option>
-          <option>Appartement</option>
-          <option>Autre</option>
-        </select>
+        <div className="relative">
+          <select
+            id="property"
+            name="property"
+            required
+            defaultValue=""
+            className="w-full appearance-none border border-bronze/25 bg-ivory px-4 py-3 pr-10 text-sm text-charcoal focus:border-bronze focus:outline-none transition-colors duration-200"
+          >
+            <option value="" disabled>Sélectionner…</option>
+            <option>Villa</option>
+            <option>Riad</option>
+            <option>Maison d'hôtes</option>
+            <option>Appartement</option>
+            <option>Autre</option>
+          </select>
+          <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-bronze/60">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="2,4 6,8 10,4" />
+            </svg>
+          </div>
+        </div>
       </div>
 
       {/* Type de projet */}
@@ -113,20 +118,25 @@ export function ContactForm() {
         <label htmlFor="projectType" className="text-[0.6rem] uppercase tracking-[0.28em] text-bronze">
           Nature du projet
         </label>
-        <select
-          id="projectType"
-          name="projectType"
-          required
-          defaultValue=""
-          className="border border-bronze/25 bg-ivory px-4 py-3 text-sm text-charcoal focus:border-bronze focus:outline-none"
-        >
-          <option value="" disabled>
-            Sélectionner…
-          </option>
-          {projectTypes.map((type) => (
-            <option key={type}>{type}</option>
-          ))}
-        </select>
+        <div className="relative">
+          <select
+            id="projectType"
+            name="projectType"
+            required
+            defaultValue=""
+            className="w-full appearance-none border border-bronze/25 bg-ivory px-4 py-3 pr-10 text-sm text-charcoal focus:border-bronze focus:outline-none transition-colors duration-200"
+          >
+            <option value="" disabled>Sélectionner…</option>
+            {projectTypes.map((type) => (
+              <option key={type}>{type}</option>
+            ))}
+          </select>
+          <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-bronze/60">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="2,4 6,8 10,4" />
+            </svg>
+          </div>
+        </div>
       </div>
 
       {/* Localisation */}
