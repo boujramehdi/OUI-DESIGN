@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { JournalCarousel } from "@/components/JournalCarousel";
 import { articles } from "@/lib/articles";
@@ -10,13 +11,27 @@ export const metadata: Metadata = {
   alternates: { canonical: "/journal" },
 };
 
+const topics = [
+  { label: "Rénovation villa",          n: "01", href: "/renovation-villa-maroc" },
+  { label: "Smart home & domotique",    n: "02", href: "/smart-home-maroc" },
+  { label: "Menuiserie sur mesure",     n: "03", href: "/menuiserie-sur-mesure-maroc" },
+  { label: "Piscine & local technique", n: "04", href: "/piscine-local-technique-maroc" },
+  { label: "Climatisation",             n: "05", href: "/climatisation-maroc" },
+  { label: "Solaire & infrastructure",  n: "06", href: "/solaire-villa-maroc" },
+  { label: "Architecture intérieure",   n: "07", href: "/expertises" },
+  { label: "Sécurité & caméras",        n: "08", href: "/camera-surveillance-maroc" },
+];
+
 export default function JournalPage() {
   return (
     <>
+      {/* ══════════════════════════════════════════════════
+          01 — SPLIT  Sticky hero  ·  Image carousel
+      ══════════════════════════════════════════════════ */}
       <section className="bg-charcoal text-ivory">
         <div className="flex flex-col lg:flex-row lg:min-h-[100svh]">
 
-          {/* ── LEFT — sticky hero ─────────────────────────── */}
+          {/* LEFT — sticky hero */}
           <div className="relative flex flex-col justify-between overflow-hidden
                           px-8 pb-12 pt-36 sm:px-12 sm:pt-44
                           lg:sticky lg:top-0 lg:h-screen lg:w-[46%] lg:pb-14 lg:pt-36">
@@ -60,7 +75,7 @@ export default function JournalPage() {
               </p>
             </div>
 
-            {/* Bottom — count */}
+            {/* Bottom — article count */}
             <div className="relative anim-fade-in anim-delay-6 flex items-end justify-between">
               <div className="flex items-center gap-3 text-ivory/20">
                 <span className="text-[0.5rem] uppercase tracking-[0.3em]">Explorer</span>
@@ -78,9 +93,54 @@ export default function JournalPage() {
             </div>
           </div>
 
-          {/* ── RIGHT — carousel ───────────────────────────── */}
+          {/* RIGHT — carousel */}
           <JournalCarousel articles={articles} />
+        </div>
+      </section>
 
+      {/* ══════════════════════════════════════════════════
+          02 — TOPICS  editorial typographic list
+      ══════════════════════════════════════════════════ */}
+      <section className="overflow-hidden bg-charcoal text-ivory">
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+          <div className="grid gap-12 lg:grid-cols-[0.65fr_1.35fr] lg:gap-24">
+
+            {/* Left — label */}
+            <div className="reveal-left">
+              <p className="text-[0.62rem] uppercase tracking-[0.4em] text-bronze">Thèmes abordés</p>
+              <h2 className="mt-4 font-serif text-4xl font-medium leading-tight text-ivory sm:text-5xl">
+                Explorer<br />par sujet.
+              </h2>
+              <div className="mt-8 h-px w-12 bg-bronze/35" />
+              <p className="mt-6 text-sm leading-7 text-ivory/35">
+                Chaque article cible un domaine précis de l'art de vivre dans une villa haut de gamme au Maroc.
+              </p>
+            </div>
+
+            {/* Right — numbered topic rows */}
+            <div className="divide-y divide-ivory/[0.07] border-t border-ivory/[0.07]">
+              {topics.map((t, i) => (
+                <Link
+                  key={t.label}
+                  href={t.href}
+                  className="reveal group flex items-center gap-6 py-5 transition-all duration-300 hover:pl-2"
+                  style={{ transitionDelay: `${i * 35}ms` }}
+                >
+                  <span className="w-8 shrink-0 font-serif text-sm leading-none text-bronze/25 transition-colors duration-300 group-hover:text-bronze">
+                    {t.n}
+                  </span>
+                  <div className="h-px w-0 shrink-0 bg-bronze/40 transition-all duration-500 group-hover:w-6" />
+                  <span className="flex-1 text-[0.7rem] uppercase tracking-[0.22em] text-ivory/45 transition-colors duration-300 group-hover:text-ivory">
+                    {t.label}
+                  </span>
+                  <span className="translate-x-2 text-[0.7rem] text-bronze opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                    →
+                  </span>
+                </Link>
+              ))}
+            </div>
+
+          </div>
         </div>
       </section>
 
