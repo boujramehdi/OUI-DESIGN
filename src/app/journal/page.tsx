@@ -12,14 +12,14 @@ export const metadata: Metadata = {
 };
 
 const topics = [
-  { label: "Rénovation villa",        n: "01" },
-  { label: "Smart home & domotique",  n: "02" },
-  { label: "Menuiserie sur mesure",   n: "03" },
-  { label: "Piscine & local technique", n: "04" },
-  { label: "Climatisation",           n: "05" },
-  { label: "Solaire & infrastructure", n: "06" },
-  { label: "Architecture intérieure", n: "07" },
-  { label: "Sécurité & caméras",      n: "08" },
+  { label: "Rénovation villa",          n: "01", href: "/renovation-villa-maroc" },
+  { label: "Smart home & domotique",    n: "02", href: "/smart-home-maroc" },
+  { label: "Menuiserie sur mesure",     n: "03", href: "/menuiserie-sur-mesure-maroc" },
+  { label: "Piscine & local technique", n: "04", href: "/piscine-local-technique-maroc" },
+  { label: "Climatisation",             n: "05", href: "/climatisation-maroc" },
+  { label: "Solaire & infrastructure",  n: "06", href: "/solaire-villa-maroc" },
+  { label: "Architecture intérieure",   n: "07", href: "/expertises" },
+  { label: "Sécurité & caméras",        n: "08", href: "/camera-surveillance-maroc" },
 ];
 
 export default function JournalPage() {
@@ -400,9 +400,10 @@ export default function JournalPage() {
             {/* Right — topic list */}
             <div className="divide-y divide-ivory/8 border-t border-ivory/8">
               {topics.map((t, i) => (
-                <div
+                <Link
                   key={t.label}
-                  className="reveal group flex cursor-default items-center gap-6 py-5 transition-all duration-300 hover:pl-2"
+                  href={t.href}
+                  className="reveal group flex items-center gap-6 py-5 transition-all duration-300 hover:pl-2"
                   style={{ transitionDelay: `${i * 40}ms` }}
                 >
                   <span className="shrink-0 font-serif text-sm leading-none text-bronze/30 transition-colors duration-300 group-hover:text-bronze">
@@ -413,9 +414,9 @@ export default function JournalPage() {
                     {t.label}
                   </span>
                   <span className="translate-x-2 text-bronze/0 transition-all duration-300 group-hover:translate-x-0 group-hover:text-bronze">
-                    ✦
+                    →
                   </span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
