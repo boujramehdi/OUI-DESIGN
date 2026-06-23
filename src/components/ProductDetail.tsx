@@ -215,13 +215,40 @@ export function ProductDetail({
             {/* Trust signals */}
             <div className="anim-fade-in anim-delay-6 mt-6 grid grid-cols-3 gap-2 border-t border-bronze/10 pt-6 sm:gap-4">
               {[
-                { icon: "🛡", label: "Garantie qualité" },
-                { icon: "🚚", label: "Livraison Maroc" },
-                { icon: "✦", label: "Sur mesure" },
+                {
+                  label: "Garantie qualité",
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      <polyline points="9,12 11,14 15,10" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Livraison Maroc",
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="1" y="3" width="15" height="13" />
+                      <polygon points="16,8 20,8 23,11 23,16 16,16 16,8" />
+                      <circle cx="5.5" cy="18.5" r="2.5" />
+                      <circle cx="18.5" cy="18.5" r="2.5" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Sur mesure",
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
+                    </svg>
+                  ),
+                },
               ].map((t) => (
-                <div key={t.label} className="text-center">
-                  <p className="text-base">{t.icon}</p>
-                  <p className="mt-1 text-[0.5rem] uppercase tracking-[0.16em] text-charcoal/45">
+                <div key={t.label} className="group flex flex-col items-center gap-2 text-center">
+                  <div className="text-bronze/50 transition-colors duration-300 group-hover:text-bronze">
+                    {t.icon}
+                  </div>
+                  <p className="text-[0.5rem] uppercase tracking-[0.18em] text-charcoal/40 transition-colors duration-300 group-hover:text-charcoal/70">
                     {t.label}
                   </p>
                 </div>
