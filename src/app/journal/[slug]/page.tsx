@@ -83,46 +83,66 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
-      {/* Hero */}
-      <section className="bg-charcoal text-ivory">
-        <div className="mx-auto max-w-4xl px-5 pb-16 pt-36 sm:px-8 sm:pt-44 lg:pb-20 lg:pt-48">
-          <div className="flex items-center gap-4">
-            <Link
-              href="/journal"
-              className="text-[0.58rem] uppercase tracking-[0.22em] text-ivory/45 transition hover:text-bronze"
-            >
-              Journal
-            </Link>
-            <span className="h-px w-5 bg-bronze/40" />
-            <span className="text-[0.58rem] uppercase tracking-[0.22em] text-bronze">
-              {article.category}
-            </span>
-          </div>
-          <h1 className="mt-6 font-serif text-3xl font-medium leading-[1.04] sm:text-4xl lg:text-5xl">
-            {article.title}
-          </h1>
-          <div className="mt-8 flex items-center gap-6 text-[0.6rem] uppercase tracking-[0.22em] text-ivory/45">
-            <span>{article.date}</span>
-            <span className="h-px w-4 bg-bronze/30" />
-            <span>{article.readTime} de lecture</span>
+      {/* Hero — full-viewport image with overlaid title */}
+      <section className="relative min-h-[100svh] overflow-hidden bg-charcoal text-ivory">
+        {/* Background image */}
+        {article.featuredImage ? (
+          <>
+            <Image
+              src={article.featuredImage}
+              alt={article.featuredImageAlt ?? article.title}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover opacity-50"
+            />
+            {/* Gradient: dark top for nav, dark bottom for text */}
+            <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/20 to-charcoal/90" />
+          </>
+        ) : (
+          /* No image fallback — solid charcoal with ambient glow */
+          <div className="pointer-events-none absolute right-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-bronze/[0.07] blur-3xl" />
+        )}
+
+        {/* Content pinned to bottom */}
+        <div className="relative flex min-h-[100svh] flex-col justify-end">
+          <div className="mx-auto w-full max-w-5xl px-5 pb-16 pt-36 sm:px-8 sm:pb-20 lg:pb-24">
+            {/* Breadcrumb */}
+            <div className="anim-fade-in flex items-center gap-4">
+              <Link
+                href="/journal"
+                className="text-[0.58rem] uppercase tracking-[0.22em] text-ivory/45 transition hover:text-bronze"
+              >
+                Journal
+              </Link>
+              <span className="h-px w-5 bg-bronze/40" />
+              <span className="text-[0.58rem] uppercase tracking-[0.22em] text-bronze">
+                {article.category}
+              </span>
+            </div>
+
+            {/* Title */}
+            <h1 className="anim-slide-up anim-delay-1 mt-6 max-w-3xl font-serif text-3xl font-medium leading-[1.06] sm:text-4xl lg:text-[3.2rem]">
+              {article.title}
+            </h1>
+
+            {/* Meta */}
+            <div className="anim-fade-in anim-delay-3 mt-8 flex items-center gap-6 text-[0.6rem] uppercase tracking-[0.22em] text-ivory/40">
+              <span>{article.date}</span>
+              <span className="h-px w-4 bg-bronze/30" />
+              <span>{article.readTime} de lecture</span>
+            </div>
+
+            {/* Scroll hint */}
+            <div className="anim-fade-in anim-delay-4 mt-12 flex items-center gap-3 text-ivory/25">
+              <div className="flex h-8 w-5 items-start justify-center rounded-full border border-ivory/20 pt-1.5">
+                <div className="h-1.5 w-px animate-bounce bg-ivory/40" />
+              </div>
+              <span className="text-[0.5rem] uppercase tracking-[0.3em]">Défiler</span>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Featured image */}
-      {article.featuredImage && (
-        <div className="relative aspect-[21/9] w-full overflow-hidden bg-charcoal/50">
-          <Image
-            src={article.featuredImage}
-            alt={article.featuredImageAlt ?? article.title}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-85"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/40 via-transparent to-charcoal/20" />
-        </div>
-      )}
 
       {/* Article body */}
       <section className="bg-ivory">
