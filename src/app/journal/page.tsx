@@ -31,7 +31,7 @@ export default function JournalPage() {
               <Link
                 key={article.slug}
                 href={`/journal/${article.slug}`}
-                className="reveal group flex flex-col overflow-hidden border border-bronze/15 bg-charcoal text-ivory transition-all duration-300 hover:border-bronze/40"
+                className="reveal group flex flex-col overflow-hidden border border-bronze/20 bg-ivory text-charcoal transition-all duration-300 hover:border-bronze/40"
               >
                 {/* Image */}
                 {article.featuredImage && (
@@ -43,7 +43,7 @@ export default function JournalPage() {
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover opacity-80 transition duration-700 group-hover:scale-105 group-hover:opacity-95"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal/30 to-transparent" />
                     <span className="absolute left-5 top-5 text-[0.55rem] uppercase tracking-[0.28em] text-bronze">
                       {article.category}
                     </span>
@@ -57,14 +57,14 @@ export default function JournalPage() {
                       {article.category}
                     </p>
                   )}
-                  <h2 className="font-serif text-xl font-medium leading-snug text-ivory sm:text-2xl">
+                  <h2 className="font-serif text-xl font-medium leading-snug text-charcoal sm:text-2xl">
                     {article.title}
                   </h2>
-                  <p className="mt-3 flex-1 text-xs leading-6 text-ivory/55">
+                  <p className="mt-3 flex-1 text-xs leading-6 text-charcoal/60">
                     {article.excerpt}
                   </p>
                   <div className="mt-6 flex items-center justify-between border-t border-bronze/10 pt-5">
-                    <div className="flex items-center gap-4 text-[0.55rem] uppercase tracking-[0.18em] text-ivory/40">
+                    <div className="flex items-center gap-4 text-[0.55rem] uppercase tracking-[0.18em] text-charcoal/45">
                       <span>{article.date}</span>
                       <span className="h-px w-4 bg-bronze/30" />
                       <span>{article.readTime}</span>
@@ -85,7 +85,7 @@ export default function JournalPage() {
       </section>
 
       {/* Topics */}
-      <section className="bg-sand text-charcoal">
+      <section className="bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
           <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Thèmes abordés</p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -102,7 +102,7 @@ export default function JournalPage() {
             ].map((tag) => (
               <span
                 key={tag}
-                className="border border-bronze/25 px-4 py-2 text-[0.6rem] uppercase tracking-[0.18em] text-charcoal/65 transition-all duration-300 hover:border-bronze hover:bg-bronze/10 hover:text-charcoal cursor-default"
+                className="border border-bronze/25 px-4 py-2 text-[0.6rem] uppercase tracking-[0.18em] text-ivory/60 transition-all duration-300 hover:border-bronze hover:bg-bronze/10 hover:text-ivory cursor-default"
               >
                 {tag}
               </span>

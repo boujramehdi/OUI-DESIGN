@@ -34,7 +34,7 @@ export default function ExpertisesPage() {
       </section>
 
       {/* Architecture section — dark bg */}
-      <section id="architecture-interieure" className="overflow-hidden bg-sand text-charcoal">
+      <section id="architecture-interieure" className="overflow-hidden bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
 
           {/* Header row */}
@@ -43,11 +43,11 @@ export default function ExpertisesPage() {
               <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
                 Architecture intérieure
               </p>
-              <h2 className="mt-3 font-serif text-4xl font-medium leading-[1.02] sm:text-5xl lg:text-6xl">
+              <h2 className="mt-3 font-serif text-4xl font-medium leading-[1.02] text-ivory sm:text-5xl lg:text-6xl">
                 Des intérieurs dessinés pour vivre, recevoir et durer.
               </h2>
             </div>
-            <p className="max-w-lg text-sm leading-7 text-charcoal/55 lg:pb-1">
+            <p className="max-w-lg text-sm leading-7 text-ivory/55 lg:pb-1">
               L'architecture intérieure Ouidesign organise la lumière, les circulations, les
               rangements, la matière et les systèmes pour que chaque espace soit à la fois
               élégant et évident.
@@ -59,21 +59,21 @@ export default function ExpertisesPage() {
             {authorityPillars.map((pillar, index) => (
               <article
                 key={pillar.title}
-                className="reveal group relative overflow-hidden bg-ivory px-8 py-10 transition-colors duration-500 hover:bg-[#cbb89a] sm:px-9 sm:py-12"
+                className="reveal group relative overflow-hidden bg-[rgba(255,255,255,0.06)] px-8 py-10 transition-colors duration-500 hover:bg-[rgba(184,146,95,0.18)] sm:px-9 sm:py-12"
               >
                 {/* Top sweep bar */}
                 <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
 
                 {/* Ghost huge number */}
                 <span
-                  className="pointer-events-none absolute -right-3 -top-2 select-none font-serif font-medium leading-none text-charcoal/[0.03] transition-all duration-700 group-hover:text-bronze/[0.10]"
+                  className="pointer-events-none absolute -right-3 -top-2 select-none font-serif font-medium leading-none text-ivory/[0.03] transition-all duration-700 group-hover:text-bronze/[0.10]"
                   style={{ fontSize: "clamp(7rem, 10vw, 9rem)" }}
                 >
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
                 {/* Visible small number */}
-                <p className="relative font-serif text-5xl font-medium leading-none text-bronze/25 transition-colors duration-500 group-hover:text-bronze/60">
+                <p className="relative font-serif text-5xl font-medium leading-none text-bronze/40 transition-colors duration-500 group-hover:text-bronze/80">
                   {String(index + 1).padStart(2, "0")}
                 </p>
 
@@ -81,12 +81,12 @@ export default function ExpertisesPage() {
                 <div className="mt-7 h-px w-8 bg-bronze/40 transition-all duration-500 group-hover:w-full group-hover:bg-bronze/60" />
 
                 {/* Title */}
-                <h3 className="mt-6 font-serif text-2xl text-charcoal transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-charcoal sm:text-3xl">
+                <h3 className="mt-6 font-serif text-2xl text-ivory transition-all duration-300 group-hover:-translate-y-0.5 sm:text-3xl">
                   {pillar.title}
                 </h3>
 
                 {/* Description — slides slightly up on hover */}
-                <p className="mt-4 text-sm leading-7 text-charcoal/55 transition-colors duration-300 group-hover:text-charcoal/80">
+                <p className="mt-4 text-sm leading-7 text-ivory/55 transition-colors duration-300 group-hover:text-ivory/80">
                   {pillar.description}
                 </p>
 

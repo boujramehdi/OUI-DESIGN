@@ -141,7 +141,7 @@ export default function AProposPage() {
       </section>
 
       {/* Valeurs */}
-      <section className="bg-sand text-charcoal overflow-hidden">
+      <section className="bg-ivory text-charcoal overflow-hidden">
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
           <div className="mb-16 flex flex-col gap-2">
             <p className="reveal text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Nos valeurs</p>
@@ -154,7 +154,7 @@ export default function AProposPage() {
             {values.map((value, index) => (
               <article
                 key={value.title}
-                className="reveal group relative overflow-hidden bg-ivory px-8 py-10 transition-colors duration-500 hover:bg-[#cbb89a] sm:px-9 sm:py-12"
+                className="reveal group relative overflow-hidden bg-sand px-8 py-10 transition-colors duration-500 hover:bg-[#cbb89a] sm:px-9 sm:py-12"
               >
                 {/* Bronze left sweep — slides in on hover */}
                 <div className="absolute left-0 top-0 h-full w-0 bg-bronze/8 transition-all duration-700 group-hover:w-full" />

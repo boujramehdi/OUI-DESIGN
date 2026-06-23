@@ -7,7 +7,7 @@ const trustItems = [
 
 export function TrustBar() {
   return (
-    <section className="relative overflow-hidden border-y border-bronze/20 bg-sand">
+    <section className="relative overflow-hidden border-y border-bronze/20 bg-charcoal">
       {/* Subtle diagonal texture */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.018]"
@@ -33,14 +33,14 @@ export function TrustBar() {
 
               {/* Value */}
               <p
-                className="anim-slide-up relative font-serif font-medium text-bronze transition-colors duration-700 group-hover:text-charcoal/90 sm:text-6xl lg:text-7xl"
+                className="anim-slide-up relative font-serif font-medium text-bronze transition-colors duration-700 group-hover:text-ivory/90 sm:text-6xl lg:text-7xl"
                 style={{ fontSize: "clamp(2rem, 8vw, 4.5rem)", animationDelay: `${i * 0.09}s` }}
               >
                 {item.value}
               </p>
 
               {/* Label */}
-              <p className="relative mt-3 text-[0.57rem] uppercase tracking-[0.3em] text-charcoal/45 transition-colors duration-500 group-hover:text-charcoal/60">
+              <p className="relative mt-3 text-[0.57rem] uppercase tracking-[0.3em] text-ivory/45 transition-colors duration-500 group-hover:text-ivory/60">
                 {item.label}
               </p>
 

@@ -16,12 +16,12 @@ export function CTASection({
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-charcoal text-ivory"
+      className="relative overflow-hidden bg-[#2C2018] text-ivory"
     >
       {/* Radial bronze glow — top-left accent */}
-      <div className="pointer-events-none absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full bg-bronze/[0.07] blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full bg-bronze/[0.12] blur-3xl" />
       {/* Radial glow — bottom-right */}
-      <div className="pointer-events-none absolute -bottom-32 -right-32 h-[500px] w-[500px] rounded-full bg-bronze/[0.05] blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-[500px] w-[500px] rounded-full bg-bronze/[0.09] blur-3xl" />
 
       {/* Subtle diagonal texture lines */}
       <div

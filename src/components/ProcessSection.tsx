@@ -32,18 +32,18 @@ const stepIcons = [
 
 export function ProcessSection() {
   return (
-    <section className="bg-ivory text-charcoal overflow-hidden">
+    <section className="bg-charcoal text-ivory overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
 
         {/* Header */}
         <div className="reveal mb-16 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-[0.62rem] uppercase tracking-[0.34em] text-bronze">Notre processus</p>
-            <h2 className="mt-3 font-serif text-4xl font-medium leading-[1.02] sm:text-5xl lg:text-6xl">
+            <h2 className="mt-3 font-serif text-4xl font-medium leading-[1.02] text-ivory sm:text-5xl lg:text-6xl">
               Une approche claire<br className="hidden sm:block" /> et maîtrisée.
             </h2>
           </div>
-          <p className="max-w-xs text-sm leading-7 text-charcoal/50 lg:text-right">
+          <p className="max-w-xs text-sm leading-7 text-ivory/50 lg:text-right">
             Chaque projet suit la même rigueur — du premier diagnostic à la livraison finale.
           </p>
         </div>
@@ -53,14 +53,14 @@ export function ProcessSection() {
           {processSteps.map((step, index) => (
             <article
               key={step.title}
-              className="group relative flex flex-col bg-sand px-5 py-6 transition-colors duration-300 hover:bg-[#cbb89a] sm:px-6 sm:py-8 md:px-7 md:py-10"
+              className="group relative flex flex-col bg-ivory px-5 py-6 transition-colors duration-300 hover:bg-[#cbb89a] sm:px-6 sm:py-8 md:px-7 md:py-10"
             >
               {/* Top: number + icon */}
               <div className="flex items-start justify-between">
-                <span className="font-serif text-5xl font-medium leading-none text-bronze/20 transition-colors duration-300 group-hover:text-bronze/40 sm:text-6xl">
+                <span className="font-serif text-5xl font-medium leading-none text-bronze/30 transition-colors duration-300 group-hover:text-bronze/60 sm:text-6xl">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <div className="mt-1 text-bronze/40 transition-colors duration-300 group-hover:text-bronze">
+                <div className="mt-1 text-bronze/50 transition-colors duration-300 group-hover:text-bronze">
                   {stepIcons[index]}
                 </div>
               </div>
@@ -72,7 +72,7 @@ export function ProcessSection() {
               <h3 className="mt-5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-charcoal/90">
                 {step.title}
               </h3>
-              <p className="mt-3 flex-1 text-xs leading-6 text-charcoal/50 transition-colors duration-300 group-hover:text-charcoal/70">
+              <p className="mt-3 flex-1 text-xs leading-6 text-charcoal/60 transition-colors duration-300 group-hover:text-charcoal/80">
                 {step.description}
               </p>
             </article>

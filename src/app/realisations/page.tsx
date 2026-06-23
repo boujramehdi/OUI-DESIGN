@@ -102,8 +102,8 @@ export default function RealisationsPage() {
         text="Les projets Ouidesign sont souvent confidentiels. Cette page présente les typologies d'intervention et les standards appliqués à chaque propriété."
       />
 
-      {/* Stats — sand */}
-      <section className="bg-sand text-charcoal">
+      {/* Stats — charcoal */}
+      <section className="bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
           <div className="grid grid-cols-2 gap-px bg-bronze/10 lg:grid-cols-4">
             {stats.map((stat) => (
@@ -198,18 +198,18 @@ export default function RealisationsPage() {
       </section>
 
       {/* Notre standard */}
-      <section className="bg-sand text-charcoal">
+      <section className="bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
           <div className="mb-14 lg:grid lg:grid-cols-[1fr_2fr] lg:gap-16 lg:items-end">
             <div>
               <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
                 Standard Ouidesign
               </p>
-              <h2 className="mt-4 font-serif text-3xl font-medium leading-tight sm:text-4xl lg:text-5xl">
+              <h2 className="mt-4 font-serif text-3xl font-medium leading-tight text-ivory sm:text-4xl lg:text-5xl">
                 La réalisation doit être aussi précise que l'intention.
               </h2>
             </div>
-            <p className="mt-4 text-sm leading-7 text-charcoal/60 lg:mt-0 lg:max-w-2xl">
+            <p className="mt-4 text-sm leading-7 text-ivory/60 lg:mt-0 lg:max-w-2xl">
               Chaque décision visible renvoie à une décision invisible : alimentation, réseau,
               maintenance, ventilation, accès, sécurité, confort thermique et durabilité. Voici
               ce que nous appliquons à chaque projet, quelle qu'en soit l'échelle.

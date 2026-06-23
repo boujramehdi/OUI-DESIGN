@@ -436,12 +436,12 @@ export default function ContactPage() {
       </section>
 
       {/* Zone d'intervention */}
-      <section className="bg-sand text-charcoal">
+      <section className="bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Zone d'intervention</p>
-              <h2 className="mt-3 font-serif text-2xl font-medium text-charcoal sm:text-3xl">
+              <h2 className="mt-3 font-serif text-2xl font-medium text-ivory sm:text-3xl">
                 Nous intervenons à Marrakech et ses environs.
               </h2>
             </div>
@@ -449,7 +449,7 @@ export default function ContactPage() {
               {["Palmeraie", "Hivernage", "Guéliz", "Agdal", "Targa", "Route de l'Ourika", "Amelkis", "Route de Fès"].map((zone) => (
                 <span
                   key={zone}
-                  className="border border-bronze/25 px-4 py-2 text-[0.6rem] uppercase tracking-[0.18em] text-charcoal/65 transition-all duration-300 hover:border-bronze hover:bg-bronze/10 hover:text-charcoal cursor-default"
+                  className="border border-bronze/25 px-4 py-2 text-[0.6rem] uppercase tracking-[0.18em] text-ivory/60 transition-all duration-300 hover:border-bronze hover:bg-bronze/10 hover:text-ivory cursor-default"
                 >
                   {zone}
                 </span>

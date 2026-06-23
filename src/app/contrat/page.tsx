@@ -117,7 +117,7 @@ export default function ContratPage() {
             {contractSteps.map((step) => (
               <article
                 key={step.number}
-                className="reveal group relative flex flex-col overflow-hidden border border-bronze/20 bg-sand p-8 text-charcoal transition-all duration-500 hover:border-bronze/50 hover:bg-[#c9b598]"
+                className="reveal group relative flex flex-col overflow-hidden border border-bronze/20 bg-[rgba(255,255,255,0.04)] p-8 text-charcoal transition-all duration-500 hover:border-bronze/50 hover:bg-[#c9b598]"
               >
                 {/* Top bronze sweep */}
                 <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
@@ -144,16 +144,16 @@ export default function ContratPage() {
       </section>
 
       {/* Échéancier de paiement */}
-      <section className="bg-sand text-charcoal">
+      <section className="bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
           <div className="mb-12">
             <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
               Échéancier type
             </p>
-            <h2 className="mt-4 max-w-2xl font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl">
+            <h2 className="mt-4 max-w-2xl font-serif text-3xl font-medium leading-tight text-ivory sm:text-4xl">
               Paiements liés aux jalons, pas au calendrier.
             </h2>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-charcoal/55">
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-ivory/55">
               L'échéancier ci-dessous est indicatif et adapté à chaque projet. Il est formalisé
               dans le contrat avant tout démarrage.
             </p>
@@ -163,7 +163,7 @@ export default function ContratPage() {
             {paymentSchedule.map((item, index) => (
               <div
                 key={item.phase}
-                className="reveal group relative overflow-hidden bg-ivory px-8 py-8 transition-colors duration-300 hover:bg-[#f3ede4]"
+                className="reveal group relative overflow-hidden bg-[rgba(255,255,255,0.06)] px-8 py-8 transition-colors duration-300 hover:bg-[rgba(255,255,255,0.10)]"
               >
                 <div className="absolute left-0 top-0 bottom-0 w-0 bg-bronze/15 transition-all duration-500 group-hover:w-1" />
                 <div className="flex items-start justify-between gap-4">
@@ -171,19 +171,19 @@ export default function ContratPage() {
                     <p className="text-[0.58rem] uppercase tracking-[0.24em] text-bronze/70 transition-colors duration-300 group-hover:text-bronze">
                       Étape {String(index + 1).padStart(2, "0")} — {item.phase}
                     </p>
-                    <p className="mt-3 font-serif text-3xl font-medium text-charcoal sm:text-4xl">
+                    <p className="mt-3 font-serif text-3xl font-medium text-ivory sm:text-4xl">
                       {item.amount}
                     </p>
                   </div>
                 </div>
-                <p className="mt-4 text-sm leading-6 text-charcoal/55 transition-colors duration-300 group-hover:text-charcoal/75">
+                <p className="mt-4 text-sm leading-6 text-ivory/55 transition-colors duration-300 group-hover:text-ivory/75">
                   {item.description}
                 </p>
               </div>
             ))}
           </div>
 
-          <p className="mt-6 text-xs text-charcoal/40">
+          <p className="mt-6 text-xs text-ivory/40">
             * Échéancier indicatif. Le contrat final peut prévoir des jalons intermédiaires
             supplémentaires selon la nature et la durée du projet.
           </p>
@@ -227,17 +227,17 @@ export default function ContratPage() {
       </section>
 
       {/* CTA — Demander un devis */}
-      <section className="bg-sand text-charcoal">
+      <section className="bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
-          <div className="group border border-bronze/20 p-8 transition-colors duration-500 hover:border-bronze/50 hover:bg-[#c9b598] sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
+          <div className="group border border-bronze/20 p-8 transition-colors duration-500 hover:border-bronze/50 hover:bg-[rgba(255,255,255,0.04)] sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
             <div>
               <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
                 Prêt à formaliser votre projet ?
               </p>
-              <h2 className="mt-4 font-serif text-3xl text-charcoal sm:text-4xl">
+              <h2 className="mt-4 font-serif text-3xl text-ivory sm:text-4xl">
                 Demandez votre devis contractuel.
               </h2>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-charcoal/65">
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-ivory/60">
                 Envoyez-nous les grandes lignes de votre projet. Ouidesign vous revient
                 avec un premier devis détaillé sous 48 à 72 heures.
               </p>
@@ -257,7 +257,7 @@ export default function ContratPage() {
               </Link>
               <Link
                 href="/devis"
-                className="inline-flex items-center justify-center gap-2 border border-bronze/30 px-6 py-4 text-xs uppercase tracking-[0.18em] text-charcoal/70 transition duration-300 hover:border-bronze hover:text-charcoal"
+                className="inline-flex items-center justify-center gap-2 border border-bronze/30 px-6 py-4 text-xs uppercase tracking-[0.18em] text-ivory/70 transition duration-300 hover:border-bronze hover:text-ivory"
               >
                 Formulaire de devis détaillé →
               </Link>
