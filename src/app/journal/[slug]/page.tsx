@@ -144,9 +144,12 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
         </div>
       </section>
 
+      {/* Gradient bridge — charcoal → ivory */}
+      <div className="h-20 bg-gradient-to-b from-charcoal to-[#F4EFE7]" />
+
       {/* Article body */}
       <section className="bg-ivory">
-        <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8 lg:py-24">
+        <div className="mx-auto max-w-3xl px-5 pb-16 pt-4 sm:px-8 lg:pb-24 lg:pt-6">
           {/* Intro */}
           <p className="border-l-2 border-bronze pl-6 font-serif text-lg leading-8 text-charcoal/80 sm:text-xl sm:leading-9">
             {article.intro}
