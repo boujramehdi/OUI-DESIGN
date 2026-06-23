@@ -29,7 +29,6 @@ export default function DevisPage() {
         eyebrow="Devis"
         title="Une première orientation pour cadrer votre projet."
         text="Partagez les informations essentielles sur votre villa, riad ou espace d'hospitalité. Ouidesign vous répond avec une lecture claire des prochaines étapes."
-        dark
       />
 
       {/* Budget ranges — ivory */}
@@ -137,18 +136,18 @@ export default function DevisPage() {
         </div>
       </section>
 
-      {/* Direct WhatsApp — sand */}
-      <section className="bg-sand text-charcoal">
+      {/* Direct WhatsApp — dark */}
+      <section className="bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
-          <div className="group border border-bronze/20 p-8 transition-colors duration-500 hover:border-bronze/50 hover:bg-[#c9b598] sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
+          <div className="group border border-bronze/20 p-8 transition-colors duration-500 hover:border-bronze/40 hover:bg-[rgba(184,146,95,0.07)] sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
             <div>
               <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
                 Vous préférez appeler ?
               </p>
-              <h2 className="mt-4 font-serif text-3xl text-charcoal sm:text-4xl">
+              <h2 className="mt-4 font-serif text-3xl text-ivory sm:text-4xl">
                 {siteConfig.phone}
               </h2>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-charcoal/65">
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-ivory/55">
                 Disponible pour répondre à vos questions et cadrer votre projet rapidement.
               </p>
             </div>
