@@ -88,34 +88,42 @@ export function CustomSelect({
 
       {/* Dropdown panel */}
       {open && (
-        <ul
-          role="listbox"
-          className="absolute left-0 right-0 top-full z-50 mt-0.5 border border-bronze/30 bg-charcoal py-1 shadow-xl"
-        >
-          {options.map((option) => (
-            <li
-              key={option}
-              role="option"
-              aria-selected={selected === option}
-              onClick={() => {
-                setSelected(option);
-                setOpen(false);
-              }}
-              className={`flex cursor-pointer items-center justify-between px-4 py-3 text-sm transition-colors duration-150 ${
-                selected === option
-                  ? "bg-bronze/15 text-bronze"
-                  : "text-ivory/75 hover:bg-bronze/10 hover:text-ivory"
-              }`}
-            >
-              <span>{option}</span>
-              {selected === option && (
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-bronze">
-                  <polyline points="1,6 4,9 11,2" />
-                </svg>
-              )}
-            </li>
-          ))}
-        </ul>
+        <div className="absolute left-0 right-0 top-full z-50 mt-0.5 border border-bronze/30 bg-charcoal shadow-2xl">
+          {/* Scrollable list — max 6 rows visible */}
+          <ul
+            role="listbox"
+            className="max-h-[13.5rem] overflow-y-auto overscroll-contain py-1 scrollbar-thin"
+            style={{ scrollbarWidth: "none" }}
+          >
+            {options.map((option) => (
+              <li
+                key={option}
+                role="option"
+                aria-selected={selected === option}
+                onClick={() => {
+                  setSelected(option);
+                  setOpen(false);
+                }}
+                className={`flex cursor-pointer items-center justify-between px-4 py-2.5 text-[0.8rem] transition-colors duration-100 ${
+                  selected === option
+                    ? "bg-bronze/15 text-bronze"
+                    : "text-ivory/70 hover:bg-bronze/10 hover:text-ivory"
+                }`}
+              >
+                <span>{option}</span>
+                {selected === option && (
+                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 text-bronze">
+                    <polyline points="1,6 4,9 11,2" />
+                  </svg>
+                )}
+              </li>
+            ))}
+          </ul>
+          {/* Bottom fade — signals more options below */}
+          {options.length > 6 && (
+            <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-charcoal to-transparent" />
+          )}
+        </div>
       )}
     </div>
   );
