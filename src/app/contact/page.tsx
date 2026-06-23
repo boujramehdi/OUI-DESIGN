@@ -396,18 +396,27 @@ export default function ContactPage() {
             <div className="mt-10 border-t border-bronze/15 pt-8">
               <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bronze">Aller plus loin</p>
               <div className="mt-4 grid gap-2">
-                <Link href="/devis" className="group flex items-center justify-between border border-bronze/15 px-5 py-3 text-xs text-charcoal/65 transition-all duration-300 hover:border-bronze/40 hover:text-charcoal">
-                  Demander un devis détaillé
-                  <span className="text-bronze/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-bronze">→</span>
-                </Link>
-                <Link href="/contrat" className="group flex items-center justify-between border border-bronze/15 px-5 py-3 text-xs text-charcoal/65 transition-all duration-300 hover:border-bronze/40 hover:text-charcoal">
-                  Comprendre notre cadre contractuel
-                  <span className="text-bronze/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-bronze">→</span>
-                </Link>
-                <Link href="/realisations" className="group flex items-center justify-between border border-bronze/15 px-5 py-3 text-xs text-charcoal/65 transition-all duration-300 hover:border-bronze/40 hover:text-charcoal">
-                  Voir nos typologies de projets
-                  <span className="text-bronze/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-bronze">→</span>
-                </Link>
+                {[
+                  { href: "/devis", label: "Demander un devis détaillé", num: "01" },
+                  { href: "/contrat", label: "Comprendre notre cadre contractuel", num: "02" },
+                  { href: "/realisations", label: "Voir nos typologies de projets", num: "03" },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="group relative flex items-center justify-between overflow-hidden bg-charcoal px-5 py-4 text-xs text-ivory/70 transition-all duration-300 hover:text-ivory"
+                  >
+                    {/* Bronze sweep from left on hover */}
+                    <div className="absolute inset-y-0 left-0 w-0 bg-bronze/20 transition-all duration-500 group-hover:w-full" />
+                    <div className="relative flex items-center gap-4">
+                      <span className="font-serif text-sm text-bronze/40 transition-colors duration-300 group-hover:text-bronze">
+                        {link.num}
+                      </span>
+                      <span className="uppercase tracking-[0.14em]">{link.label}</span>
+                    </div>
+                    <span className="relative text-bronze/50 transition-all duration-300 group-hover:translate-x-1 group-hover:text-bronze">→</span>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
