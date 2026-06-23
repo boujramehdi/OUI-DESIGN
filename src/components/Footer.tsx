@@ -26,6 +26,9 @@ export function Footer() {
             Architecture, intelligence et confort. Nous créons des villas d'exception
             à Marrakech et ses environs.
           </p>
+          <p className="mt-5 font-serif text-2xl italic text-bronze/70 tracking-wide">
+            Hamza
+          </p>
           <Link
             href="/realisations"
             className="group mt-6 inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-bronze transition hover:text-ivory"
