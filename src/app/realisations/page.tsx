@@ -147,7 +147,7 @@ export default function RealisationsPage() {
                   <p className="text-[0.58rem] uppercase tracking-[0.26em] text-charcoal/65 transition-colors duration-300 group-hover:text-bronze">
                     {project.kicker}
                   </p>
-                  <p className="shrink-0 font-serif text-3xl leading-none text-bronze/25 transition-colors duration-300 group-hover:text-bronze/60">
+                  <p className="shrink-0 font-serif text-3xl leading-none text-bronze/55 transition-colors duration-300 group-hover:text-bronze">
                     {String(index + 1).padStart(2, "0")}
                   </p>
                 </div>
