@@ -32,7 +32,7 @@ const stepIcons = [
 
 export function ProcessSection() {
   return (
-    <section className="bg-sand text-charcoal overflow-hidden">
+    <section className="bg-ivory text-charcoal overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
 
         {/* Header */}
@@ -53,7 +53,7 @@ export function ProcessSection() {
           {processSteps.map((step, index) => (
             <article
               key={step.title}
-              className="group relative flex flex-col bg-ivory px-5 py-6 transition-colors duration-300 hover:bg-[#cbb89a] sm:px-6 sm:py-8 md:px-7 md:py-10"
+              className="group relative flex flex-col bg-sand px-5 py-6 transition-colors duration-300 hover:bg-[#cbb89a] sm:px-6 sm:py-8 md:px-7 md:py-10"
             >
               {/* Top: number + icon */}
               <div className="flex items-start justify-between">
