@@ -297,9 +297,9 @@ export default function HomePage() {
             src="/images/mosques2.png"
             alt="Mosquée Koutoubia et Atlas enneigé — Marrakech, zone d'intervention Ouidesign"
             sizes="(min-width: 1024px) 66vw, 100vw"
-            imageClassName="object-contain object-center"
+            imageClassName="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/45 via-transparent to-charcoal/15" />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/40 via-transparent to-transparent" />
         </div>
       </section>
 
