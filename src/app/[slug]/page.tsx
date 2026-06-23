@@ -125,6 +125,7 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
         image={service.heroImage}
         imageAlt={service.heroImageAlt}
         imagePosition={service.heroImagePosition}
+        imageOverlay={service.heroImageOverlay}
       />
 
       {/* Highlights — ivory bg, dark cards */}
@@ -160,24 +161,26 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
         </div>
       </section>
 
-      {/* Deliverables — sand bg */}
-      <section className="bg-sand text-charcoal">
+      {/* Deliverables — dark bg */}
+      <section className="bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
           <div className="mb-12 flex items-end justify-between">
             <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Livrables</p>
             <span className="h-px flex-1 mx-8 bg-bronze/15" />
-            <p className="font-serif text-2xl text-charcoal/25">{String(service.deliverables.length).padStart(2, "0")}</p>
+            <p className="font-serif text-2xl text-ivory/20">{String(service.deliverables.length).padStart(2, "0")}</p>
           </div>
           <div className="grid gap-px bg-bronze/10 md:grid-cols-2 lg:grid-cols-4">
             {service.deliverables.map((deliverable, index) => (
-              <article key={deliverable} className="group relative overflow-hidden bg-ivory p-8 transition-colors duration-300 hover:bg-[#cbb89a]">
+              <article key={deliverable} className="group relative overflow-hidden bg-[rgba(255,255,255,0.04)] p-8 transition-all duration-300 hover:bg-[rgba(184,146,95,0.12)] border border-ivory/5 hover:border-bronze/30">
                 {/* Background number */}
-                <span className="absolute -right-2 -top-3 font-serif text-[5rem] font-medium leading-none text-charcoal/[0.03] transition-colors duration-300 group-hover:text-bronze/[0.06] select-none">
+                <span className="absolute -right-2 -top-3 font-serif text-[5rem] font-medium leading-none text-ivory/[0.03] transition-colors duration-300 group-hover:text-bronze/[0.08] select-none">
                   {String(index + 1).padStart(2, "0")}
                 </span>
+                {/* Top sweep */}
+                <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
                 {/* Bronze line — grows on hover */}
-                <div className="mb-6 h-px w-6 bg-bronze/50 transition-all duration-500 group-hover:w-12 group-hover:bg-bronze" />
-                <h3 className="relative font-serif text-xl leading-tight text-charcoal transition-colors duration-300 group-hover:text-charcoal sm:text-2xl">
+                <div className="mb-6 h-px w-6 bg-bronze/40 transition-all duration-500 group-hover:w-12 group-hover:bg-bronze" />
+                <h3 className="relative font-serif text-xl leading-tight text-ivory transition-all duration-300 group-hover:-translate-y-0.5 sm:text-2xl">
                   {deliverable}
                 </h3>
               </article>

@@ -230,6 +230,7 @@ export type ServicePage = {
   heroImage?: string;
   heroImageAlt?: string;
   heroImagePosition?: string;
+  heroImageOverlay?: string;
   highlights: string[];
   deliverables: string[];
   faq: FaqItem[];
@@ -333,6 +334,7 @@ export const servicePages: ServicePage[] = [
     heroImage: "/images/smart-home-2.png",
     heroImageAlt: "Smart home et domotique pour villa à Marrakech — installation Ouidesign",
     heroImagePosition: "object-top",
+    heroImageOverlay: "bg-gradient-to-br from-[#2C1810]/40 via-amber-900/15 to-transparent",
     highlights: [
       "Scénarios lumière, climatisation, stores et accès",
       "Réseau, Wi-Fi, baie technique et sécurité",

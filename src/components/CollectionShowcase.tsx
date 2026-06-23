@@ -8,7 +8,7 @@ import { collectionItems } from "@/lib/site";
 const collectionImages: { src: string; fit: string }[] = [
   { src: "/images/liftbar.png",           fit: "object-cover" },
   { src: "/images/mini-liftbar.png",      fit: "object-cover" },
-  { src: "/images/bar-vintage.png",       fit: "object-cover" },
+  { src: "/images/bar-vintage-side.jpg",  fit: "object-cover object-center" },
   { src: "/images/bureau-marrakech.png",  fit: "object-cover" },
   { src: "/images/cuisine-premium.png",   fit: "object-cover" },
 ];
@@ -65,7 +65,7 @@ export function CollectionShowcase() {
             ))}
 
             {/* Active item overlay — bottom info strip */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-charcoal/80 via-charcoal/30 to-transparent px-6 pb-6 pt-16">
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-charcoal/60 via-charcoal/20 to-transparent px-6 pb-6 pt-16">
               <p className="text-[0.55rem] uppercase tracking-[0.3em] text-bronze/80">
                 {activeItem.price}
               </p>
