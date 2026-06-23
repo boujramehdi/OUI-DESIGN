@@ -131,3 +131,51 @@ summary::-webkit-details-marker {
 .hero-line-grow {
   animation: line-grow 0.9s cubic-bezier(0.16,1,0.3,1) 0.35s both;
 }
+
+/* ── Extended animation primitives ─────────────────────── */
+@keyframes slide-left {
+  from { opacity: 0; transform: translateX(-36px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slide-right {
+  from { opacity: 0; transform: translateX(36px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes clip-down {
+  from { clip-path: inset(0 0 100% 0); opacity: 0; }
+  to   { clip-path: inset(0 0 0% 0);   opacity: 1; }
+}
+@keyframes line-x {
+  from { transform: scaleX(0); transform-origin: left; }
+  to   { transform: scaleX(1); transform-origin: left; }
+}
+
+.anim-slide-left  { animation: slide-left  0.7s cubic-bezier(0.16,1,0.3,1) both; }
+.anim-slide-right { animation: slide-right 0.7s cubic-bezier(0.16,1,0.3,1) both; }
+.anim-clip-down   { animation: clip-down   0.8s cubic-bezier(0.16,1,0.3,1) both; }
+.anim-line-x      { animation: line-x      0.9s cubic-bezier(0.16,1,0.3,1) both; }
+
+.anim-delay-7  { animation-delay: 0.68s; }
+.anim-delay-8  { animation-delay: 0.84s; }
+.anim-delay-9  { animation-delay: 1.00s; }
+
+/* reveal variants */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1),
+              transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-left.is-visible { opacity: 1; transform: translateX(0); }
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1),
+              transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-scale.is-visible { opacity: 1; transform: scale(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-left, .reveal-scale { opacity: 1; transform: none; transition: none; }
+}
