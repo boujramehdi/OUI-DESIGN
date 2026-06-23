@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { siteConfig, whatsappHref } from "@/lib/site";
+import { CustomSelect } from "@/components/CustomSelect";
 
 const services = [
   "Rénovation villa / riad",
@@ -17,35 +18,6 @@ const services = [
   "Projet complet",
   "Autre demande",
 ];
-
-/* ─── Custom select wrapper ─── */
-function Select({ id, name, required, defaultValue, children }: {
-  id: string;
-  name: string;
-  required?: boolean;
-  defaultValue?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="relative">
-      <select
-        id={id}
-        name={name}
-        required={required}
-        defaultValue={defaultValue}
-        className="w-full appearance-none border border-bronze/25 bg-ivory px-4 py-3 pr-10 text-sm text-charcoal focus:border-bronze focus:outline-none transition-colors duration-200"
-      >
-        {children}
-      </select>
-      {/* Custom arrow */}
-      <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-bronze/60">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <polyline points="2,4 6,8 10,4" />
-        </svg>
-      </div>
-    </div>
-  );
-}
 
 /* ─── Contact form ─── */
 function ContactForm() {
@@ -124,15 +96,13 @@ function ContactForm() {
           <label htmlFor="c-property" className="text-[0.6rem] uppercase tracking-[0.28em] text-bronze">
             Type de bien *
           </label>
-          <Select id="c-property" name="property" required defaultValue="">
-            <option value="" disabled>Sélectionner…</option>
-            <option>Villa</option>
-            <option>Riad</option>
-            <option>Maison d'hôtes</option>
-            <option>Appartement</option>
-            <option>Espace commercial</option>
-            <option>Autre</option>
-          </Select>
+          <CustomSelect
+            id="c-property"
+            name="property"
+            required
+            placeholder="Sélectionner…"
+            options={["Villa", "Riad", "Maison d'hôtes", "Appartement", "Espace commercial", "Autre"]}
+          />
         </div>
       </div>
 
@@ -141,12 +111,13 @@ function ContactForm() {
         <label htmlFor="c-service" className="text-[0.6rem] uppercase tracking-[0.28em] text-bronze">
           Service souhaité *
         </label>
-        <Select id="c-service" name="service" required defaultValue="">
-          <option value="" disabled>Sélectionner un service…</option>
-          {services.map((s) => (
-            <option key={s}>{s}</option>
-          ))}
-        </Select>
+        <CustomSelect
+          id="c-service"
+          name="service"
+          required
+          placeholder="Sélectionner un service…"
+          options={services}
+        />
       </div>
 
       {/* Localisation */}
