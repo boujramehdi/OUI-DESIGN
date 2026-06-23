@@ -69,7 +69,7 @@ export function Header() {
 
         {/* Desktop CTA */}
         <Link
-          href="/#contact"
+          href="/contact"
           className="hidden border border-ivory/30 px-5 py-[0.6rem] text-[0.58rem] uppercase tracking-[0.18em] text-ivory transition duration-200 hover:border-bronze hover:bg-bronze hover:text-charcoal lg:inline-flex"
         >
           Demander une orientation
@@ -113,7 +113,7 @@ export function Header() {
                     );
                   })}
                   <Link
-                    href="/#contact"
+                    href="/contact"
                     onClick={closeMenu}
                     className="mt-3 bg-bronze px-3 py-3 text-center text-[0.65rem] uppercase tracking-[0.16em] text-charcoal transition hover:bg-ivory"
                   >

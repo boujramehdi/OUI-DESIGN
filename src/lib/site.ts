@@ -23,7 +23,7 @@ export const navLinks = [
   { href: "/realisations", label: "Réalisations" },
   { href: "/journal", label: "Journal" },
   { href: "/a-propos", label: "À Propos" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export type ServiceSummary = {
