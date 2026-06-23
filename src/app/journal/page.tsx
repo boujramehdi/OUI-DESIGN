@@ -32,9 +32,9 @@ export default function JournalPage() {
         <div className="flex flex-col lg:flex-row lg:min-h-[100svh]">
 
           {/* LEFT — sticky hero */}
-          <div className="relative flex flex-col justify-between overflow-hidden
-                          px-8 pb-12 pt-36 sm:px-12 sm:pt-44
-                          lg:sticky lg:top-0 lg:h-screen lg:w-[46%] lg:pb-14 lg:pt-36">
+          <div className="relative flex flex-col overflow-hidden
+                          px-8 pb-12 pt-[90px] sm:px-12
+                          lg:sticky lg:top-0 lg:h-screen lg:w-[46%] lg:pb-14">
 
             {/* Ghost watermark */}
             <span
@@ -58,8 +58,8 @@ export default function JournalPage() {
               <p className="text-[0.62rem] uppercase tracking-[0.4em] text-bronze">Journal Ouidesign</p>
             </div>
 
-            {/* Title */}
-            <div className="relative my-auto py-12 lg:py-0">
+            {/* Title — centred in the remaining space */}
+            <div className="relative flex flex-1 flex-col justify-center py-10 lg:py-0">
               <h1
                 className="anim-slide-up anim-delay-1 font-serif leading-[1.0] text-ivory"
                 style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)" }}
