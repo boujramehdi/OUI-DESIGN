@@ -22,8 +22,10 @@ export function RevealObserver() {
       }
     );
 
-    // Observe all .reveal elements — including any added by route change
-    const elements = document.querySelectorAll(".reveal:not(.is-visible)");
+    // Observe all reveal variants — including any added by route change
+    const elements = document.querySelectorAll(
+      ".reveal:not(.is-visible), .reveal-left:not(.is-visible), .reveal-scale:not(.is-visible)"
+    );
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
