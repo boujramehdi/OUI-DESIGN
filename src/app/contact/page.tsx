@@ -174,16 +174,19 @@ export default function ContactPage() {
       <section className="relative overflow-hidden bg-ivory text-charcoal">
         <div className="absolute left-0 right-0 top-[90px] h-px bg-bronze/12" />
         <div className="absolute bottom-0 left-0 top-[90px] w-px bg-bronze/15" />
-        <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-36 sm:px-8 sm:pb-20 sm:pt-44 lg:pb-24 lg:pt-52">
-          <div className="flex items-center gap-5">
+        <div className="relative mx-auto max-w-7xl px-5 pb-14 pt-28 sm:px-8 sm:pb-20 sm:pt-44 lg:pb-24 lg:pt-52">
+          {/* Eyebrow — centered mobile */}
+          <div className="flex items-center justify-center gap-4 sm:justify-start">
+            <span className="hero-line-grow inline-block h-px bg-bronze/65 sm:hidden" />
             <span className="hero-line-grow inline-block h-px bg-bronze/65" />
-            <p className="text-[0.62rem] uppercase tracking-[0.4em] text-bronze">Contact</p>
+            <p className="text-[0.62rem] uppercase tracking-[0.4em] text-bronze whitespace-nowrap">Contact</p>
+            <span className="hero-line-grow inline-block h-px bg-bronze/65 sm:hidden" />
           </div>
-          <h1 className="mt-5 max-w-3xl font-serif text-4xl font-medium leading-[1.02] text-charcoal sm:text-5xl lg:text-[3.5rem]">
-            Parlons de votre projet.
+          <h1 className="mt-5 text-center font-serif text-4xl font-medium leading-[1.02] text-charcoal sm:text-left sm:text-5xl lg:text-[3.5rem]">
+            Parlons de<br className="sm:hidden" /> votre projet.
           </h1>
-          <div className="mt-8 h-px w-20 bg-bronze/40" />
-          <p className="mt-6 max-w-xl text-sm leading-7 text-charcoal/55">
+          <div className="mx-auto mt-8 h-px w-20 bg-bronze/40 sm:mx-0" />
+          <p className="mx-auto mt-6 max-w-[28ch] text-center text-sm leading-7 text-charcoal/55 sm:mx-0 sm:max-w-xl sm:text-left">
             Ouidesign vous répond rapidement — par WhatsApp, par téléphone ou par email.
             Choisissez le canal qui vous convient le mieux.
           </p>
@@ -193,7 +196,7 @@ export default function ContactPage() {
       {/* Contact method cards — dark background, full bleed */}
       <section className="bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-px bg-ivory/[0.04] lg:grid-cols-4">
             {[
               {
                 icon: (
@@ -251,26 +254,29 @@ export default function ContactPage() {
               },
             ].map((method) => {
               const inner = (
-                <div className="group relative flex flex-col overflow-hidden border border-ivory/8 p-7 transition-all duration-500 hover:border-bronze/50 hover:bg-[rgba(184,146,95,0.07)]">
+                <div className="group relative flex h-full flex-col overflow-hidden bg-charcoal p-5 transition-all duration-500 hover:bg-[#141412] sm:p-7">
                   {/* Top bronze sweep */}
                   <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
-                  {/* Bottom line */}
-                  <div className="absolute bottom-0 left-0 h-px w-full bg-ivory/5" />
+                  {/* Left accent */}
+                  <div className="absolute left-0 top-0 h-0 w-[2px] bg-bronze/60 transition-all duration-700 group-hover:h-full" />
+                  {/* Bronze glow */}
+                  <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                    style={{ background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(188,143,85,0.10) 0%, transparent 70%)" }} />
 
-                  {/* Icon with glow on hover */}
-                  <div className="mb-6 w-fit rounded-full border border-bronze/20 p-3 text-bronze transition-all duration-500 group-hover:border-bronze/60 group-hover:bg-bronze/10 group-hover:shadow-[0_0_20px_rgba(184,146,95,0.15)]">
+                  {/* Icon */}
+                  <div className="relative mb-5 w-fit rounded-full border border-bronze/20 p-2.5 text-bronze transition-all duration-500 group-hover:border-bronze/60 group-hover:bg-bronze/10 sm:p-3">
                     {method.icon}
                   </div>
 
-                  <p className="text-[0.58rem] uppercase tracking-[0.3em] text-ivory/40 transition-colors duration-300 group-hover:text-bronze">
+                  <p className="relative text-[0.52rem] uppercase tracking-[0.3em] text-ivory/40 transition-colors duration-300 group-hover:text-bronze sm:text-[0.58rem]">
                     {method.label}
                   </p>
-                  <p className="mt-2 font-serif text-xl leading-tight text-ivory transition-colors duration-300 group-hover:text-ivory sm:text-2xl">
+                  <p className="relative mt-1.5 font-serif text-base leading-tight text-ivory transition-colors duration-300 sm:text-xl">
                     {method.value}
                   </p>
-                  <p className="mt-1.5 text-xs text-ivory/45">{method.sub}</p>
+                  <p className="relative mt-1 text-[0.6rem] text-ivory/38 sm:text-xs">{method.sub}</p>
 
-                  <span className="mt-6 flex items-center gap-2 text-[0.58rem] uppercase tracking-[0.22em] text-bronze/50 transition-all duration-300 group-hover:gap-3 group-hover:text-bronze">
+                  <span className="relative mt-5 flex items-center gap-2 text-[0.52rem] uppercase tracking-[0.22em] text-bronze/50 transition-all duration-300 group-hover:gap-3 group-hover:text-bronze sm:text-[0.58rem]">
                     {method.cta}
                     <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                   </span>
@@ -296,13 +302,13 @@ export default function ContactPage() {
 
       {/* Main content — form + side info */}
       <section className="bg-ivory text-charcoal">
-        <div className="mx-auto grid max-w-7xl gap-16 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_1.4fr] lg:gap-24 lg:py-28">
+        <div className="mx-auto grid max-w-7xl gap-14 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[1fr_1.4fr] lg:gap-24 lg:py-28">
 
           {/* Left — info column */}
           <div>
-            <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Avant de nous écrire</p>
-            <h2 className="mt-4 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl">
-              Ce qu'il est utile de préparer.
+            <p className="text-center text-[0.65rem] uppercase tracking-[0.4em] text-bronze sm:text-left">Avant de nous écrire</p>
+            <h2 className="mt-4 text-center font-serif text-3xl font-medium leading-tight text-charcoal sm:text-left sm:text-4xl">
+              Ce qu&apos;il est utile de préparer.
             </h2>
             <p className="mt-5 text-sm leading-7 text-charcoal/60">
               Un premier échange WhatsApp suffit souvent. Si vous avez ces éléments sous la main,
@@ -396,12 +402,12 @@ export default function ContactPage() {
 
           {/* Right — form */}
           <div>
-            <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Formulaire de contact</p>
-            <h2 className="mt-4 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl">
+            <p className="text-center text-[0.65rem] uppercase tracking-[0.4em] text-bronze sm:text-left">Formulaire de contact</p>
+            <h2 className="mt-4 text-center font-serif text-3xl font-medium leading-tight text-charcoal sm:text-left sm:text-4xl">
               Décrivez votre projet en 2 minutes.
             </h2>
-            <p className="mt-4 mb-8 text-sm leading-7 text-charcoal/55">
-              Votre message s'ouvrira dans WhatsApp, prêt à être envoyé. Pas de formulaire perdu, pas de délai.
+            <p className="mt-4 mb-8 text-center text-sm leading-7 text-charcoal/55 sm:text-left">
+              Votre message s&apos;ouvrira dans WhatsApp, prêt à être envoyé. Pas de formulaire perdu, pas de délai.
             </p>
             <ContactForm />
           </div>
@@ -410,20 +416,22 @@ export default function ContactPage() {
 
       {/* Zone d'intervention */}
       <section id="zones" className="bg-charcoal text-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-            <div>
-              <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Zone d'intervention</p>
+        <div className="h-px bg-ivory/[0.06]" />
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:py-20">
+          <div className="flex flex-col items-center gap-8 text-center sm:text-left lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+            <div className="shrink-0">
+              <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Zone d&apos;intervention</p>
               <h2 className="mt-3 font-serif text-2xl font-medium text-ivory sm:text-3xl">
-                Nous intervenons au Maroc et ses environs.
+                Nous intervenons<br className="sm:hidden" /> au Maroc.
               </h2>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap justify-center gap-2 sm:justify-start">
               {["Palmeraie", "Hivernage", "Guéliz", "Agdal", "Targa", "Route de l'Ourika", "Amelkis", "Route de Fès"].map((zone) => (
                 <span
                   key={zone}
-                  className="border border-bronze/25 px-4 py-2 text-[0.6rem] uppercase tracking-[0.18em] text-ivory/60 transition-all duration-300 hover:border-bronze hover:bg-bronze/10 hover:text-ivory cursor-default"
+                  className="group relative overflow-hidden border border-bronze/20 px-4 py-2 text-[0.58rem] uppercase tracking-[0.18em] text-ivory/50 transition-all duration-300 hover:border-bronze/60 hover:text-ivory cursor-default"
                 >
+                  <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-500 group-hover:w-full" />
                   {zone}
                 </span>
               ))}

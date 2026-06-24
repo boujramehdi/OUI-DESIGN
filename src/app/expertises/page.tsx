@@ -25,7 +25,37 @@ export default function ExpertisesPage() {
       {/* Service cards — dark cards on ivory bg */}
       <section className="bg-ivory">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+
+          {/* Mobile header */}
+          <div className="mb-4 flex items-center justify-between md:hidden">
+            <span className="text-[0.6rem] uppercase tracking-[0.28em] text-charcoal/40">
+              {mainServices.length} expertises
+            </span>
+            <span className="flex items-center gap-2 text-[0.6rem] uppercase tracking-[0.28em] text-charcoal/40">
+              Glisser
+              <span className="flex gap-0.5">
+                <span className="h-1 w-1 rounded-full bg-bronze/60" />
+                <span className="h-1 w-1 rounded-full bg-bronze/30" />
+                <span className="h-1 w-1 rounded-full bg-bronze/30" />
+              </span>
+            </span>
+          </div>
+
+          {/* Mobile carousel */}
+          <div className="relative -mx-5 md:hidden">
+            <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-5 pb-5">
+              {mainServices.map((service, index) => (
+                <div key={service.title} className="snap-start shrink-0 w-[82vw]">
+                  <ServiceCard service={service} index={index} />
+                </div>
+              ))}
+              <div className="shrink-0 w-5" aria-hidden="true" />
+            </div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-ivory to-transparent" />
+          </div>
+
+          {/* Desktop grid */}
+          <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-4">
             {mainServices.map((service, index) => (
               <ServiceCard key={service.title} service={service} index={index} />
             ))}
@@ -35,11 +65,11 @@ export default function ExpertisesPage() {
 
       {/* Architecture section — dark bg */}
       <section id="architecture-interieure" className="overflow-hidden bg-charcoal text-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20 lg:py-28">
 
           {/* Header row */}
-          <div className="reveal mb-16 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-20">
-            <div>
+          <div className="reveal mb-10 grid gap-8 sm:mb-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-20">
+            <div className="text-center sm:text-left">
               <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
                 Architecture intérieure
               </p>
@@ -47,15 +77,65 @@ export default function ExpertisesPage() {
                 Des intérieurs dessinés pour vivre, recevoir et durer.
               </h2>
             </div>
-            <p className="max-w-lg text-sm leading-7 text-ivory/55 lg:pb-1">
+            <p className="mx-auto max-w-[28ch] text-center text-sm leading-7 text-ivory/55 sm:mx-0 sm:max-w-lg sm:text-left lg:pb-1">
               L'architecture intérieure Ouidesign organise la lumière, les circulations, les
               rangements, la matière et les systèmes pour que chaque espace soit à la fois
               élégant et évident.
             </p>
           </div>
 
-          {/* Pillar cards — horizontal on desktop */}
-          <div className="grid gap-px bg-bronze/10 sm:grid-cols-3">
+          {/* Pillar cards */}
+
+          {/* Mobile carousel */}
+          <div className="relative -mx-5 sm:hidden">
+            <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-5 pb-5">
+              {authorityPillars.map((pillar, index) => (
+                <article
+                  key={pillar.title}
+                  className="snap-start shrink-0 w-[82vw] group relative overflow-hidden bg-[rgba(255,255,255,0.06)] px-7 py-9 transition-colors duration-500 active:bg-[rgba(184,146,95,0.18)]"
+                >
+                  {/* Top sweep bar */}
+                  <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
+
+                  {/* Ghost huge number */}
+                  <span
+                    className="pointer-events-none absolute -right-3 -top-2 select-none font-serif font-medium leading-none text-ivory/[0.03] transition-all duration-700 group-hover:text-bronze/[0.10]"
+                    style={{ fontSize: "clamp(7rem, 10vw, 9rem)" }}
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  {/* Visible small number */}
+                  <p className="relative font-serif text-5xl font-medium leading-none text-bronze/40 transition-colors duration-500 group-hover:text-bronze/80">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+
+                  {/* Bronze rule */}
+                  <div className="mt-7 h-px w-8 bg-bronze/40 transition-all duration-500 group-hover:w-full group-hover:bg-bronze/60" />
+
+                  {/* Title */}
+                  <h3 className="mt-6 font-serif text-2xl text-ivory transition-all duration-300 group-hover:-translate-y-0.5 sm:text-3xl">
+                    {pillar.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="mt-4 text-sm leading-7 text-ivory/55 transition-colors duration-300 group-hover:text-ivory/80">
+                    {pillar.description}
+                  </p>
+
+                  {/* Bottom label */}
+                  <p className="mt-8 translate-y-2 text-[0.58rem] uppercase tracking-[0.28em] text-bronze/0 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:text-bronze group-hover:opacity-100">
+                    ✦ Vision Ouidesign
+                  </p>
+                </article>
+              ))}
+              <div className="shrink-0 w-5" aria-hidden="true" />
+            </div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-charcoal to-transparent" />
+          </div>
+
+          {/* Desktop grid */}
+          <div className="hidden sm:grid sm:grid-cols-3 gap-px bg-bronze/10">
             {authorityPillars.map((pillar, index) => (
               <article
                 key={pillar.title}

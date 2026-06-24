@@ -22,7 +22,7 @@ export function PageHero({ eyebrow, title, text, dark = false, image, imageAlt =
         <div className="grid lg:min-h-[100svh] lg:grid-cols-[44fr_56fr]">
 
           {/* Text side — always charcoal for drama */}
-          <div className="relative flex flex-col justify-center overflow-hidden px-5 pb-16 pt-32 sm:px-10 sm:pb-20 sm:pt-44 lg:pb-24 lg:pl-[max(2.5rem,calc(50vw-40rem+2.5rem))] lg:pr-16 lg:pt-52">
+          <div className="relative flex flex-col justify-center overflow-hidden px-5 pb-16 pt-24 sm:px-10 sm:pb-20 sm:pt-44 lg:pb-24 lg:pl-[max(2.5rem,calc(50vw-40rem+2.5rem))] lg:pr-16 lg:pt-52">
 
             {/* Ghost large index number in background */}
             <span
@@ -37,16 +37,16 @@ export function PageHero({ eyebrow, title, text, dark = false, image, imageAlt =
             <div className="anim-fade-in absolute left-0 top-[90px] h-20 w-px bg-bronze/20" />
 
             {/* Eyebrow + animated line */}
-            <div className="anim-fade-in relative flex items-center gap-4">
+            <div className="anim-fade-in relative flex items-center justify-center gap-4 sm:justify-start">
               <span className="hero-line-grow inline-block h-px bg-bronze/70" />
               <p className="text-[0.62rem] uppercase tracking-[0.4em] text-bronze">{eyebrow}</p>
             </div>
 
-            <h1 className="anim-slide-up anim-delay-1 relative mt-6 font-serif text-4xl font-medium leading-[1.02] text-ivory sm:text-5xl lg:text-[3.5rem] xl:text-6xl">
+            <h1 className="anim-slide-up anim-delay-1 relative mt-6 text-center font-serif font-medium leading-[1.02] text-ivory sm:text-left" style={{ fontSize: "clamp(1.8rem, 5.5vw, 3.5rem)" }}>
               {title}
             </h1>
 
-            <div className="anim-scale-in anim-delay-3 mt-8 h-px w-16 bg-bronze/40" />
+            <div className="anim-scale-in anim-delay-3 mx-auto mt-8 h-px w-16 bg-bronze/40 sm:mx-0" />
 
             <p className="anim-slide-up anim-delay-3 relative mt-6 max-w-md text-sm leading-7 text-ivory/55">
               {text}
@@ -111,16 +111,16 @@ export function PageHero({ eyebrow, title, text, dark = false, image, imageAlt =
       <div className={`absolute right-5 top-[100px] hidden h-px w-24 sm:right-8 lg:block ${dark ? "bg-ivory/8" : "bg-bronze/18"}`} />
 
       {/* Content */}
-      <div className="relative mx-auto max-w-7xl px-5 pb-20 pt-36 sm:px-8 sm:pb-24 sm:pt-44 lg:pb-32 lg:pt-52">
+      <div className="relative mx-auto max-w-7xl px-5 pb-14 pt-28 sm:px-8 sm:pb-24 sm:pt-44 lg:pb-32 lg:pt-52">
 
         {/* Eyebrow with animated leading line */}
-        <div className="anim-fade-in flex items-center gap-5">
+        <div className="anim-fade-in flex items-center justify-center gap-5 sm:justify-start">
           <span className="hero-line-grow inline-block h-px bg-bronze/65" />
           <p className="text-[0.62rem] uppercase tracking-[0.4em] text-bronze">{eyebrow}</p>
         </div>
 
         {/* Title — large and bold */}
-        <h1 className="anim-slide-up anim-delay-1 mt-5 max-w-5xl font-serif text-4xl font-medium leading-[1.02] sm:text-5xl lg:text-[3.75rem]">
+        <h1 className="anim-slide-up anim-delay-1 mt-5 max-w-5xl text-center font-serif font-medium leading-[1.02] sm:text-left" style={{ fontSize: "clamp(1.9rem, 6vw, 3.75rem)" }}>
           {title}
         </h1>
 

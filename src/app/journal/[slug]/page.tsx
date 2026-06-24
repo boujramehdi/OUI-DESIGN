@@ -191,17 +191,43 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
       {/* Related services — internal links block */}
       {article.relatedServices.length > 0 && (
         <section className="bg-ivory">
-          <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
-            <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
+          <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:py-20">
+            <p className="text-center text-[0.65rem] uppercase tracking-[0.4em] text-bronze sm:text-left">
               Nos expertises liées
             </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+
+            {/* Mobile carousel */}
+            <div className="relative -mx-5 mt-8 sm:hidden">
+              <div className="flex items-start snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide gap-3 px-5">
+                {article.relatedServices.map((service) => (
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    className="group snap-start shrink-0 w-[76vw] relative border border-bronze/20 bg-charcoal p-6 text-ivory transition-all duration-300 active:border-bronze/50"
+                  >
+                    <div className="absolute left-0 top-0 h-0 w-[2px] bg-bronze/70 transition-all duration-500 group-active:h-full" />
+                    <div className="mb-4 h-px w-8 bg-bronze transition-all duration-300 group-active:w-14" />
+                    <h3 className="font-serif text-xl text-ivory">{service.title}</h3>
+                    <p className="mt-3 text-xs leading-6 text-ivory/58">{service.description}</p>
+                    <span className="mt-5 block text-[0.58rem] uppercase tracking-[0.2em] text-bronze transition group-active:translate-x-1">
+                      Découvrir →
+                    </span>
+                  </Link>
+                ))}
+                <div className="shrink-0 w-5" aria-hidden="true" />
+              </div>
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-ivory to-transparent" />
+            </div>
+
+            {/* Desktop grid */}
+            <div className="hidden mt-8 gap-4 sm:grid sm:grid-cols-3">
               {article.relatedServices.map((service) => (
                 <Link
                   key={service.href}
                   href={service.href}
-                  className="group border border-bronze/20 bg-charcoal p-7 text-ivory transition hover:border-bronze"
+                  className="group relative border border-bronze/20 bg-charcoal p-7 text-ivory transition hover:border-bronze"
                 >
+                  <div className="absolute left-0 top-0 h-0 w-[2px] bg-bronze/70 transition-all duration-500 group-hover:h-full" />
                   <div className="mb-4 h-px w-8 bg-bronze transition-all duration-300 group-hover:w-14" />
                   <h3 className="font-serif text-xl text-ivory">{service.title}</h3>
                   <p className="mt-3 text-xs leading-6 text-ivory/55">{service.description}</p>
@@ -218,15 +244,47 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
       {/* Related articles */}
       {related.length > 0 && (
         <section className="bg-charcoal text-ivory">
-          <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
-            <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">À lire aussi</p>
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:py-24">
+            <p className="text-center text-[0.65rem] uppercase tracking-[0.4em] text-bronze sm:text-left">
+              À lire aussi
+            </p>
+
+            {/* Mobile carousel */}
+            <div className="relative -mx-5 mt-8 sm:hidden">
+              <div className="flex items-start snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide gap-3 px-5">
+                {related.map((rel) => (
+                  <Link
+                    key={rel.slug}
+                    href={`/journal/${rel.slug}`}
+                    className="group snap-start shrink-0 w-[76vw] relative border border-bronze/15 p-6 transition-all duration-300 active:border-bronze/40 active:bg-[rgba(184,146,95,0.08)]"
+                  >
+                    <div className="absolute left-0 top-0 h-0 w-[2px] bg-bronze/70 transition-all duration-500 group-active:h-full" />
+                    <p className="text-[0.58rem] uppercase tracking-[0.22em] text-bronze">
+                      {rel.category}
+                    </p>
+                    <h3 className="mt-3 font-serif text-lg leading-snug text-ivory group-active:text-bronze/90">
+                      {rel.title}
+                    </h3>
+                    <p className="mt-3 text-xs leading-6 text-ivory/58">{rel.excerpt}</p>
+                    <span className="mt-5 block text-[0.58rem] uppercase tracking-[0.2em] text-bronze transition group-active:translate-x-1">
+                      Lire l'article →
+                    </span>
+                  </Link>
+                ))}
+                <div className="shrink-0 w-5" aria-hidden="true" />
+              </div>
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-charcoal to-transparent" />
+            </div>
+
+            {/* Desktop grid */}
+            <div className="hidden mt-8 gap-5 sm:grid sm:grid-cols-2 lg:grid-cols-3">
               {related.map((rel) => (
                 <Link
                   key={rel.slug}
                   href={`/journal/${rel.slug}`}
-                  className="group border border-bronze/15 p-7 transition hover:border-bronze/40"
+                  className="group relative border border-bronze/15 p-7 transition hover:border-bronze/40 hover:bg-[rgba(184,146,95,0.06)]"
                 >
+                  <div className="absolute left-0 top-0 h-0 w-[2px] bg-bronze/70 transition-all duration-500 group-hover:h-full" />
                   <p className="text-[0.58rem] uppercase tracking-[0.22em] text-bronze">
                     {rel.category}
                   </p>

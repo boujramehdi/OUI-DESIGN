@@ -142,7 +142,7 @@ export function ProductDetail({
           </div>
 
           {/* RIGHT: Product info */}
-          <div className="mt-8 lg:mt-0">
+          <div className="mt-8 text-center lg:mt-0 lg:text-left">
             {/* Eyebrow */}
             <p className="anim-fade-in text-[0.58rem] uppercase tracking-[0.34em] text-bronze">
               Collection 2026
@@ -159,7 +159,7 @@ export function ProductDetail({
             </p>
 
             {/* Star rating summary */}
-            <div className="anim-fade-in anim-delay-2 mt-4 flex items-center gap-3">
+            <div className="anim-fade-in anim-delay-2 mt-4 flex items-center justify-center gap-3 lg:justify-start">
               <div className="flex gap-0.5">
                 {[1, 2, 3, 4, 5].map((s) => (
                   <StarIcon key={s} filled={s <= avgRating} />
@@ -179,7 +179,7 @@ export function ProductDetail({
             </div>
 
             {/* Description */}
-            <p className="anim-slide-up anim-delay-4 mt-6 text-sm leading-7 text-charcoal/65 sm:text-base sm:leading-8">
+            <p className="anim-slide-up anim-delay-4 mt-6 text-sm leading-7 text-charcoal/65 sm:text-base sm:leading-8 lg:text-left">
               {description}
             </p>
 
@@ -194,7 +194,7 @@ export function ProductDetail({
             </ul>
 
             {/* CTAs */}
-            <div className="anim-slide-up anim-delay-6 mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="anim-slide-up anim-delay-6 mt-8 flex flex-col gap-3 text-left sm:flex-row">
               {price !== "Sur devis" ? (
                 <button
                   onClick={() => setModalOpen(true)}
@@ -260,8 +260,9 @@ export function ProductDetail({
 
       {/* Reviews section */}
       <section className="bg-charcoal text-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
-          <div className="mb-10 flex items-end justify-between">
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:py-20">
+          {/* Header */}
+          <div className="mb-8 flex flex-col items-center gap-4 text-center sm:mb-10 sm:flex-row sm:items-end sm:justify-between sm:text-left">
             <div>
               <p className="text-[0.62rem] uppercase tracking-[0.34em] text-bronze">Avis clients</p>
               <h2 className="mt-2 font-serif text-3xl font-medium">
@@ -277,14 +278,46 @@ export function ProductDetail({
               <span className="font-serif text-2xl text-bronze">{avgRating.toFixed(1)}</span>
             </div>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+
+          {/* Mobile carousel */}
+          <div className="relative -mx-5 md:hidden">
+            <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-3 px-5 pb-4">
+              {reviews.map((review) => (
+                <article
+                  key={review.author}
+                  className="snap-start shrink-0 w-[82vw] border border-bronze/15 bg-[#1a1714] p-6"
+                >
+                  <div className="mb-4 flex gap-0.5">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <StarIcon key={s} filled={s <= review.rating} small />
+                    ))}
+                  </div>
+                  <p className="text-sm leading-7 text-ivory/70">&ldquo;{review.text}&rdquo;</p>
+                  <div className="mt-5 flex items-center justify-between border-t border-ivory/[0.08] pt-4">
+                    <div>
+                      <p className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-ivory">
+                        {review.author}
+                      </p>
+                      <p className="text-[0.55rem] text-ivory/40">{review.location}</p>
+                    </div>
+                    <p className="text-[0.55rem] text-ivory/30">{review.date}</p>
+                  </div>
+                </article>
+              ))}
+              <div className="shrink-0 w-5" aria-hidden="true" />
+            </div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-charcoal to-transparent" />
+          </div>
+
+          {/* Desktop grid */}
+          <div className="hidden gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
             {reviews.map((review, i) => (
               <article
                 key={review.author}
                 className="reveal border border-bronze/15 bg-[#1a1714] p-7"
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
-                <div className="flex gap-0.5 mb-4">
+                <div className="mb-4 flex gap-0.5">
                   {[1, 2, 3, 4, 5].map((s) => (
                     <StarIcon key={s} filled={s <= review.rating} small />
                   ))}
@@ -307,11 +340,46 @@ export function ProductDetail({
 
       {/* Related products */}
       <section className="bg-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:py-20">
-          <p className="text-[0.62rem] uppercase tracking-[0.34em] text-bronze">
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:py-20">
+          <p className="text-center text-[0.62rem] uppercase tracking-[0.34em] text-bronze sm:text-left">
             Vous aimerez aussi
           </p>
-          <div className="mt-8 grid gap-5 sm:grid-cols-3">
+
+          {/* Mobile carousel */}
+          <div className="relative -mx-5 mt-8 sm:hidden">
+            <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-3 px-5 pb-4">
+              {related.map((rp) => (
+                <Link
+                  key={rp.slug}
+                  href={`/collection/${rp.slug}`}
+                  className="group snap-start shrink-0 w-[72vw] relative overflow-hidden border border-bronze/15 bg-charcoal transition-all duration-300 active:border-bronze/40"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={rp.images[0]}
+                      alt={rp.title}
+                      fill
+                      sizes="72vw"
+                      className="object-cover opacity-80 transition-all duration-700 group-active:opacity-100 group-active:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent" />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-serif text-lg text-ivory">{rp.title}</h3>
+                    <p className="mt-1 font-serif text-base text-bronze">{rp.price}</p>
+                    <p className="mt-3 text-[0.6rem] uppercase tracking-[0.2em] text-ivory/40 transition-colors duration-300 group-active:text-bronze">
+                      Voir le produit →
+                    </p>
+                  </div>
+                </Link>
+              ))}
+              <div className="shrink-0 w-5" aria-hidden="true" />
+            </div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-ivory to-transparent" />
+          </div>
+
+          {/* Desktop grid */}
+          <div className="hidden mt-8 gap-5 sm:grid sm:grid-cols-3">
             {related.map((rp) => (
               <Link
                 key={rp.slug}
