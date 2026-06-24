@@ -31,7 +31,7 @@ function ProductImage({ item }: { item: CollectionProduct }) {
   const imgs = item.images ?? [item.image];
 
   return (
-    <div className="relative h-full w-full overflow-hidden">
+    <div className="lg-dark-panel relative h-full w-full overflow-hidden">
       {imgs.map((src, i) => (
         <div
           key={src}
@@ -200,9 +200,8 @@ export function CollectionGrid({ items }: { items: CollectionProduct[] }) {
                       Commander
                     </button>
                   ) : (
-                    <a
-                      href={whatsappHref(`Bonjour Ouidesign, je souhaite un devis pour : ${item.title}.`)}
-                      target="_blank"
+                    <button
+                      type="button"
                       onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
@@ -211,7 +210,7 @@ export function CollectionGrid({ items }: { items: CollectionProduct[] }) {
                       className="inline-flex items-center gap-2 bg-bronze px-5 py-3 text-[0.62rem] uppercase tracking-[0.14em] text-charcoal transition-all duration-300 hover:bg-ivory sm:px-6 sm:py-3.5 sm:text-xs sm:tracking-[0.18em]"
                     >
                       Sur mesure — Devis
-                    </a>
+                    </button>
                   )}
 
                   <span className="ml-auto hidden text-[0.58rem] uppercase tracking-[0.2em] text-bronze/0 transition-all duration-500 group-hover/card:translate-x-1 group-hover/card:text-bronze/70 sm:block">

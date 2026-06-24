@@ -259,7 +259,7 @@ export function ProductDetail({
       </section>
 
       {/* Reviews section */}
-      <section className="bg-charcoal text-ivory">
+      <section className="lg-dark-panel bg-charcoal text-ivory">
         <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:py-20">
           {/* Header */}
           <div className="mb-8 flex flex-col items-center gap-4 text-center sm:mb-10 sm:flex-row sm:items-end sm:justify-between sm:text-left">
@@ -354,7 +354,7 @@ export function ProductDetail({
                   href={`/collection/${rp.slug}`}
                   className="group snap-start shrink-0 w-[72vw] relative overflow-hidden border border-bronze/15 bg-charcoal transition-all duration-300 active:border-bronze/40"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                  <div className="lg-dark-panel relative aspect-[4/3] overflow-hidden">
                     <Image
                       src={rp.images[0]}
                       alt={rp.title}
@@ -386,7 +386,7 @@ export function ProductDetail({
                 href={`/collection/${rp.slug}`}
                 className="group relative overflow-hidden border border-bronze/15 bg-charcoal"
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="lg-dark-panel relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={rp.images[0]}
                     alt={rp.title}

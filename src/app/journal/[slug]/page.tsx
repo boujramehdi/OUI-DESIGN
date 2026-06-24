@@ -84,7 +84,7 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
       />
 
       {/* Hero — full-viewport image with overlaid title */}
-      <section className="relative min-h-[100svh] overflow-hidden bg-charcoal text-ivory">
+      <section className="lg-dark-panel relative min-h-[100svh] overflow-hidden bg-charcoal text-ivory">
         {/* Background image */}
         {article.featuredImage ? (
           <>

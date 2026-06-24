@@ -192,7 +192,7 @@ function ExpertiseTile({
   return (
     <Link
       href={tile.href}
-      className={`reveal group relative isolate flex min-w-0 overflow-hidden bg-charcoal text-ivory ${tile.className}`}
+      className={`lg-dark-panel reveal group relative isolate flex min-w-0 overflow-hidden bg-charcoal text-ivory ${tile.className}`}
     >
       <CinematicImage
         src={tile.image}
@@ -319,7 +319,7 @@ export default function HomePage() {
                 <Link
                   key={tile.title}
                   href={tile.href}
-                  className="group relative snap-start shrink-0 overflow-hidden bg-charcoal"
+                  className="lg-dark-panel group relative snap-start shrink-0 overflow-hidden bg-charcoal"
                   style={{ width: "70vw", height: "88vw", maxWidth: "320px", maxHeight: "400px" }}
                 >
                   <CinematicImage
@@ -388,7 +388,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-        <div className="reveal relative min-h-[300px] overflow-hidden bg-charcoal sm:min-h-[400px] lg:min-h-[600px]">
+        <div className="lg-dark-panel reveal relative min-h-[300px] overflow-hidden bg-charcoal sm:min-h-[400px] lg:min-h-[600px]">
           <CinematicImage
             src="/images/mosques2.png"
             alt="Mosquée Koutoubia et Atlas enneigé — Maroc, zone d'intervention Ouidesign"

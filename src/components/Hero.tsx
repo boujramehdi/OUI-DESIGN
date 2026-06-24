@@ -15,7 +15,7 @@ const tickerItems = [
 
 export function Hero() {
   return (
-    <section className="relative isolate flex min-h-svh overflow-hidden bg-charcoal text-ivory">
+    <section className="lg-dark-panel relative isolate flex min-h-svh overflow-hidden bg-charcoal text-ivory">
       <CinematicImage
         src="/images/villa-sunset.png"
         alt=""

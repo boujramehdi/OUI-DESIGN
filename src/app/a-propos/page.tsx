@@ -162,7 +162,7 @@ export default function AProposPage() {
             </div>
 
             {/* Right — image */}
-            <div className="reveal relative aspect-[3/4] overflow-hidden lg:aspect-auto lg:min-h-[560px]">
+            <div className="lg-dark-panel reveal relative aspect-[3/4] overflow-hidden lg:aspect-auto lg:min-h-[560px]">
               <div className="absolute right-0 top-0 z-10 h-16 w-px bg-bronze/40" />
               <div className="absolute right-0 top-0 z-10 h-px w-16 bg-bronze/40" />
               <div className="absolute bottom-0 left-0 z-10 h-16 w-px bg-bronze/40" />
@@ -311,7 +311,7 @@ export default function AProposPage() {
               {values.map((value, index) => (
                 <article
                   key={value.title}
-                  className="group snap-start shrink-0 w-[82vw] h-[310px] relative flex flex-col overflow-hidden bg-charcoal px-7 py-8 transition-colors duration-300 active:bg-[#141412]"
+                  className="lg-dark-panel group snap-start shrink-0 w-[82vw] h-[310px] relative flex flex-col overflow-hidden bg-charcoal px-7 py-8 transition-colors duration-300 active:bg-[#141412]"
                 >
                   {/* Left accent */}
                   <div className="absolute left-0 top-0 h-0 w-[2px] bg-bronze/70 transition-all duration-500 group-active:h-full" />
@@ -350,7 +350,7 @@ export default function AProposPage() {
             {values.map((value, index) => (
               <article
                 key={value.title}
-                className="reveal group relative flex flex-col overflow-hidden bg-charcoal px-8 py-10 transition-colors duration-500 hover:bg-[#141412] sm:px-9 sm:py-12"
+                className="lg-dark-panel reveal group relative flex flex-col overflow-hidden bg-charcoal px-8 py-10 transition-colors duration-500 hover:bg-[#141412] sm:px-9 sm:py-12"
               >
                 {/* Left accent bar */}
                 <div className="absolute left-0 top-0 h-0 w-[2px] bg-bronze/70 transition-all duration-700 group-hover:h-full" />
@@ -420,7 +420,7 @@ export default function AProposPage() {
                   className="group/exp snap-start shrink-0 w-[72vw] relative overflow-hidden"
                 >
                   {/* Image */}
-                  <div className="relative h-[58vw] overflow-hidden">
+                  <div className="lg-dark-panel relative h-[58vw] overflow-hidden">
                     <Image
                       src={item.image}
                       alt={item.label}
@@ -475,9 +475,9 @@ export default function AProposPage() {
                 className="group relative flex items-center gap-5 overflow-hidden border-b border-ivory/[0.05] px-6 py-5 transition-all duration-300 last:border-b-0 hover:bg-[rgba(184,146,95,0.07)] sm:border-b-0"
               >
                 {/* Hover image reveal */}
-                <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <Image src={item.image} alt="" fill sizes="50vw" className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/92 to-charcoal/70" />
+                <div className="lg-dark-panel absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                  <Image src={item.image} alt="" fill sizes="50vw" className="object-cover object-center brightness-[0.85]" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/55 to-transparent" />
                 </div>
                 {/* Top sweep */}
                 <div className="absolute left-0 top-0 h-[1px] w-0 bg-bronze/60 transition-all duration-500 group-hover:w-full" />

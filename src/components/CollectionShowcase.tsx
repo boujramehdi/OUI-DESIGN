@@ -62,7 +62,7 @@ export function CollectionShowcase() {
                   <Link href={`/collection/${item.slug}`} className="group block">
 
                     {/* Product image */}
-                    <div className="relative aspect-[4/3] overflow-hidden bg-charcoal">
+                    <div className="lg-dark-panel relative aspect-[4/3] overflow-hidden bg-charcoal">
                       <Image
                         src={collectionImages[index]?.src ?? ""}
                         alt={item.title}
@@ -113,7 +113,7 @@ export function CollectionShowcase() {
         <div className="hidden lg:grid lg:grid-cols-[1.7fr_1fr] lg:gap-10 lg:items-stretch">
 
           {/* Swappable image */}
-          <div className="reveal relative aspect-[3/2] overflow-hidden bg-charcoal sm:aspect-[16/10]">
+          <div className="lg-dark-panel reveal relative aspect-[3/2] overflow-hidden bg-charcoal sm:aspect-[16/10]">
             {collectionImages.map((item, i) => (
               <div
                 key={i}

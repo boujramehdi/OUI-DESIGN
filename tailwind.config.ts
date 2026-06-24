@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ivory:   "#F4EFE7",   // Warm Ivory — main backgrounds
-        charcoal:"#1C1C1A",   // Deep Charcoal — dark sections / titles
+        ivory:   "rgb(var(--tw-ivory) / <alpha-value>)",   // Warm Ivory — flips on desktop
+        charcoal:"rgb(var(--tw-charcoal) / <alpha-value>)",// Deep Charcoal — flips on desktop
         bronze:  "#B8925F",   // Muted Bronze — buttons / accents
         sand:    "#D8C6AD",   // Soft Sand — cards / overlays
         stone:   "#B8A58C",   // Stone Beige — dividers / secondary text

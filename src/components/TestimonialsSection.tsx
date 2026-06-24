@@ -97,7 +97,7 @@ function TestimonialCard({ t, index, mobile }: { t: typeof testimonials[number];
 
 export function TestimonialsSection() {
   return (
-    <section className="relative overflow-hidden bg-charcoal text-ivory">
+    <section className="lg-dark-panel relative overflow-hidden bg-charcoal text-ivory">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }} />
 
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-bronze/35 to-transparent" />

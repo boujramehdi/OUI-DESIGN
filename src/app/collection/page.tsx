@@ -211,7 +211,7 @@ export default function CollectionPage() {
             </div>
 
             {/* Image with Ken Burns */}
-            <div className="group relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[520px]">
+            <div className="lg-dark-panel group relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[520px]">
               {/* Corner brackets */}
               <div className="absolute right-0 top-0 z-10 h-14 w-px bg-bronze/40" />
               <div className="absolute right-0 top-0 z-10 h-px w-14 bg-bronze/40" />

@@ -194,7 +194,7 @@ export function GalleryStrip() {
           return (
             <div
               key={idx}
-              className="group relative shrink-0 overflow-hidden"
+              className="lg-dark-panel group relative shrink-0 overflow-hidden"
               /* Mobile: taller for easier swiping; desktop: 36 vh as before */
               style={{ width: "clamp(160px, 52vw, 440px)", height: "clamp(180px, 36vh, 340px)" }}
               onMouseEnter={() => onEnter(idx)}

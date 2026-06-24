@@ -16,7 +16,7 @@ export function CTASection({
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-[#2C2018] text-ivory"
+      className="lg-dark-panel relative overflow-hidden bg-[#2C2018] text-ivory"
     >
       {/* Radial bronze glow — top-left accent */}
       <div className="pointer-events-none absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full bg-bronze/[0.12] blur-3xl" />

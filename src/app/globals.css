@@ -26,6 +26,9 @@
 :root {
   --background: #F4EFE7;
   --foreground: #1C1C1A;
+  /* Channel variables for Tailwind color utilities — flipped on desktop */
+  --tw-charcoal: 28 28 26;     /* #1C1C1A */
+  --tw-ivory: 244 239 231;     /* #F4EFE7 */
 }
 
 * {
@@ -195,3 +198,40 @@ summary::-webkit-details-marker {
 /* Hide scrollbar — used by horizontal snap carousels */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ── Desktop light theme (lg: 1024px+) ─────────────────────────────────────
+   Every .bg-charcoal element flips to Warm Ivory (#F4EFE7).
+   CSS channel variables are redefined locally so all descendent Tailwind
+   utilities that use text-ivory / text-charcoal / bg-charcoal inherit the
+   inverted palette automatically — no per-component changes needed.
+   ────────────────────────────────────────────────────────────────────────── */
+@media (min-width: 1024px) {
+  .bg-charcoal {
+    background-color: #F4EFE7 !important;
+    /* Redefine channels for all child utility classes */
+    --tw-charcoal: 244 239 231;   /* children using charcoal get ivory color */
+    --tw-ivory: 28 28 26;         /* children using ivory get charcoal color  */
+  }
+
+  /* Stone Beige hairline separators (replaces near-invisible ivory/0.06 lines) */
+  .bg-charcoal .h-px { background-color: rgb(184 165 140 / 0.30) !important; }
+
+  /* Hardcoded dark hover backgrounds → warm sand on desktop */
+  .hover\:bg-\[\#141210\]:hover,
+  .hover\:bg-\[\#141412\]:hover { background-color: #EDE8DA !important; }
+
+  /* Hardcoded dark bg on nested panels (e.g. gradient overlays in images) */
+  /* Leave image overlays alone — they look fine as ivory fades on light bg */
+
+  /* Header stays dark — it uses bg-[rgba(13,14,16,0.88)], not bg-charcoal,
+     so the rule above does NOT affect it. No extra rule needed. */
+
+  /* Image panels stay dark — gradients, shimmer, and text overlays on photos
+     must keep the original dark variables so they remain visible on dark images.
+     background-color restores dark bg when the same element also has bg-charcoal. */
+  .lg-dark-panel {
+    background-color: #1C1C1A !important;
+    --tw-charcoal: 28 28 26;
+    --tw-ivory:    244 239 231;
+  }
+}

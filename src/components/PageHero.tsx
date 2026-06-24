@@ -61,7 +61,7 @@ export function PageHero({ eyebrow, title, text, dark = false, image, imageAlt =
           </div>
 
           {/* Image side */}
-          <div className="relative h-72 overflow-hidden sm:h-[480px] lg:h-auto">
+          <div className="lg-dark-panel relative h-72 overflow-hidden sm:h-[480px] lg:h-auto">
             <Image
               src={image}
               alt={imageAlt}

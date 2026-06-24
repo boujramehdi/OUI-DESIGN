@@ -116,7 +116,7 @@ export default function RealisationsPage() {
       {/* ══════════════════════════════════════════════════
           01 — HERO · full-bleed cover
       ══════════════════════════════════════════════════ */}
-      <section className="group/hero relative min-h-[100svh] bg-charcoal text-ivory overflow-hidden">
+      <section className="lg-dark-panel group/hero relative min-h-[100svh] bg-charcoal text-ivory overflow-hidden">
 
         {/* Background image — Ken Burns slow zoom-out + subtle hover scale */}
         <div className="absolute inset-0 overflow-hidden">
@@ -275,7 +275,7 @@ export default function RealisationsPage() {
               {/* Image panel — 58%, wrapped in Link */}
               <Link
                 href={p.href}
-                className="group/img relative block h-64 overflow-hidden sm:h-80 lg:h-auto lg:w-[58%]"
+                className="lg-dark-panel group/img relative block h-64 overflow-hidden sm:h-80 lg:h-auto lg:w-[58%]"
                 aria-label={`Découvrir : ${p.title}`}
               >
                 <Image
@@ -405,7 +405,7 @@ export default function RealisationsPage() {
       {/* ══════════════════════════════════════════════════
           04 — STANDARDS · 3×2 visual card grid
       ══════════════════════════════════════════════════ */}
-      <section className="bg-charcoal text-ivory">
+      <section className="lg-dark-panel bg-charcoal text-ivory">
         <div className="h-px bg-ivory/[0.06]" />
 
         {/* Section header */}
