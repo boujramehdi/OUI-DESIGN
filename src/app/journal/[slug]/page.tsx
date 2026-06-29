@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { CTASection } from "@/components/CTASection";
 import { articles, getArticle, getRelatedArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 type ArticleRouteProps = {
   params: Promise<{ slug: string }>;
@@ -106,7 +107,7 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
 
         {/* Content pinned to bottom */}
         <div className="relative flex min-h-[100svh] flex-col justify-end">
-          <div className="mx-auto w-full max-w-5xl px-5 pb-16 pt-36 sm:px-8 sm:pb-20 lg:pb-24">
+          <Container className="pb-24 pt-36 sm:pb-32 lg:pb-40">
             {/* Breadcrumb */}
             <div className="anim-fade-in flex items-center gap-4">
               <Link
@@ -140,7 +141,7 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
               </div>
               <span className="text-[0.5rem] uppercase tracking-[0.3em]">Défiler</span>
             </div>
-          </div>
+          </Container>
         </div>
       </section>
 
@@ -149,7 +150,8 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
 
       {/* Article body */}
       <section className="bg-ivory">
-        <div className="mx-auto max-w-3xl px-5 pb-16 pt-4 sm:px-8 lg:pb-24 lg:pt-6">
+        <Container className="pb-20 pt-4 lg:pb-28 lg:pt-6">
+        <div className="mx-auto max-w-3xl">
           {/* Intro */}
           <p className="border-l-2 border-bronze pl-6 font-serif text-lg leading-8 text-charcoal/80 sm:text-xl sm:leading-9">
             {article.intro}
@@ -186,19 +188,20 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
             </p>
           </div>
         </div>
+        </Container>
       </section>
 
       {/* Related services — internal links block */}
       {article.relatedServices.length > 0 && (
         <section className="bg-ivory">
-          <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:py-20">
+          <Container className="py-20 md:py-28">
             <p className="text-center text-[0.65rem] uppercase tracking-[0.4em] text-bronze sm:text-left">
               Nos expertises liées
             </p>
 
             {/* Mobile carousel */}
-            <div className="relative -mx-5 mt-8 sm:hidden">
-              <div className="flex items-start snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide gap-3 px-5">
+            <div className="relative -mx-6 mt-8 sm:hidden">
+              <div className="flex items-start snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide gap-3 px-6">
                 {article.relatedServices.map((service) => (
                   <Link
                     key={service.href}
@@ -214,7 +217,7 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
                     </span>
                   </Link>
                 ))}
-                <div className="shrink-0 w-5" aria-hidden="true" />
+                <div className="shrink-0 w-6" aria-hidden="true" />
               </div>
               <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-ivory to-transparent" />
             </div>
@@ -237,21 +240,21 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
                 </Link>
               ))}
             </div>
-          </div>
+          </Container>
         </section>
       )}
 
       {/* Related articles */}
       {related.length > 0 && (
         <section className="bg-charcoal text-ivory">
-          <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:py-24">
+          <Container className="py-20 md:py-28">
             <p className="text-center text-[0.65rem] uppercase tracking-[0.4em] text-bronze sm:text-left">
               À lire aussi
             </p>
 
             {/* Mobile carousel */}
-            <div className="relative -mx-5 mt-8 sm:hidden">
-              <div className="flex items-start snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide gap-3 px-5">
+            <div className="relative -mx-6 mt-8 sm:hidden">
+              <div className="flex items-start snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide gap-3 px-6">
                 {related.map((rel) => (
                   <Link
                     key={rel.slug}
@@ -271,7 +274,7 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
                     </span>
                   </Link>
                 ))}
-                <div className="shrink-0 w-5" aria-hidden="true" />
+                <div className="shrink-0 w-6" aria-hidden="true" />
               </div>
               <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-charcoal to-transparent" />
             </div>
@@ -298,7 +301,7 @@ export default async function ArticlePage({ params }: ArticleRouteProps) {
                 </Link>
               ))}
             </div>
-          </div>
+          </Container>
         </section>
       )}
 

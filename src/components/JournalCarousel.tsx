@@ -36,7 +36,7 @@ export function JournalCarousel({ articles }: { articles: Article[] }) {
           <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-px bg-stone/25 lg:block" />
 
           {/* ── PAGE HEADER — compact, not full-viewport ── */}
-          <div className="lg-dark-panel relative overflow-hidden px-6 pb-10 pt-[108px] sm:px-14 sm:pb-12 lg:px-12 lg:pt-[124px] lg:pb-14">
+          <div className="lg-dark-panel relative overflow-hidden px-6 pb-10 pt-[108px] sm:px-8 sm:pb-12 lg:px-12 lg:pt-[124px] lg:pb-14">
 
             {/* Mobile: subtle image tint behind */}
             <div className="pointer-events-none absolute inset-0 lg:hidden">
@@ -111,10 +111,6 @@ export function JournalCarousel({ articles }: { articles: Article[] }) {
                     <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/[0.10] to-transparent transition-transform duration-[850ms] group-hover/card:translate-x-full group-active:translate-x-full" />
                     {/* Bronze border */}
                     <div className="absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 bg-bronze/70 transition-transform duration-500 group-hover/card:scale-x-100 group-active:scale-x-100" />
-                    {/* Number */}
-                    <span className="absolute right-4 top-4 font-serif text-[2.5rem] font-medium leading-none text-ivory/[0.08] transition-all duration-500 group-hover/card:text-ivory/[0.16]">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
                     {/* Category */}
                     <p className="absolute bottom-4 left-5 text-[0.44rem] uppercase tracking-[0.42em] text-bronze/75">
                       {a.category}
@@ -150,12 +146,10 @@ export function JournalCarousel({ articles }: { articles: Article[] }) {
             <div
               key={a.slug}
               ref={(el) => { sectionRefs.current[i] = el; }}
-              className={`group relative hidden sm:flex min-h-[85svh] flex-col justify-center px-6 sm:px-14 lg:h-[100svh] lg:min-h-0 lg:px-12 ${
-                i === articles.length - 1 ? "pb-0" : ""
+              className={`group relative hidden sm:flex flex-col justify-center px-6 sm:px-8 lg:px-12 py-20 lg:py-28 ${
+                i === articles.length - 1 ? "" : "border-b border-ivory/[0.06]"
               }`}
             >
-              {/* Top hairline */}
-              <div className="absolute inset-x-0 top-0 h-px bg-stone/20" />
 
               {/* Mobile image */}
               {a.featuredImage && (
@@ -165,14 +159,6 @@ export function JournalCarousel({ articles }: { articles: Article[] }) {
                 </div>
               )}
 
-              {/* Large ghost number */}
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute right-6 top-1/2 -translate-y-1/2 select-none font-serif font-medium leading-none text-ivory/[0.03] transition-all duration-700 group-hover:text-ivory/[0.06]"
-                style={{ fontSize: "clamp(8rem, 16vw, 14rem)", letterSpacing: "-0.03em" }}
-              >
-                {String(i + 1).padStart(2, "0")}
-              </span>
 
               {/* Category + date */}
               <div className="flex items-center gap-5 mb-6">

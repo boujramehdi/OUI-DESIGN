@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { siteConfig } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 export function EmailCapture() {
   const [email, setEmail] = useState("");
@@ -21,7 +22,7 @@ export function EmailCapture() {
 
   return (
     <section className="bg-charcoal text-ivory">
-      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
+      <Container className="py-24 md:py-32">
         <div className="mx-auto max-w-3xl text-center">
           {sent ? (
             <>
@@ -68,7 +69,7 @@ export function EmailCapture() {
             </>
           )}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import type { FaqItem } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 type FaqProps = {
   items: FaqItem[];
@@ -7,7 +8,7 @@ type FaqProps = {
 export function Faq({ items }: FaqProps) {
   return (
     <section className="bg-charcoal text-ivory overflow-hidden">
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+      <Container className="py-24 md:py-32">
 
         {/* Header */}
         <div className="mb-14 lg:grid lg:grid-cols-[1fr_2fr] lg:gap-20 lg:items-end">
@@ -56,7 +57,7 @@ export function Faq({ items }: FaqProps) {
           ))}
         </div>
 
-      </div>
+      </Container>
     </section>
   );
 }

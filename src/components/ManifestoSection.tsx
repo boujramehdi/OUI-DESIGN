@@ -1,3 +1,5 @@
+import { Container } from "@/components/Container";
+
 export function ManifestoSection() {
   return (
     <section className="relative overflow-hidden bg-charcoal text-ivory">
@@ -13,7 +15,7 @@ export function ManifestoSection() {
         "
       </span>
 
-      <div className="relative mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-16 lg:py-24">
+      <Container className="relative py-20 md:py-28">
 
         {/* ── MOBILE: centred editorial layout ── */}
         <div className="flex flex-col items-center text-center lg:hidden">
@@ -119,7 +121,7 @@ export function ManifestoSection() {
           </div>
         </div>
 
-      </div>
+      </Container>
 
       {/* Bottom gradient line */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-bronze/40 to-transparent" />

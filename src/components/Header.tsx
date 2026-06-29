@@ -86,7 +86,7 @@ export function Header() {
         </div>
 
         {/* ── DESKTOP bar ── */}
-        <div className="mx-auto hidden h-[90px] max-w-7xl items-center justify-between px-8 lg:flex">
+        <div className="mx-auto hidden h-[90px] max-w-[1440px] items-center justify-between px-8 lg:flex xl:px-16">
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3" aria-label="Ouidesign accueil">

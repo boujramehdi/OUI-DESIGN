@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { OrderModal } from "@/components/OrderModal";
+import { Container } from "@/components/Container";
 import { whatsappHref } from "@/lib/site";
 import type { Review } from "@/lib/products";
 
@@ -78,19 +79,19 @@ export function ProductDetail({
   return (
     <main>
       {/* Breadcrumb */}
-      <div className="bg-ivory border-b border-bronze/10 px-5 py-3 sm:px-8">
-        <div className="mx-auto max-w-7xl text-[0.58rem] uppercase tracking-[0.2em] text-charcoal/40">
+      <div className="bg-ivory border-b border-bronze/10">
+        <Container className="py-3 text-[0.58rem] uppercase tracking-[0.2em] text-charcoal/40">
           <Link href="/collection" className="transition-colors hover:text-bronze">
             Collection
           </Link>{" "}
           /{" "}
           <span className="text-bronze">{title}</span>
-        </div>
+        </Container>
       </div>
 
       {/* Main product area */}
       <section className="bg-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8 lg:py-16 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:gap-20 lg:items-start">
+        <Container className="py-20 lg:py-28 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:gap-20 lg:items-start">
 
           {/* LEFT: Image gallery */}
           <div className="lg:sticky lg:top-[110px]">
@@ -255,12 +256,12 @@ export function ProductDetail({
               ))}
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Reviews section */}
       <section className="lg-dark-panel bg-charcoal text-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:py-20">
+        <Container className="py-20 md:py-28">
           {/* Header */}
           <div className="mb-8 flex flex-col items-center gap-4 text-center sm:mb-10 sm:flex-row sm:items-end sm:justify-between sm:text-left">
             <div>
@@ -280,8 +281,8 @@ export function ProductDetail({
           </div>
 
           {/* Mobile carousel */}
-          <div className="relative -mx-5 md:hidden">
-            <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-3 px-5 pb-4">
+          <div className="relative -mx-6 md:hidden">
+            <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-3 px-6 pb-4">
               {reviews.map((review) => (
                 <article
                   key={review.author}
@@ -304,7 +305,7 @@ export function ProductDetail({
                   </div>
                 </article>
               ))}
-              <div className="shrink-0 w-5" aria-hidden="true" />
+              <div className="shrink-0 w-6" aria-hidden="true" />
             </div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-charcoal to-transparent" />
           </div>
@@ -335,19 +336,19 @@ export function ProductDetail({
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Related products */}
       <section className="bg-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:py-20">
+        <Container className="py-20 md:py-28">
           <p className="text-center text-[0.62rem] uppercase tracking-[0.34em] text-bronze sm:text-left">
             Vous aimerez aussi
           </p>
 
           {/* Mobile carousel */}
-          <div className="relative -mx-5 mt-8 sm:hidden">
-            <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-3 px-5 pb-4">
+          <div className="relative -mx-6 mt-8 sm:hidden">
+            <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-3 px-6 pb-4">
               {related.map((rp) => (
                 <Link
                   key={rp.slug}
@@ -373,7 +374,7 @@ export function ProductDetail({
                   </div>
                 </Link>
               ))}
-              <div className="shrink-0 w-5" aria-hidden="true" />
+              <div className="shrink-0 w-6" aria-hidden="true" />
             </div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-ivory to-transparent" />
           </div>
@@ -406,7 +407,7 @@ export function ProductDetail({
               </Link>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Order modal */}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Container } from "@/components/Container";
 
 const faqs = [
   {
@@ -40,7 +41,7 @@ export function HomeFaqSection() {
 
   return (
     <section className="bg-ivory">
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+      <Container className="py-24 md:py-32">
         <div className="mb-14 lg:grid lg:grid-cols-[1fr_2fr] lg:gap-16 lg:items-start">
           <div className="reveal">
             <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
@@ -87,7 +88,7 @@ export function HomeFaqSection() {
             );
           })}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Container } from "@/components/Container";
 
 type CTASectionProps = {
   title?: string;
@@ -37,7 +38,8 @@ export function CTASection({
       {/* Bottom bronze rule */}
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-bronze/25 to-transparent" />
 
-      <div className="reveal relative mx-auto grid max-w-7xl gap-5 px-5 py-10 sm:gap-8 sm:px-8 sm:py-14 lg:grid-cols-[1.2fr_0.9fr_0.8fr] lg:items-center lg:gap-12 lg:py-20">
+      <Container className="reveal relative py-16 md:py-24">
+        <div className="grid gap-5 sm:gap-8 lg:grid-cols-[1.2fr_0.9fr_0.8fr] lg:items-center lg:gap-12">
         <div>
           <p className="text-xs text-ivory/55">Prêt à donner vie à votre projet ?</p>
           <h2 className="mt-2 max-w-3xl font-serif text-3xl font-medium leading-[1.02] sm:text-4xl lg:text-5xl">
@@ -60,7 +62,8 @@ export function CTASection({
           </Link>
           <p className="mt-4 text-xs text-ivory/45">Réponse rapide et confidentielle.</p>
         </div>
-      </div>
+        </div>
+      </Container>
     </section>
   );
 }

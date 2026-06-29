@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { JournalCarousel } from "@/components/JournalCarousel";
 import { articles } from "@/lib/articles";
+import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Journal Ouidesign — Conseils villas et architecture au Maroc",
@@ -34,7 +35,7 @@ export default function JournalPage() {
         {/* Full-width hairline */}
         <div className="h-px bg-ivory/[0.06]" />
 
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-10 sm:py-24 lg:py-36">
+        <Container className="py-24 md:py-32">
 
           {/* Header row */}
           <div className="mb-10 flex flex-col gap-6 sm:mb-16 sm:gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-0">
@@ -52,8 +53,8 @@ export default function JournalPage() {
           </div>
 
           {/* ── MOBILE: snap carousel ── */}
-          <div className="relative -mx-5 mb-2 sm:hidden">
-            <div className="flex snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-2 px-5 pb-4">
+          <div className="relative -mx-6 mb-2 sm:hidden">
+            <div className="flex snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-2 px-6 pb-4">
               {topics.map((t) => (
                 <Link
                   key={t.label}
@@ -104,7 +105,7 @@ export default function JournalPage() {
               </Link>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <CTASection title="Un projet en tête ? Parlons-en directement." />

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { collectionItems } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 const collectionImages: { src: string; fit: string }[] = [
   { src: "/images/liftbar.png",           fit: "object-cover" },
@@ -19,7 +20,7 @@ export function CollectionShowcase() {
 
   return (
     <section className="bg-ivory text-charcoal">
-      <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8 sm:py-16 lg:py-28">
+      <Container className="py-20 md:py-28">
 
         {/* Header row */}
         <div className="reveal mb-8 flex flex-col gap-4 sm:mb-12 sm:flex-row sm:items-end sm:justify-between lg:mb-16">
@@ -55,8 +56,8 @@ export function CollectionShowcase() {
             </div>
           </div>
 
-          <div className="relative -mx-5">
-            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide px-5 pb-5 gap-4">
+          <div className="relative -mx-6">
+            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide px-6 pb-5 gap-4">
               {collectionItems.map((item, index) => (
                 <div key={item.title} className="snap-start shrink-0 w-[82vw]">
                   <Link href={`/collection/${item.slug}`} className="group block">
@@ -194,7 +195,7 @@ export function CollectionShowcase() {
           </div>
         </div>
 
-      </div>
+      </Container>
     </section>
   );
 }

@@ -46,7 +46,7 @@ export function CookieBanner() {
       {/* Top bronze rule */}
       <div className="absolute inset-x-0 top-0 h-px bg-bronze/50" />
 
-      <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-8">
+      <div className="mx-auto flex max-w-[1440px] flex-col gap-5 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-8 xl:px-16">
         {/* Text */}
         <div className="flex-1">
           <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bronze">Cookies</p>

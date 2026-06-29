@@ -234,4 +234,11 @@ summary::-webkit-details-marker {
     --tw-charcoal: 28 28 26;
     --tw-ivory:    244 239 231;
   }
+
+  /* Soft Sand panels — dark on mobile, #D8C6AD on desktop */
+  .lg-soft-sand {
+    background-color: #D8C6AD !important;
+    --tw-charcoal: 244 239 231;
+    --tw-ivory:    28 28 26;
+  }
 }

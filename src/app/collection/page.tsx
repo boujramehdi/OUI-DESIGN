@@ -5,6 +5,7 @@ import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { CollectionGrid } from "@/components/CollectionGrid";
 import { collectionItems, whatsappHref } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Collection mobilier intelligent et cuisines premium",
@@ -106,6 +107,7 @@ export default function CollectionPage() {
       {/* ── PILLARS STRIP ── */}
       <section className="bg-charcoal text-ivory">
         <div className="h-px bg-ivory/[0.06]" />
+        <Container>
         <div className="grid grid-cols-2 gap-px bg-bronze/10 lg:grid-cols-4">
           {pillars.map((s) => (
             <div
@@ -132,11 +134,12 @@ export default function CollectionPage() {
             </div>
           ))}
         </div>
+        </Container>
       </section>
 
       {/* ── COLLECTION HEADER ── */}
       <section className="bg-charcoal text-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:py-20">
+        <Container className="py-20 md:py-28">
           <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:items-end sm:justify-between sm:text-left">
             <div>
               <div className="flex items-center justify-center gap-4 sm:justify-start">
@@ -152,19 +155,21 @@ export default function CollectionPage() {
               Conçus pour vivre dans les plus belles propriétés du Maroc, chaque pièce est produite sur commande.
             </p>
           </div>
-        </div>
+        </Container>
         <div className="h-px bg-ivory/[0.06]" />
       </section>
 
       {/* ── COLLECTION GRID ── */}
       <section className="bg-charcoal">
-        <CollectionGrid items={collectionWithImages} />
+        <Container>
+          <CollectionGrid items={collectionWithImages} />
+        </Container>
       </section>
 
       {/* ── CUISINES PREMIUM ── */}
       <section id="cuisines-premium" className="overflow-hidden bg-charcoal text-ivory">
         <div className="h-px bg-ivory/[0.06]" />
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20 lg:py-28">
+        <Container className="py-24 md:py-32">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-20 lg:items-center">
 
             {/* Text */}
@@ -235,7 +240,7 @@ export default function CollectionPage() {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <CTASection title="Créons une pièce qui disparaît et se révèle au bon moment." />

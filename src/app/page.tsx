@@ -11,6 +11,7 @@ import { HomeFaqSection } from "@/components/HomeFaqSection";
 import { EmailCapture } from "@/components/EmailCapture";
 import { TrustBar } from "@/components/TrustBar";
 import { authorityPillars, siteConfig } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Architecture intelligente pour villas au Maroc",
@@ -35,18 +36,19 @@ const localBusinessJsonLd = {
   },
   areaServed: [
     "Maroc",
+    "Marrakech",
     "Casablanca",
     "Rabat",
     "Tanger",
     "Agadir",
     "Essaouira",
     "Fès",
-    "Palmeraie",
-    "Route de l’Ourika",
-    "Targa",
-    "Agdal",
-    "Guéliz",
-    "Hivernage",
+    "Meknès",
+    "Oujda",
+    "Tétouan",
+    "El Jadida",
+    "Safi",
+    "Kénitra",
   ],
   description: siteConfig.description,
   priceRange: "$$$",
@@ -174,12 +176,14 @@ const expertiseTiles = [
 ];
 
 const serviceAreas = [
-  "Palmeraie",
-  "Route de l’Ourika",
-  "Targa",
-  "Agdal",
-  "Guéliz",
-  "Hivernage",
+  "Marrakech",
+  "Casablanca",
+  "Rabat",
+  "Tanger",
+  "Agadir",
+  "Fès",
+  "Essaouira",
+  "Tout le Maroc",
 ];
 
 function ExpertiseTile({
@@ -231,7 +235,7 @@ export default function HomePage() {
       <ManifestoSection />
 
       <section className="bg-ivory overflow-hidden">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20 lg:grid lg:grid-cols-[1fr_2fr] lg:items-start lg:gap-16 lg:py-28">
+        <Container className="py-24 md:py-32 lg:grid lg:grid-cols-[1fr_2fr] lg:items-start lg:gap-16 lg:py-24">
 
           {/* Section header */}
           <div className="reveal mb-8 text-center sm:text-left lg:mb-0 lg:border-r lg:border-bronze/45 lg:pr-12">
@@ -249,18 +253,15 @@ export default function HomePage() {
           </div>
 
           {/* ── MOBILE: horizontal snap scroll ── */}
-          <div className="relative -mx-5 sm:hidden">
-            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-5 pb-6">
+          <div className="relative -mx-6 sm:hidden">
+            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-6 pb-6">
               {authorityPillars.map((pillar, index) => (
                 <article
                   key={pillar.title}
                   className="group relative snap-start shrink-0 w-[78vw] overflow-hidden border-t-2 border-bronze/20 px-4 pt-6 pb-6 transition-colors duration-300"
                 >
                   <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-active:w-full" />
-                  <p className="font-serif text-[3.5rem] leading-none text-bronze/60">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="mt-5 text-[0.65rem] font-medium uppercase tracking-[0.22em] text-charcoal">
+                  <h3 className="text-[0.65rem] font-medium uppercase tracking-[0.22em] text-charcoal">
                     {pillar.title}
                   </h3>
                   <div className="mt-3 h-px w-6 bg-bronze/30" />
@@ -278,10 +279,7 @@ export default function HomePage() {
             {authorityPillars.map((pillar, index) => (
               <article key={pillar.title} className="reveal group relative overflow-hidden border-t border-bronze/15 pt-6 transition-colors duration-300 hover:border-bronze/50">
                 <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
-                <p className="inline-block origin-left font-serif text-5xl leading-none text-bronze/70 transition-all duration-500 group-hover:scale-110 group-hover:text-bronze">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3 className="mt-4 text-[0.65rem] uppercase tracking-[0.22em] text-charcoal transition-colors duration-300 group-hover:text-bronze">
+                <h3 className="text-[0.65rem] uppercase tracking-[0.22em] text-charcoal transition-colors duration-300 group-hover:text-bronze">
                   {pillar.title}
                 </h3>
                 <p className="mt-3 text-xs leading-6 text-charcoal/62 transition-colors duration-300 group-hover:text-charcoal/85">{pillar.description}</p>
@@ -289,76 +287,76 @@ export default function HomePage() {
             ))}
           </div>
 
-        </div>
+        </Container>
       </section>
 
-      <section className="bg-charcoal py-10 sm:py-12 lg:px-10 lg:py-16">
+      <section className="bg-charcoal py-10 sm:py-12 lg:py-16">
+        <Container>
 
-        {/* ── MOBILE: section header + horizontal snap scroll ── */}
-        <div className="lg:hidden">
-          <div className="flex items-end justify-between px-5 pb-5 sm:px-8">
-            <div>
-              <p className="text-[0.5rem] uppercase tracking-[0.45em] text-bronze">Nos expertises</p>
-              <h2 className="mt-2 font-serif text-[1.75rem] font-medium leading-[1.02] text-ivory">
-                Ce que<br />nous faisons.
-              </h2>
-            </div>
-            <div className="flex shrink-0 flex-col items-end gap-1 pb-1">
-              <span className="text-[0.42rem] uppercase tracking-[0.38em] text-ivory/25">Glisser</span>
-              <div className="flex gap-1">
-                {expertiseTiles.slice(0, 5).map((_, i) => (
-                  <div key={i} className="h-px w-3 bg-bronze/30" />
-                ))}
+          {/* ── MOBILE: section header + horizontal snap scroll ── */}
+          <div className="lg:hidden">
+            <div className="flex items-end justify-between pb-5">
+              <div>
+                <p className="text-[0.5rem] uppercase tracking-[0.45em] text-bronze">Nos expertises</p>
+                <h2 className="mt-2 font-serif text-[1.75rem] font-medium leading-[1.02] text-ivory">
+                  Ce que<br />nous faisons.
+                </h2>
+              </div>
+              <div className="flex shrink-0 flex-col items-end gap-1 pb-1">
+                <span className="text-[0.42rem] uppercase tracking-[0.38em] text-ivory/25">Glisser</span>
+                <div className="flex gap-1">
+                  {expertiseTiles.slice(0, 5).map((_, i) => (
+                    <div key={i} className="h-px w-3 bg-bronze/30" />
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="relative">
-            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pl-5 sm:pl-8 pb-5">
-              {expertiseTiles.map((tile, index) => (
-                <Link
-                  key={tile.title}
-                  href={tile.href}
-                  className="lg-dark-panel group relative snap-start shrink-0 overflow-hidden bg-charcoal"
-                  style={{ width: "70vw", height: "88vw", maxWidth: "320px", maxHeight: "400px" }}
-                >
-                  <CinematicImage
-                    src={tile.image}
-                    alt={tile.title}
-                    sizes="70vw"
-                    imageClassName="object-cover object-center opacity-[0.88] transition duration-700 group-active:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/35 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-5">
-                    <div className="mb-2.5 h-px w-8 bg-bronze transition-all duration-500 group-hover:w-16" />
-                    <p className="text-[0.46rem] uppercase tracking-[0.28em] text-bronze">
-                      {String(index + 1).padStart(2, "0")}
-                    </p>
-                    <h3 className="mt-1.5 font-serif text-[1.15rem] font-medium leading-tight text-ivory">
-                      {tile.title}
-                    </h3>
-                    <p className="mt-1.5 text-[0.68rem] leading-5 text-ivory/60">
-                      {tile.text}
-                    </p>
-                  </div>
-                </Link>
-              ))}
-              <div className="shrink-0 w-5 sm:w-8" aria-hidden="true" />
+            <div className="relative -mx-6">
+              <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-6 pb-5">
+                {expertiseTiles.map((tile, index) => (
+                  <Link
+                    key={tile.title}
+                    href={tile.href}
+                    className="lg-dark-panel group relative snap-start shrink-0 overflow-hidden bg-charcoal"
+                    style={{ width: "70vw", height: "88vw", maxWidth: "320px", maxHeight: "400px" }}
+                  >
+                    <CinematicImage
+                      src={tile.image}
+                      alt={tile.title}
+                      sizes="70vw"
+                      imageClassName="object-cover object-center opacity-[0.88] transition duration-700 group-active:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/35 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 p-5">
+                      <div className="mb-2.5 h-px w-8 bg-bronze transition-all duration-500 group-hover:w-16" />
+                      <p className="text-[0.46rem] uppercase tracking-[0.28em] text-bronze">
+                        {String(index + 1).padStart(2, "0")}
+                      </p>
+                      <h3 className="mt-1.5 font-serif text-[1.15rem] font-medium leading-tight text-ivory">
+                        {tile.title}
+                      </h3>
+                      <p className="mt-1.5 text-[0.68rem] leading-5 text-ivory/60">
+                        {tile.text}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+                <div className="shrink-0 w-6" aria-hidden="true" />
+              </div>
+              {/* Right-edge fade hint */}
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-charcoal to-transparent" />
             </div>
-            {/* Right-edge fade hint */}
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-charcoal to-transparent" />
           </div>
-        </div>
 
-        {/* ── DESKTOP: original 12-col grid ── */}
-        <div className="hidden lg:block">
-          <div className="mx-auto grid max-w-[1500px] gap-5 lg:grid-cols-12 lg:auto-rows-[320px]">
+          {/* ── DESKTOP: 12-col grid ── */}
+          <div className="hidden lg:grid lg:grid-cols-12 lg:auto-rows-[320px] gap-5">
             {expertiseTiles.map((tile, index) => (
               <ExpertiseTile key={tile.title} tile={tile} index={index} />
             ))}
           </div>
-        </div>
 
+        </Container>
       </section>
 
       <CollectionShowcase />
@@ -367,36 +365,39 @@ export default function HomePage() {
 
       <ProcessSection />
 
-      <section className="grid overflow-hidden bg-charcoal text-ivory lg:grid-cols-[1fr_1.65fr]">
-        <div className="reveal px-5 py-14 sm:px-8 sm:py-20 lg:py-28 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-20">
-          <p className="text-xs uppercase tracking-[0.34em] text-bronze">Notre ancrage</p>
-          <h2 className="mt-3 max-w-md font-serif text-3xl font-medium leading-[1.04] sm:text-4xl lg:text-5xl">
-            Nous intervenons là où l’exception rencontre l’expertise.
-          </h2>
-          <p className="mt-4 max-w-md text-sm leading-7 text-ivory/72">
-            De la Palmeraie à l’Hivernage, en passant par Targa, Agdal, Guéliz
-            et l’Ourika, chaque projet est une rencontre avec un lieu unique.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-2 sm:gap-3">
-            {serviceAreas.map((area) => (
-              <span
-                key={area}
-                className="border border-bronze/30 px-3 py-2 text-[0.58rem] uppercase tracking-[0.18em] text-ivory/70 transition-all duration-300 hover:border-bronze hover:bg-bronze/10 hover:text-ivory sm:px-4 sm:py-3 sm:text-[0.62rem]"
-              >
-                {area}
-              </span>
-            ))}
+      <section className="overflow-hidden bg-charcoal text-ivory">
+        <Container className="py-24 md:py-32">
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.65fr] lg:items-center lg:gap-16">
+            <div className="reveal">
+              <p className="text-xs uppercase tracking-[0.34em] text-bronze">Notre ancrage</p>
+              <h2 className="mt-3 max-w-md font-serif text-3xl font-medium leading-[1.04] sm:text-4xl lg:text-5xl">
+                Nous intervenons là où l’exception rencontre l’expertise.
+              </h2>
+              <p className="mt-4 max-w-md text-sm leading-7 text-ivory/72">
+                De Casablanca à Agadir, de Tanger à Marrakech, en passant par Rabat, Fès et Essaouira — nous intervenons partout au Maroc.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-2 sm:gap-3">
+                {serviceAreas.map((area) => (
+                  <span
+                    key={area}
+                    className="border border-bronze/30 px-3 py-2 text-[0.58rem] uppercase tracking-[0.18em] text-ivory/70 transition-all duration-300 hover:border-bronze hover:bg-bronze/10 hover:text-ivory sm:px-4 sm:py-3 sm:text-[0.62rem]"
+                  >
+                    {area}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="lg-dark-panel reveal relative min-h-[300px] overflow-hidden sm:min-h-[400px] lg:min-h-[560px]">
+              <CinematicImage
+                src="/images/mosques2.png"
+                alt="Mosquée Koutoubia et Atlas enneigé — Maroc, zone d’intervention Ouidesign"
+                sizes="(min-width: 1024px) 55vw, 100vw"
+                imageClassName="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-charcoal/40 via-transparent to-transparent" />
+            </div>
           </div>
-        </div>
-        <div className="lg-dark-panel reveal relative min-h-[300px] overflow-hidden bg-charcoal sm:min-h-[400px] lg:min-h-[600px]">
-          <CinematicImage
-            src="/images/mosques2.png"
-            alt="Mosquée Koutoubia et Atlas enneigé — Maroc, zone d'intervention Ouidesign"
-            sizes="(min-width: 1024px) 66vw, 100vw"
-            imageClassName="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/40 via-transparent to-transparent" />
-        </div>
+        </Container>
       </section>
 
       <HomeFaqSection />

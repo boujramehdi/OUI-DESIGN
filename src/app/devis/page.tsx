@@ -4,6 +4,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { siteConfig, whatsappHref } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Demander un devis ou une orientation",
@@ -33,7 +34,7 @@ export default function DevisPage() {
 
       {/* Budget ranges — ivory */}
       <section className="bg-ivory text-charcoal">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:py-24">
+        <Container className="py-20 md:py-28">
           <div className="mb-8 text-center sm:mb-12 sm:text-left">
             <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Fourchettes indicatives</p>
             <h2 className="mt-4 font-serif text-3xl font-medium leading-tight text-charcoal sm:max-w-2xl sm:text-4xl">
@@ -66,12 +67,12 @@ export default function DevisPage() {
             * Prix en dirhams marocains (DH), hors mobilier et décoration. Hors taxes le cas
             échéant. Valables pour des projets au Maroc en 2026.
           </p>
-        </div>
+        </Container>
       </section>
 
       {/* Brief section — ivory */}
       <section className="bg-ivory text-charcoal">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:py-28">
+        <Container className="grid gap-10 py-24 md:py-32 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:py-24">
           <div className="text-center sm:text-left">
             <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
               Préparer l'échange
@@ -97,12 +98,12 @@ export default function DevisPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Contact form — ivory */}
       <section className="bg-ivory text-charcoal">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[1fr_1.2fr] lg:gap-20 lg:py-28">
+        <Container className="grid gap-10 py-24 md:py-32 lg:grid-cols-[1fr_1.2fr] lg:gap-20 lg:py-24">
           <div className="text-center sm:text-left">
             <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
               Formulaire
@@ -133,12 +134,12 @@ export default function DevisPage() {
           </div>
 
           <ContactForm />
-        </div>
+        </Container>
       </section>
 
       {/* Direct WhatsApp — dark */}
       <section className="bg-charcoal text-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:py-24">
+        <Container className="py-20 md:py-28">
           <div className="group border border-bronze/20 p-8 text-center transition-colors duration-500 hover:border-bronze/40 hover:bg-[rgba(184,146,95,0.07)] sm:p-10 sm:text-left lg:flex lg:items-center lg:justify-between lg:gap-10">
             <div>
               <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
@@ -164,7 +165,7 @@ export default function DevisPage() {
               Ouvrir WhatsApp directement
             </Link>
           </div>
-        </div>
+        </Container>
       </section>
 
       <CTASection title="Votre villa mérite une orientation précise dès le premier échange." />

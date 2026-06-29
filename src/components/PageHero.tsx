@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Container } from "@/components/Container";
 
 type PageHeroProps = {
   eyebrow: string;
@@ -23,15 +24,6 @@ export function PageHero({ eyebrow, title, text, dark = false, image, imageAlt =
 
           {/* Text side — always charcoal for drama */}
           <div className="relative flex flex-col justify-center overflow-hidden px-5 pb-16 pt-24 sm:px-10 sm:pb-20 sm:pt-44 lg:pb-24 lg:pl-[max(2.5rem,calc(50vw-40rem+2.5rem))] lg:pr-16 lg:pt-52">
-
-            {/* Ghost large index number in background */}
-            <span
-              className="pointer-events-none absolute -bottom-6 -left-4 select-none font-serif font-medium leading-none text-ivory/[0.025]"
-              style={{ fontSize: "clamp(9rem, 20vw, 18rem)" }}
-              aria-hidden="true"
-            >
-              01
-            </span>
 
             {/* Top corner decoration */}
             <div className="anim-fade-in absolute left-0 top-[90px] h-20 w-px bg-bronze/20" />
@@ -111,7 +103,7 @@ export function PageHero({ eyebrow, title, text, dark = false, image, imageAlt =
       <div className={`absolute right-5 top-[100px] hidden h-px w-24 sm:right-8 lg:block ${dark ? "bg-ivory/8" : "bg-bronze/18"}`} />
 
       {/* Content */}
-      <div className="relative mx-auto max-w-7xl px-5 pb-14 pt-28 sm:px-8 sm:pb-24 sm:pt-44 lg:pb-32 lg:pt-52">
+      <Container className="relative pb-24 pt-28 sm:pb-32 sm:pt-44 lg:pb-40 lg:pt-52">
 
         {/* Eyebrow with animated leading line */}
         <div className="anim-fade-in flex items-center justify-center gap-5 sm:justify-start">
@@ -138,7 +130,7 @@ export function PageHero({ eyebrow, title, text, dark = false, image, imageAlt =
           <span className="h-px w-6 bg-current opacity-40" />
           <span className="text-[0.55rem] uppercase tracking-[0.3em]">Ouidesign · 2026</span>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

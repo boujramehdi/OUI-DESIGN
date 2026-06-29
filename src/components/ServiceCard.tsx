@@ -30,16 +30,6 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
         </div>
       )}
 
-      {/* Ghost number — fades out when image appears */}
-      {number && (
-        <span
-          className="pointer-events-none absolute -right-3 -bottom-6 select-none font-serif font-medium leading-none text-ivory/[0.04] transition-all duration-500 group-hover:opacity-0"
-          style={{ fontSize: "clamp(6rem, 10vw, 9rem)" }}
-        >
-          {number}
-        </span>
-      )}
-
       {/* Bottom sweep line */}
       <div className="absolute bottom-0 left-0 h-[1.5px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
 

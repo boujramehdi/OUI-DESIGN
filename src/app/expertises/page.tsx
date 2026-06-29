@@ -3,6 +3,7 @@ import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { ServiceCard } from "@/components/ServiceCard";
 import { authorityPillars, mainServices } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Expertises villa, riad et smart living au Maroc",
@@ -24,7 +25,7 @@ export default function ExpertisesPage() {
 
       {/* Service cards — dark cards on ivory bg */}
       <section className="bg-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
+        <Container className="py-24 md:py-32">
 
           {/* Mobile header */}
           <div className="mb-4 flex items-center justify-between md:hidden">
@@ -42,14 +43,14 @@ export default function ExpertisesPage() {
           </div>
 
           {/* Mobile carousel */}
-          <div className="relative -mx-5 md:hidden">
-            <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-5 pb-5">
+          <div className="relative -mx-6 md:hidden">
+            <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-6 pb-5">
               {mainServices.map((service, index) => (
                 <div key={service.title} className="snap-start shrink-0 w-[82vw]">
                   <ServiceCard service={service} index={index} />
                 </div>
               ))}
-              <div className="shrink-0 w-5" aria-hidden="true" />
+              <div className="shrink-0 w-6" aria-hidden="true" />
             </div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-ivory to-transparent" />
           </div>
@@ -60,12 +61,12 @@ export default function ExpertisesPage() {
               <ServiceCard key={service.title} service={service} index={index} />
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Architecture section — dark bg */}
       <section id="architecture-interieure" className="overflow-hidden bg-charcoal text-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20 lg:py-28">
+        <Container className="py-24 md:py-32">
 
           {/* Header row */}
           <div className="reveal mb-10 grid gap-8 sm:mb-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-20">
@@ -87,8 +88,8 @@ export default function ExpertisesPage() {
           {/* Pillar cards */}
 
           {/* Mobile carousel */}
-          <div className="relative -mx-5 sm:hidden">
-            <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-5 pb-5">
+          <div className="relative -mx-6 sm:hidden">
+            <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-6 pb-5">
               {authorityPillars.map((pillar, index) => (
                 <article
                   key={pillar.title}
@@ -97,21 +98,8 @@ export default function ExpertisesPage() {
                   {/* Top sweep bar */}
                   <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
 
-                  {/* Ghost huge number */}
-                  <span
-                    className="pointer-events-none absolute -right-3 -top-2 select-none font-serif font-medium leading-none text-ivory/[0.03] transition-all duration-700 group-hover:text-bronze/[0.10]"
-                    style={{ fontSize: "clamp(7rem, 10vw, 9rem)" }}
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-
-                  {/* Visible small number */}
-                  <p className="relative font-serif text-5xl font-medium leading-none text-bronze/40 transition-colors duration-500 group-hover:text-bronze/80">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-
                   {/* Bronze rule */}
-                  <div className="mt-7 h-px w-8 bg-bronze/40 transition-all duration-500 group-hover:w-full group-hover:bg-bronze/60" />
+                  <div className="mt-0 h-px w-8 bg-bronze/40 transition-all duration-500 group-hover:w-full group-hover:bg-bronze/60" />
 
                   {/* Title */}
                   <h3 className="mt-6 font-serif text-2xl text-ivory transition-all duration-300 group-hover:-translate-y-0.5 sm:text-3xl">
@@ -129,13 +117,13 @@ export default function ExpertisesPage() {
                   </p>
                 </article>
               ))}
-              <div className="shrink-0 w-5" aria-hidden="true" />
+              <div className="shrink-0 w-6" aria-hidden="true" />
             </div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-charcoal to-transparent" />
           </div>
 
           {/* Desktop grid */}
-          <div className="hidden sm:grid sm:grid-cols-3 gap-px bg-bronze/10">
+          <div className="hidden sm:grid sm:grid-cols-3 gap-px bg-bronze/10 mt-0">
             {authorityPillars.map((pillar, index) => (
               <article
                 key={pillar.title}
@@ -144,21 +132,8 @@ export default function ExpertisesPage() {
                 {/* Top sweep bar */}
                 <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
 
-                {/* Ghost huge number */}
-                <span
-                  className="pointer-events-none absolute -right-3 -top-2 select-none font-serif font-medium leading-none text-ivory/[0.03] transition-all duration-700 group-hover:text-bronze/[0.10]"
-                  style={{ fontSize: "clamp(7rem, 10vw, 9rem)" }}
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                {/* Visible small number */}
-                <p className="relative font-serif text-5xl font-medium leading-none text-bronze/40 transition-colors duration-500 group-hover:text-bronze/80">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-
                 {/* Bronze rule — extends on hover */}
-                <div className="mt-7 h-px w-8 bg-bronze/40 transition-all duration-500 group-hover:w-full group-hover:bg-bronze/60" />
+                <div className="mt-0 h-px w-8 bg-bronze/40 transition-all duration-500 group-hover:w-full group-hover:bg-bronze/60" />
 
                 {/* Title */}
                 <h3 className="mt-6 font-serif text-2xl text-ivory transition-all duration-300 group-hover:-translate-y-0.5 sm:text-3xl">
@@ -177,7 +152,7 @@ export default function ExpertisesPage() {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <CTASection />

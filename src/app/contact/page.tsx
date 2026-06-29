@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { siteConfig, whatsappHref } from "@/lib/site";
 import { CustomSelect } from "@/components/CustomSelect";
+import { Container } from "@/components/Container";
 
 const services = [
   "Rénovation villa / riad",
@@ -174,7 +175,7 @@ export default function ContactPage() {
       <section className="relative overflow-hidden bg-ivory text-charcoal">
         <div className="absolute left-0 right-0 top-[90px] h-px bg-bronze/12" />
         <div className="absolute bottom-0 left-0 top-[90px] w-px bg-bronze/15" />
-        <div className="relative mx-auto max-w-7xl px-5 pb-14 pt-28 sm:px-8 sm:pb-20 sm:pt-44 lg:pb-24 lg:pt-52">
+        <Container className="relative pb-24 pt-28 sm:pb-32 sm:pt-44 lg:pb-40 lg:pt-52">
           {/* Eyebrow — centered mobile */}
           <div className="flex items-center justify-center gap-4 sm:justify-start">
             <span className="hero-line-grow inline-block h-px bg-bronze/65 sm:hidden" />
@@ -190,12 +191,12 @@ export default function ContactPage() {
             Ouidesign vous répond rapidement — par WhatsApp, par téléphone ou par email.
             Choisissez le canal qui vous convient le mieux.
           </p>
-        </div>
+        </Container>
       </section>
 
       {/* Contact method cards — dark background, full bleed */}
       <section className="bg-charcoal text-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16">
+        <Container className="py-14 sm:py-16">
           <div className="grid grid-cols-2 gap-px bg-ivory/[0.04] lg:grid-cols-4">
             {[
               {
@@ -297,12 +298,12 @@ export default function ContactPage() {
               );
             })}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Main content — form + side info */}
       <section className="bg-ivory text-charcoal">
-        <div className="mx-auto grid max-w-7xl gap-14 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[1fr_1.4fr] lg:gap-24 lg:py-28">
+        <Container className="grid gap-14 py-24 md:py-32 lg:grid-cols-[1fr_1.4fr] lg:gap-24 lg:py-24">
 
           {/* Left — info column */}
           <div>
@@ -411,13 +412,13 @@ export default function ContactPage() {
             </p>
             <ContactForm />
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Zone d'intervention */}
       <section id="zones" className="bg-charcoal text-ivory">
         <div className="h-px bg-ivory/[0.06]" />
-        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:py-20">
+        <Container className="py-20 md:py-28">
           <div className="flex flex-col items-center gap-8 text-center sm:text-left lg:flex-row lg:items-center lg:justify-between lg:gap-12">
             <div className="shrink-0">
               <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Zone d&apos;intervention</p>
@@ -437,7 +438,7 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Bottom CTA */}
@@ -445,7 +446,7 @@ export default function ContactPage() {
         <div className="pointer-events-none absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full bg-bronze/[0.12] blur-3xl" />
         <div className="pointer-events-none absolute -bottom-32 -right-32 h-[500px] w-[500px] rounded-full bg-bronze/[0.09] blur-3xl" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-bronze/60 to-transparent" />
-        <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
+        <Container className="relative py-24 md:py-32">
           <div className="flex flex-col items-center text-center">
             <p className="text-xs text-ivory/55">Réponse rapide et confidentielle</p>
             <h2 className="mt-4 font-serif text-3xl font-medium leading-tight sm:text-4xl lg:text-5xl">
@@ -466,7 +467,7 @@ export default function ContactPage() {
               Écrire sur WhatsApp
             </a>
           </div>
-        </div>
+        </Container>
       </section>
     </>
   );

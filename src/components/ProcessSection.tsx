@@ -1,4 +1,5 @@
 import { processSteps } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 const stepIcons = [
   <svg key="diagnostic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
@@ -34,11 +35,8 @@ function StepCard({ step, index, mobile }: { step: typeof processSteps[number]; 
           : "px-6 py-8 md:px-7 md:py-10"
       }`}
     >
-      {/* Top: number + icon */}
-      <div className="flex items-start justify-between">
-        <span className="font-serif text-5xl font-medium leading-none text-bronze/30 transition-colors duration-300 group-hover:text-bronze/60">
-          {String(index + 1).padStart(2, "0")}
-        </span>
+      {/* Top: icon */}
+      <div className="flex items-start justify-end">
         <div className="mt-1 text-bronze/50 transition-colors duration-300 group-hover:text-bronze">
           {stepIcons[index]}
         </div>
@@ -60,8 +58,8 @@ function StepCard({ step, index, mobile }: { step: typeof processSteps[number]; 
 
 export function ProcessSection() {
   return (
-    <section className="bg-charcoal text-ivory overflow-hidden">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section className="lg-dark-panel bg-charcoal text-ivory overflow-hidden">
+      <Container>
 
         {/* ── Header — tightly coupled to cards below ── */}
         <div className="reveal pt-16 pb-10 sm:pt-20 sm:pb-12 lg:pt-28 lg:pb-14">
@@ -95,10 +93,10 @@ export function ProcessSection() {
           </p>
         </div>
 
-      </div>
+      </Container>
 
-      {/* ── MOBILE: horizontal snap scroll (outside padded container for edge-to-edge) ── */}
-      <div className="relative md:hidden">
+      {/* ── MOBILE + TABLET: horizontal snap scroll (< lg) ── */}
+      <div className="relative lg:hidden">
         <div className="flex gap-px overflow-x-auto snap-x snap-mandatory scrollbar-hide pl-5 sm:pl-8 pb-16 sm:pb-20">
           {processSteps.map((step, index) => (
             <StepCard key={step.title} step={step} index={index} mobile />
@@ -108,14 +106,14 @@ export function ProcessSection() {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-charcoal to-transparent" />
       </div>
 
-      {/* ── DESKTOP: 5-col grid (inside padded container) ── */}
-      <div className="mx-auto hidden max-w-7xl px-5 pb-16 sm:px-8 lg:pb-24 md:block">
+      {/* ── DESKTOP: 5-col grid (lg+) ── */}
+      <Container className="hidden pb-24 lg:pb-32 lg:block">
         <div className="reveal grid grid-cols-5 gap-px bg-bronze/10">
           {processSteps.map((step, index) => (
             <StepCard key={step.title} step={step} index={index} />
           ))}
         </div>
-      </div>
+      </Container>
 
     </section>
   );

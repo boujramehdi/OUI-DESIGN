@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { whatsappHref } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Contrat de prestation Ouidesign — Cadre et engagements",
@@ -103,7 +104,7 @@ export default function ContratPage() {
 
       {/* Processus contractuel */}
       <section className="bg-ivory text-charcoal">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
+        <Container className="py-24 md:py-32">
           <div className="mb-14">
             <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
               De la demande à la livraison
@@ -140,12 +141,12 @@ export default function ContratPage() {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Échéancier de paiement */}
       <section className="bg-charcoal text-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
+        <Container className="py-24 md:py-32">
           <div className="mb-12">
             <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
               Échéancier type
@@ -187,12 +188,12 @@ export default function ContratPage() {
             * Échéancier indicatif. Le contrat final peut prévoir des jalons intermédiaires
             supplémentaires selon la nature et la durée du projet.
           </p>
-        </div>
+        </Container>
       </section>
 
       {/* Garanties */}
       <section className="bg-ivory text-charcoal">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
+        <Container className="py-24 md:py-32">
           <div className="mb-14 lg:grid lg:grid-cols-[1fr_2fr] lg:gap-16 lg:items-end">
             <div>
               <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
@@ -223,12 +224,12 @@ export default function ContratPage() {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* CTA — Demander un devis */}
       <section className="bg-charcoal text-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
+        <Container className="py-24 md:py-32">
           <div className="group border border-bronze/20 p-8 transition-colors duration-500 hover:border-bronze/50 hover:bg-[rgba(255,255,255,0.04)] sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
             <div>
               <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">
@@ -263,7 +264,7 @@ export default function ContratPage() {
               </Link>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <CTASection title="Un projet clair commence par un contrat clair." />

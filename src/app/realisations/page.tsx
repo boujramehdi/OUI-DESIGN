@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { GalleryStrip } from "@/components/GalleryStrip";
+import { RealisationsStats } from "@/components/RealisationsStats";
 import { whatsappHref } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Réalisations villas et riads au Maroc — Ouidesign",
@@ -12,12 +14,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/realisations" },
 };
 
-const stats = [
-  { value: "50+",  label: "Projets réalisés" },
-  { value: "8",    label: "Expertises maîtrisées" },
-  { value: "100%", label: "Coordination totale" },
-  { value: "5★",   label: "Niveau de finition" },
-];
 
 const projectTypes = [
   {
@@ -140,58 +136,50 @@ export default function RealisationsPage() {
         {/* Eyebrow — pinned at top below nav */}
         <div className="absolute inset-x-0 top-[90px]">
           <div className="h-px bg-ivory/[0.07]" />
-          <div className="flex items-center justify-center gap-4 px-5 py-5 sm:justify-start sm:px-14">
-            <span className="hero-line-grow inline-block h-px bg-bronze/65 sm:hidden" />
-            <span className="hero-line-grow inline-block h-px bg-bronze/65" />
-            <p className="text-[0.58rem] uppercase tracking-[0.42em] text-bronze">Réalisations · Ouidesign</p>
-            <span className="hero-line-grow inline-block h-px bg-bronze/65 sm:hidden" />
-          </div>
+          <Container>
+            <div className="flex items-center justify-center gap-4 py-5 sm:justify-start">
+              <span className="hero-line-grow inline-block h-px bg-bronze/65 sm:hidden" />
+              <span className="hero-line-grow inline-block h-px bg-bronze/65" />
+              <p className="text-[0.58rem] uppercase tracking-[0.42em] text-bronze">Réalisations · Ouidesign</p>
+              <span className="hero-line-grow inline-block h-px bg-bronze/65 sm:hidden" />
+            </div>
+          </Container>
         </div>
 
         {/* Main content — pushed to bottom */}
         <div className="relative flex min-h-[100svh] flex-col justify-end">
+          <Container>
 
-          {/* Title + text block */}
-          <div className="flex flex-col items-center px-5 pb-8 text-center sm:items-start sm:px-14 sm:text-left lg:max-w-[60%]">
-            <p className="mb-5 text-[0.48rem] uppercase tracking-[0.5em] text-ivory/22">
-              50+ projets · Maroc
-            </p>
+            {/* Title + text block */}
+            <div className="flex flex-col items-center pb-8 text-center sm:items-start sm:text-left lg:max-w-[60%]">
+              <p className="mb-5 text-[0.48rem] uppercase tracking-[0.5em] text-ivory/22">
+                50+ projets · Maroc
+              </p>
 
-            <h1
-              className="font-serif font-medium leading-[0.95] text-ivory"
-              style={{ fontSize: "clamp(2.4rem, 7.5vw, 5.2rem)", letterSpacing: "-0.025em" }}
-            >
-              Des projets<br />pensés pour<br />durer.
-            </h1>
+              <h1
+                className="font-serif font-medium leading-[0.95] text-ivory"
+                style={{ fontSize: "clamp(2.4rem, 7.5vw, 5.2rem)", letterSpacing: "-0.025em" }}
+              >
+                Des projets<br />pensés pour<br />durer.
+              </h1>
 
-            <div className="mt-6 h-px w-12 bg-bronze/40" />
+              <div className="mt-6 h-px w-12 bg-bronze/40" />
 
-            <p className="mt-5 max-w-[26ch] text-[0.78rem] leading-[1.9] text-ivory/40 sm:max-w-[38ch]">
-              Les projets Ouidesign sont souvent confidentiels. Cette page présente les
-              typologies d&apos;intervention et les standards appliqués à chaque propriété.
-            </p>
-          </div>
-
-          {/* Stats bar */}
-          <div className="border-t border-ivory/[0.08] pb-10">
-            <div className="grid grid-cols-2 divide-x divide-y divide-ivory/[0.07] sm:grid-cols-4 sm:divide-y-0 sm:divide-ivory/[0.08]">
-              {stats.map((s) => (
-                <div key={s.label} className="px-5 pt-6 sm:px-6 sm:pt-7 sm:first:pl-0">
-                  <p
-                    className="font-serif font-medium leading-none text-bronze"
-                    style={{ fontSize: "clamp(1.4rem, 2.8vw, 2.4rem)" }}
-                  >
-                    {s.value}
-                  </p>
-                  <p className="mt-2 text-[0.41rem] uppercase tracking-[0.28em] text-ivory/22">
-                    {s.label}
-                  </p>
-                </div>
-              ))}
+              <p className="mt-5 max-w-[26ch] text-[0.78rem] leading-[1.9] text-ivory/40 sm:max-w-[38ch]">
+                Les projets Ouidesign sont souvent confidentiels. Cette page présente les
+                typologies d&apos;intervention et les standards appliqués à chaque propriété.
+              </p>
             </div>
-          </div>
 
+          </Container>
         </div>
+      </section>
+
+      {/* ── STATS BAND · Soft Sand on desktop ── */}
+      <section className="bg-charcoal text-ivory">
+        <Container>
+          <RealisationsStats />
+        </Container>
       </section>
 
       {/* ══════════════════════════════════════════════════
@@ -201,20 +189,23 @@ export default function RealisationsPage() {
         <div className="h-px bg-ivory/[0.06]" />
 
         {/* Section label */}
-        <div className="flex items-center gap-6 px-5 py-10 sm:px-14">
-          <p className="text-[0.48rem] uppercase tracking-[0.48em] text-bronze/60">Typologies de projets</p>
-          <div className="h-px flex-1 bg-ivory/[0.05]" />
-          <div className="flex shrink-0 items-center gap-2 sm:hidden">
-            <span className="text-[0.42rem] uppercase tracking-[0.32em] text-ivory/20">Glisser</span>
+        <Container>
+          <div className="flex items-center gap-6 py-10">
+            <p className="text-[0.48rem] uppercase tracking-[0.48em] text-bronze/60">Typologies de projets</p>
+            <div className="h-px flex-1 bg-ivory/[0.05]" />
+            <div className="flex shrink-0 items-center gap-2 sm:hidden">
+              <span className="text-[0.42rem] uppercase tracking-[0.32em] text-ivory/20">Glisser</span>
+            </div>
+            <p className="hidden text-[0.44rem] uppercase tracking-[0.35em] text-ivory/18 sm:block">
+              {String(projectTypes.length).padStart(2, "0")} catégories
+            </p>
           </div>
-          <p className="hidden text-[0.44rem] uppercase tracking-[0.35em] text-ivory/18 sm:block">
-            {String(projectTypes.length).padStart(2, "0")} catégories
-          </p>
-        </div>
+        </Container>
 
         {/* ── MOBILE: horizontal snap carousel ── */}
-        <div className="relative sm:hidden">
-          <div className="flex snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide gap-px">
+        <Container>
+        <div className="relative -mx-6 sm:hidden">
+          <div className="flex snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide gap-px px-6">
             {projectTypes.map((p, i) => (
               <Link
                 key={p.title}
@@ -235,10 +226,6 @@ export default function RealisationsPage() {
                   <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-ivory/[0.10] to-transparent transition-transform duration-[850ms] group-active:translate-x-full" />
                   {/* Bronze bottom border */}
                   <div className="absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 bg-bronze/70 transition-transform duration-500 group-active:scale-x-100" />
-                  {/* Number */}
-                  <span className="absolute right-4 top-4 font-serif text-[2.5rem] font-medium leading-none text-ivory/[0.08]">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
                 </div>
 
                 {/* Text */}
@@ -261,13 +248,14 @@ export default function RealisationsPage() {
           </div>
           <div className="pointer-events-none absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-charcoal to-transparent" />
         </div>
+        </Container>
 
         {/* ── DESKTOP: alternating rows ── */}
         {projectTypes.map((p, i) => {
           const imageLeft = i % 2 === 0;
           return (
+            <Container key={p.title}>
             <div
-              key={p.title}
               className={`group relative hidden min-h-[60svh] border-t border-ivory/[0.05] sm:flex ${
                 imageLeft ? "flex-col lg:flex-row" : "flex-col lg:flex-row-reverse"
               }`}
@@ -338,17 +326,6 @@ export default function RealisationsPage() {
               {/* Text panel — 42% */}
               <div className="relative flex flex-col justify-center px-5 py-10 sm:px-12 sm:py-14 lg:w-[42%] lg:px-14 lg:py-16">
 
-                {/* Large ghost number */}
-                <span
-                  aria-hidden="true"
-                  className={`pointer-events-none absolute top-6 select-none font-serif font-medium leading-none text-ivory/[0.035] transition-all duration-700 group-hover:text-ivory/[0.06] ${
-                    imageLeft ? "right-8" : "left-8"
-                  }`}
-                  style={{ fontSize: "clamp(5rem, 10vw, 9rem)", letterSpacing: "-0.03em" }}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-
                 <p className="text-[0.46rem] uppercase tracking-[0.42em] text-bronze/65">{p.kicker}</p>
 
                 <h2
@@ -377,6 +354,7 @@ export default function RealisationsPage() {
                 </div>
               </div>
             </div>
+            </Container>
           );
         })}
       </section>
@@ -388,28 +366,33 @@ export default function RealisationsPage() {
         <div className="h-px bg-ivory/[0.06]" />
 
         {/* Section label */}
-        <div className="flex items-center gap-5 px-8 py-8 sm:px-14">
-          <div className="h-px w-6 bg-bronze/35" />
-          <p className="text-[0.46rem] uppercase tracking-[0.45em] text-ivory/20">Ambiances · Maroc</p>
-        </div>
+        <Container>
+          <div className="flex items-center gap-5 py-8">
+            <div className="h-px w-6 bg-bronze/35" />
+            <p className="text-[0.46rem] uppercase tracking-[0.45em] text-ivory/20">Ambiances · Maroc</p>
+          </div>
+        </Container>
 
         <GalleryStrip />
 
-        <div className="px-8 pb-10 pt-2 sm:px-14">
-          <p className="text-[0.42rem] uppercase tracking-[0.35em] text-ivory/15">
-            Les visuels sont présentés à titre d&apos;illustration de nos catégories d&apos;intervention.
-          </p>
-        </div>
+        <Container>
+          <div className="pb-10 pt-2">
+            <p className="text-[0.42rem] uppercase tracking-[0.35em] text-ivory/15">
+              Les visuels sont présentés à titre d&apos;illustration de nos catégories d&apos;intervention.
+            </p>
+          </div>
+        </Container>
       </section>
 
       {/* ══════════════════════════════════════════════════
           04 — STANDARDS · 3×2 visual card grid
       ══════════════════════════════════════════════════ */}
-      <section className="lg-dark-panel bg-charcoal text-ivory">
+      <section className="bg-charcoal text-ivory">
         <div className="h-px bg-ivory/[0.06]" />
 
+        <Container>
         {/* Section header */}
-        <div className="px-8 py-14 sm:px-14">
+        <div className="py-14">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-[0.5rem] uppercase tracking-[0.48em] text-bronze">Standard Ouidesign</p>
@@ -428,8 +411,8 @@ export default function RealisationsPage() {
         </div>
 
         {/* ── MOBILE: snap carousel ── */}
-        <div className="relative sm:hidden">
-          <div className="flex snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide gap-px">
+        <div className="relative -mx-6 sm:hidden">
+          <div className="flex snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide gap-px px-6">
             {standards.map((s) => (
               <article
                 key={s.title}
@@ -440,15 +423,12 @@ export default function RealisationsPage() {
                 {/* Bronze glow */}
                 <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-active:opacity-100"
                   style={{ background: "radial-gradient(ellipse 90% 50% at 50% 100%, rgba(188,143,85,0.10) 0%, transparent 70%)" }} />
-                {/* Ghost word */}
-                <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 select-none translate-y-4 font-serif font-medium leading-none text-bronze/0 transition-all duration-500 group-active:translate-y-0 group-active:text-bronze/[0.20]"
-                  style={{ fontSize: "clamp(3rem, 10vw, 5rem)", letterSpacing: "-0.02em" }}>{s.ghost}</span>
                 <div className="relative mb-6 h-px w-8 bg-bronze/25 transition-all duration-500 group-active:w-14 group-active:bg-bronze/80" />
                 <h3 className="relative font-serif text-lg font-medium leading-tight text-ivory transition-colors duration-300 group-active:text-bronze">{s.title}</h3>
                 <p className="relative mt-3 text-[0.75rem] leading-[1.9] text-ivory/32 transition-colors duration-300 group-active:text-ivory/60">{s.description}</p>
               </article>
             ))}
-            <div className="shrink-0 w-5" aria-hidden="true" />
+            <div className="shrink-0 w-6" aria-hidden="true" />
           </div>
           <div className="pointer-events-none absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-charcoal to-transparent" />
         </div>
@@ -469,15 +449,6 @@ export default function RealisationsPage() {
                 style={{ background: "radial-gradient(ellipse 90% 50% at 50% 100%, rgba(188,143,85,0.12) 0%, transparent 70%)" }}
               />
 
-              {/* Ghost word — bronze tinted, slides up */}
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-0 select-none translate-y-6 font-serif font-medium leading-none text-bronze/0 transition-all duration-700 group-hover:translate-y-0 group-hover:text-bronze/[0.20]"
-                style={{ fontSize: "clamp(3.5rem, 6vw, 5.5rem)", letterSpacing: "-0.02em" }}
-              >
-                {s.ghost}
-              </span>
-
               {/* Shimmer sweep */}
               <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-ivory/[0.04] to-transparent transition-transform duration-[1100ms] ease-in-out group-hover:translate-x-full" />
 
@@ -497,6 +468,7 @@ export default function RealisationsPage() {
             </article>
           ))}
         </div>
+        </Container>
       </section>
 
       {/* ══════════════════════════════════════════════════
@@ -505,10 +477,10 @@ export default function RealisationsPage() {
       <section className="bg-charcoal text-ivory">
         <div className="h-px bg-ivory/[0.06]" />
 
-        <div className="mx-auto max-w-7xl px-8 py-20 sm:px-14 lg:py-28">
-          <div className="grid items-center gap-12 lg:grid-cols-[1fr_auto] lg:gap-20">
+        <Container className="py-24 md:py-32">
+          <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
 
-            <div>
+            <div className="max-w-xl">
               <div className="reveal-left mb-8 flex items-center gap-4">
                 <div className="h-px w-8 bg-bronze/35" />
                 <p className="text-[0.5rem] uppercase tracking-[0.48em] text-bronze">Photos &amp; références</p>
@@ -545,7 +517,7 @@ export default function RealisationsPage() {
             </div>
 
           </div>
-        </div>
+        </Container>
       </section>
 
       <CTASection title="Votre villa mérite une lecture précise dès le premier échange." />

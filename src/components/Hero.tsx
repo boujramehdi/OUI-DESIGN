@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CinematicImage } from "@/components/CinematicImage";
+import { Container } from "@/components/Container";
 
 const tickerItems = [
   "Architecture",
@@ -54,7 +55,7 @@ export function Hero() {
       </div>
 
       {/* ── CONTENT ── */}
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col justify-center px-6 pb-10 pt-[80px] sm:px-8 sm:pb-32 md:pb-44 lg:justify-center lg:pb-52 lg:pt-44">
+      <Container className="relative flex flex-col justify-center pb-10 pt-[80px] sm:pb-32 md:pb-44 lg:justify-center lg:pb-52 lg:pt-44">
 
         {/* Eyebrow — centered mobile, left desktop */}
         <div className="mb-6 flex items-center justify-center gap-4 sm:mb-8 sm:justify-start">
@@ -111,7 +112,7 @@ export function Hero() {
           <span className="text-[0.42rem] uppercase tracking-[0.35em] text-ivory/20">Défiler</span>
         </div>
 
-      </div>
+      </Container>
     </section>
   );
 }

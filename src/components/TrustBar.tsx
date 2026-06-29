@@ -1,3 +1,5 @@
+import { Container } from "@/components/Container";
+
 const trustItems = [
   { value: "50+",  label: "Projets réalisés",      sub: "Villas & Riads" },
   { value: "8",    label: "Expertises maîtrisées", sub: "Architecture → Solaire" },
@@ -21,7 +23,7 @@ export function TrustBar() {
       {/* Top gradient line */}
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-bronze/50 to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+      <Container className="relative">
         <div className="grid grid-cols-2 lg:grid-cols-4">
           {trustItems.map((item, i) => (
             <div
@@ -51,7 +53,7 @@ export function TrustBar() {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
 
       {/* Bottom gradient line */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-bronze/50 to-transparent" />

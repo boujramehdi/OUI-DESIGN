@@ -1,15 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { mainServices, navLinks, siteConfig, whatsappHref } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 export function Footer() {
   const expertiseLinks = mainServices.slice(0, 8);
 
   return (
-    <footer className="border-t border-bronze/40 bg-charcoal text-ivory">
+    <footer className="lg-dark-panel border-t border-bronze/40 bg-charcoal text-ivory">
 
       {/* ── MAIN GRID ── */}
-      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20 lg:py-24">
+      <Container className="py-24 md:py-32">
 
         {/* Mobile: stacked. Desktop: 4-col grid */}
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_0.8fr_0.9fr] lg:gap-14">
@@ -153,11 +154,11 @@ export function Footer() {
             </Link>
           </div>
         </div>
-      </div>
+      </Container>
 
       {/* ── Bottom bar ── */}
       <div className="border-t border-ivory/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 px-5 py-5 text-[0.58rem] uppercase tracking-[0.18em] text-ivory/35 sm:px-8 sm:flex-row sm:items-center sm:justify-between">
+        <Container className="flex flex-col items-center gap-3 py-5 text-[0.58rem] uppercase tracking-[0.18em] text-ivory/35 sm:flex-row sm:items-center sm:justify-between">
           <p>© Ouidesign 2026 — Tous droits réservés</p>
           <div className="flex gap-6">
             <Link href="/mentions-legales" className="transition hover:text-ivory/70">
@@ -167,7 +168,7 @@ export function Footer() {
               Confidentialité
             </Link>
           </div>
-        </div>
+        </Container>
       </div>
     </footer>
   );

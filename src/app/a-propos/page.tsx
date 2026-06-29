@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { whatsappHref } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "À propos de Ouidesign — Architecture intelligente au Maroc",
@@ -62,7 +63,7 @@ const expertise = [
   { label: "Solaire et infrastructure durable", href: "/solaire-villa-maroc", image: "/images/solaire-infrastruction.jpg" },
 ];
 
-const zones = ["Palmeraie", "Hivernage", "Targa", "Agdal", "Guéliz", "Route de l'Ourika", "Médina", "Amelkis", "Route de Fès"];
+const zones = ["Marrakech", "Casablanca", "Rabat", "Tanger", "Agadir", "Fès", "Essaouira", "Meknès", "El Jadida"];
 
 export default function AProposPage() {
   return (
@@ -81,6 +82,7 @@ export default function AProposPage() {
       ══════════════════════════════════════════════════ */}
       <section className="bg-charcoal text-ivory">
         <div className="h-px bg-ivory/[0.06]" />
+        <Container>
         <div className="grid grid-cols-2 gap-px bg-bronze/10 lg:grid-cols-4">
           {stats.map((s) => (
             <div
@@ -108,13 +110,14 @@ export default function AProposPage() {
             </div>
           ))}
         </div>
+        </Container>
       </section>
 
       {/* ══════════════════════════════════════════════════
           HISTOIRE
       ══════════════════════════════════════════════════ */}
       <section className="overflow-hidden bg-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20 lg:py-28">
+        <Container className="py-24 md:py-32">
           <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-20">
 
             {/* Left — text */}
@@ -142,9 +145,7 @@ export default function AProposPage() {
                   conçoit et réalise de bout en bout, avec une responsabilité claire sur le résultat.
                 </p>
                 <p className="text-sm leading-7 text-charcoal/60 sm:text-base sm:leading-8">
-                  Basés au Maroc, nous intervenons dans la Palmeraie, l&apos;Hivernage, Targa, Agdal,
-                  Guéliz, la Route de l&apos;Ourika et sur toutes les propriétés qui méritent une
-                  attention sans compromis.
+                  Basés au Maroc, nous intervenons dans toutes les grandes villes du Royaume — Casablanca, Rabat, Marrakech, Tanger, Agadir, Fès et au-delà — sur toutes les propriétés qui méritent une attention sans compromis.
                 </p>
               </div>
 
@@ -184,7 +185,7 @@ export default function AProposPage() {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* ══════════════════════════════════════════════════
@@ -198,28 +199,26 @@ export default function AProposPage() {
         {/* ── MOBILE layout ── */}
         <div className="sm:hidden">
           {/* Heading */}
-          <div className="relative px-5 pb-8 pt-12 text-center">
-            <p className="text-[0.62rem] uppercase tracking-[0.4em] text-bronze">Notre approche</p>
-            <h2 className="mt-5 font-serif text-4xl font-medium leading-[1.02] text-ivory">
-              Un seul regard.<br />Tout le projet.
-            </h2>
-            <div className="mx-auto mt-6 h-px w-16 bg-bronze/40" />
-          </div>
+          <Container>
+            <div className="relative pb-8 pt-12 text-center">
+              <p className="text-[0.62rem] uppercase tracking-[0.4em] text-bronze">Notre approche</p>
+              <h2 className="mt-5 font-serif text-4xl font-medium leading-[1.02] text-ivory">
+                Un seul regard.<br />Tout le projet.
+              </h2>
+              <div className="mx-auto mt-6 h-px w-16 bg-bronze/40" />
+            </div>
+          </Container>
 
           {/* Mobile snap carousel */}
-          <div className="relative">
-            <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-px">
+          <Container>
+          <div className="relative -mx-6">
+            <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-px px-6">
               {steps.map((step) => (
                 <div
                   key={step.n}
                   className="group snap-start shrink-0 w-[82vw] relative overflow-hidden border border-ivory/[0.08] bg-charcoal p-7 transition-colors duration-300 active:bg-[#141412] active:border-bronze/30"
                 >
                   <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-500 group-active:w-full" />
-                  <span aria-hidden="true"
-                    className="pointer-events-none absolute -bottom-2 -right-1 select-none font-serif font-medium leading-none text-ivory/[0.04]"
-                    style={{ fontSize: "clamp(5rem, 14vw, 8rem)", letterSpacing: "-0.03em" }}>
-                    {step.n}
-                  </span>
                   <p className="relative font-serif text-4xl font-medium leading-none text-bronze/30 transition-colors duration-300 group-active:text-bronze/70">
                     {step.n}
                   </p>
@@ -232,16 +231,17 @@ export default function AProposPage() {
                   </p>
                 </div>
               ))}
-              <div className="shrink-0 w-5" aria-hidden="true" />
+              <div className="shrink-0 w-6" aria-hidden="true" />
             </div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-charcoal to-transparent" />
           </div>
+          </Container>
           <div className="pb-10" />
         </div>
 
         {/* ── DESKTOP layout ── */}
         <div className="relative hidden sm:block">
-          <div className="mx-auto max-w-7xl px-8 py-20 lg:py-28">
+          <Container className="py-24 md:py-32">
             <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-20">
               {/* Heading */}
               <div className="text-left">
@@ -262,11 +262,6 @@ export default function AProposPage() {
                     <div className="absolute left-0 top-0 h-0 w-[2px] bg-bronze/70 transition-all duration-700 group-hover:h-full" />
                     <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
                       style={{ background: "radial-gradient(ellipse 90% 50% at 0% 50%, rgba(188,143,85,0.08) 0%, transparent 70%)" }} />
-                    <span aria-hidden="true"
-                      className="pointer-events-none absolute -bottom-2 -right-1 select-none font-serif font-medium leading-none text-bronze/0 transition-all duration-700 group-hover:text-bronze/[0.15]"
-                      style={{ fontSize: "clamp(5rem, 8vw, 7rem)", letterSpacing: "-0.03em" }}>
-                      {step.n}
-                    </span>
                     <p className="relative font-serif text-4xl font-medium leading-none text-bronze/25 transition-colors duration-300 group-hover:text-bronze/70">
                       {step.n}
                     </p>
@@ -281,7 +276,7 @@ export default function AProposPage() {
                 ))}
               </div>
             </div>
-          </div>
+          </Container>
         </div>
       </section>
 
@@ -289,7 +284,7 @@ export default function AProposPage() {
           VALEURS
       ══════════════════════════════════════════════════ */}
       <section className="overflow-hidden bg-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20 lg:py-28">
+        <Container className="py-24 md:py-32">
 
           {/* Header */}
           <div className="reveal mb-6 text-center sm:mb-10 sm:text-left lg:mb-14 lg:grid lg:grid-cols-[1fr_2fr] lg:items-end lg:gap-16">
@@ -306,25 +301,18 @@ export default function AProposPage() {
           </div>
 
           {/* ── MOBILE: snap carousel ── */}
-          <div className="relative -mx-5 sm:hidden">
-            <div className="flex items-start snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide gap-px px-5 pb-2">
+          <div className="relative -mx-6 sm:hidden">
+            <div className="flex items-start snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide gap-px px-6 pb-2">
               {values.map((value, index) => (
                 <article
                   key={value.title}
-                  className="lg-dark-panel group snap-start shrink-0 w-[82vw] h-[310px] relative flex flex-col overflow-hidden bg-charcoal px-7 py-8 transition-colors duration-300 active:bg-[#141412]"
+                  className="group snap-start shrink-0 w-[82vw] h-[310px] relative flex flex-col overflow-hidden bg-charcoal px-7 py-8 transition-colors duration-300 active:bg-[#141412]"
                 >
                   {/* Left accent */}
                   <div className="absolute left-0 top-0 h-0 w-[2px] bg-bronze/70 transition-all duration-500 group-active:h-full" />
                   {/* Bronze glow */}
                   <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-active:opacity-100"
                     style={{ background: "radial-gradient(ellipse 90% 50% at 50% 100%, rgba(188,143,85,0.10) 0%, transparent 70%)" }} />
-                  {/* Ghost number */}
-                  <span aria-hidden="true"
-                    className="pointer-events-none absolute -bottom-3 -right-1 select-none font-serif font-medium leading-none text-ivory/[0.04] transition-colors duration-500 group-active:text-bronze/[0.12]"
-                    style={{ fontSize: "clamp(5.5rem, 18vw, 8rem)" }}>
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-
                   <p className="relative font-serif text-4xl font-medium leading-none text-bronze/30 transition-colors duration-500 group-active:text-bronze/75">
                     {String(index + 1).padStart(2, "0")}
                   </p>
@@ -340,7 +328,7 @@ export default function AProposPage() {
                   </p>
                 </article>
               ))}
-              <div className="shrink-0 w-5" aria-hidden="true" />
+              <div className="shrink-0 w-6" aria-hidden="true" />
             </div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-ivory to-transparent" />
           </div>
@@ -350,26 +338,14 @@ export default function AProposPage() {
             {values.map((value, index) => (
               <article
                 key={value.title}
-                className="lg-dark-panel reveal group relative flex flex-col overflow-hidden bg-charcoal px-8 py-10 transition-colors duration-500 hover:bg-[#141412] sm:px-9 sm:py-12"
+                className="reveal group relative flex flex-col overflow-hidden bg-charcoal px-8 py-10 transition-colors duration-500 hover:bg-[#141412] sm:px-9 sm:py-12"
               >
                 {/* Left accent bar */}
                 <div className="absolute left-0 top-0 h-0 w-[2px] bg-bronze/70 transition-all duration-700 group-hover:h-full" />
                 {/* Bronze glow */}
                 <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
                   style={{ background: "radial-gradient(ellipse 90% 60% at 50% 100%, rgba(188,143,85,0.10) 0%, transparent 70%)" }} />
-                {/* Ghost number */}
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute -bottom-4 -right-2 select-none font-serif font-medium leading-none text-bronze/0 transition-all duration-700 group-hover:text-bronze/[0.18]"
-                  style={{ fontSize: "clamp(6rem, 10vw, 9rem)" }}
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <p className="relative font-serif text-5xl font-medium leading-none text-bronze/30 transition-colors duration-500 group-hover:text-bronze/75">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <div className="relative mt-6 h-px w-8 bg-bronze/30 transition-all duration-500 group-hover:w-16 group-hover:bg-bronze/65" />
+                <div className="relative h-px w-8 bg-bronze/30 transition-all duration-500 group-hover:w-16 group-hover:bg-bronze/65" />
                 <h3 className="relative mt-5 font-serif text-2xl text-ivory transition-colors duration-300 group-hover:text-bronze/90">
                   {value.title}
                 </h3>
@@ -382,7 +358,7 @@ export default function AProposPage() {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* ══════════════════════════════════════════════════
@@ -391,7 +367,7 @@ export default function AProposPage() {
       <section className="overflow-hidden bg-charcoal text-ivory">
         <div className="h-px bg-ivory/[0.06]" />
 
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20 lg:py-28">
+        <Container className="py-24 md:py-32">
 
           {/* Header */}
           <div className="reveal mb-10 flex flex-col items-center gap-4 text-center sm:flex-row sm:items-end sm:justify-between sm:text-left">
@@ -411,7 +387,7 @@ export default function AProposPage() {
           </div>
 
           {/* ── MOBILE: image snap carousel ── */}
-          <div className="relative -mx-5 sm:hidden">
+          <div className="relative -mx-6 sm:hidden">
             <div className="flex snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-hide gap-px">
               {expertise.map((item, index) => (
                 <Link
@@ -461,7 +437,7 @@ export default function AProposPage() {
                   </div>
                 </Link>
               ))}
-              <div className="shrink-0 w-5" aria-hidden="true" />
+              <div className="shrink-0 w-6" aria-hidden="true" />
             </div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-charcoal to-transparent" />
           </div>
@@ -494,14 +470,14 @@ export default function AProposPage() {
               </Link>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* ══════════════════════════════════════════════════
           ZONE D'INTERVENTION
       ══════════════════════════════════════════════════ */}
       <section className="overflow-hidden bg-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20 lg:py-28">
+        <Container className="py-24 md:py-32">
           <div className="reveal grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-center lg:gap-20">
 
             {/* Left */}
@@ -512,9 +488,7 @@ export default function AProposPage() {
               </h2>
               <div className="mx-auto mt-6 h-px w-12 bg-bronze/30 sm:mx-0" />
               <p className="mt-6 text-sm leading-7 text-charcoal/60 sm:text-base">
-                De la Palmeraie à l&apos;Hivernage, de Targa à la Route de l&apos;Ourika, chaque projet
-                est une rencontre avec un lieu unique. Nous intervenons là où l&apos;exception
-                rencontre l&apos;expertise.
+                De Casablanca à Agadir, de Tanger à Marrakech, en passant par Rabat, Fès et Essaouira — nous intervenons partout au Maroc, là où l&apos;exception rencontre l&apos;expertise.
               </p>
               <div className="mt-8 flex justify-center sm:justify-start">
                 <Link
@@ -543,7 +517,7 @@ export default function AProposPage() {
               ))}
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <CTASection title="Parlons de votre villa au Maroc." />

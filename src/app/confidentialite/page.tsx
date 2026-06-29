@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 export default function ConfidentialitePage() {
   return (
     <main className="bg-ivory min-h-screen">
-      <div className="mx-auto max-w-3xl px-5 pb-24 pt-36 sm:px-8">
+      <Container className="pb-24 pt-36"><div className="max-w-3xl">
         <p className="text-[0.65rem] uppercase tracking-[0.4em] text-bronze">Légal</p>
         <h1 className="mt-4 font-serif text-4xl font-medium text-charcoal sm:text-5xl">
           Politique de confidentialité
@@ -130,7 +131,7 @@ export default function ConfidentialitePage() {
             Dernière mise à jour : juin 2026
           </p>
         </div>
-      </div>
+      </div></Container>
     </main>
   );
 }

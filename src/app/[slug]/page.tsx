@@ -5,6 +5,7 @@ import { CTASection } from "@/components/CTASection";
 import { Faq } from "@/components/Faq";
 import { PageHero } from "@/components/PageHero";
 import { mainServices, getServicePage, servicePages, whatsappHref } from "@/lib/site";
+import { Container } from "@/components/Container";
 
 type ServiceRouteProps = {
   params: Promise<{
@@ -91,7 +92,7 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
 
       {/* ── HIGHLIGHTS ── */}
       <section className="bg-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20 lg:py-28">
+        <Container className="py-24 md:py-32">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
 
             {/* Left — intro text */}
@@ -112,8 +113,8 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
             {/* Right — highlights */}
             <div>
               {/* Mobile: snap carousel */}
-              <div className="relative -mx-5 sm:hidden">
-                <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-3 px-5 pb-4">
+              <div className="relative -mx-6 sm:hidden">
+                <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-3 px-4 pb-4">
                   {service.highlights.map((highlight, index) => (
                     <article
                       key={highlight}
@@ -150,12 +151,12 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* ── DELIVERABLES ── */}
       <section className="bg-charcoal text-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:py-24">
+        <Container className="py-20 md:py-28">
 
           {/* Header */}
           <div className="mb-8 flex items-center gap-6 sm:mb-12">
@@ -167,16 +168,13 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
           </div>
 
           {/* Mobile: snap carousel */}
-          <div className="relative -mx-5 sm:hidden">
-            <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-px pb-4 px-5">
+          <div className="relative -mx-6 sm:hidden">
+            <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-px pb-4 px-4">
               {service.deliverables.map((deliverable, index) => (
                 <article
                   key={deliverable}
                   className="group snap-start shrink-0 w-[72vw] relative overflow-hidden bg-[rgba(255,255,255,0.04)] p-7 transition-all duration-300 active:bg-[rgba(184,146,95,0.12)] border border-ivory/[0.05] active:border-bronze/30"
                 >
-                  <span className="pointer-events-none absolute -right-2 -top-3 select-none font-serif text-[5rem] font-medium leading-none text-ivory/[0.03]">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
                   <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-500 group-active:w-full" />
                   <div className="mb-5 h-px w-6 bg-bronze/40 transition-all duration-500 group-active:w-12 group-active:bg-bronze" />
                   <h3 className="relative font-serif text-lg leading-tight text-ivory">
@@ -196,9 +194,6 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
                 key={deliverable}
                 className="group relative overflow-hidden bg-[rgba(255,255,255,0.04)] p-8 transition-all duration-300 hover:bg-[rgba(184,146,95,0.12)] border border-ivory/[0.05] hover:border-bronze/30"
               >
-                <span className="absolute -right-2 -top-3 select-none font-serif text-[5rem] font-medium leading-none text-ivory/[0.03] transition-colors duration-300 group-hover:text-bronze/[0.08]">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
                 <div className="absolute left-0 top-0 h-[2px] w-0 bg-bronze transition-all duration-700 group-hover:w-full" />
                 <div className="mb-6 h-px w-6 bg-bronze/40 transition-all duration-500 group-hover:w-12 group-hover:bg-bronze" />
                 <h3 className="relative font-serif text-xl leading-tight text-ivory transition-all duration-300 group-hover:-translate-y-0.5 sm:text-2xl">
@@ -207,14 +202,14 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <Faq items={service.faq} />
 
       {/* ── OTHER EXPERTISES ── */}
       <section className="bg-ivory">
-        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:py-24">
+        <Container className="py-20 md:py-28">
 
           <div className="mb-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:items-end sm:justify-between sm:text-left sm:mb-10">
             <div>
@@ -233,8 +228,8 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
           </div>
 
           {/* Mobile: snap carousel */}
-          <div className="relative -mx-5 sm:hidden">
-            <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-px pb-4 px-5">
+          <div className="relative -mx-6 sm:hidden">
+            <div className="flex items-start snap-x snap-mandatory overflow-x-auto scrollbar-hide gap-px pb-4 px-4">
               {mainServices
                 .filter((item) => item.href !== `/${service.slug}`)
                 .slice(0, 6)
@@ -291,7 +286,7 @@ export default async function ServiceRoutePage({ params }: ServiceRouteProps) {
           >
             Demander une orientation
           </Link>
-        </div>
+        </Container>
       </section>
 
       <CTASection title="Parlons de votre propriété au Maroc." />

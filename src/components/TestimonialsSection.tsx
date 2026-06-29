@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Container } from "@/components/Container";
 
 const testimonials = [
   {
@@ -102,7 +103,7 @@ export function TestimonialsSection() {
 
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-bronze/35 to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
+      <Container className="relative py-24 md:py-32">
 
         {/* Header */}
         <div className="reveal mb-10 lg:mb-16">
@@ -130,12 +131,12 @@ export function TestimonialsSection() {
         </div>
 
         {/* ── MOBILE: horizontal snap scroll ── */}
-        <div className="relative -mx-5 sm:hidden">
-          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pl-5 pb-5">
+        <div className="relative -mx-6 sm:hidden">
+          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pl-4 pb-5">
             {testimonials.map((t, index) => (
               <TestimonialCard key={index} t={t} index={index} mobile />
             ))}
-            <div className="shrink-0 w-5" aria-hidden="true" />
+            <div className="shrink-0 w-6" aria-hidden="true" />
           </div>
           {/* Right-edge fade */}
           <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-charcoal to-transparent" />
@@ -153,7 +154,7 @@ export function TestimonialsSection() {
           <span className="text-[0.55rem] uppercase tracking-[0.3em]">Confidentialité garantie</span>
           <span className="h-px w-12 bg-current opacity-40" />
         </div>
-      </div>
+      </Container>
 
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-bronze/30 to-transparent" />
     </section>
